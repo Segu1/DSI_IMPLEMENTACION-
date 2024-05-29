@@ -1,0 +1,17 @@
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.exe
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.deps.json
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.runtimeconfig.json
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.dll
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.pdb
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.csproj.GenerateResource.cache
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.AssemblyInfoInputs.cache
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.AssemblyInfo.cs
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.csproj.CoreCompileInputs.cache
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.dll
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\refint\BonVino.dll
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.pdb
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.genruntimeconfig.cache
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\ref\BonVino.dll
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.ventanaPrincipal.resources
+C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.Ranking.resources
