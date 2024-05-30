@@ -17,8 +17,7 @@ namespace BonVino
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Vino nuevoVino = new Vino("OtroLocoMas", "DonBosco");
-            nuevoVino.NombreVino = "OtraLocaMas";
+  
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -7,26 +7,47 @@ namespace BonVino.Entidades
 {
     public class Vino
     {
-        private string nombreVino;  
-        private string nombreBodega;
-        //Bodega, Varietal, *Reseña
+        private string nombre;
+        private Bodega bodega;
+        private float precioARS;
+        private List<Reseña> reseñas;
+        private List<Varietal> varietal;
 
-        public Vino(string vino, string bodega)
+        public Vino(string nombre, Bodega bodega, float precioARS, List<Varietal> varietal)
         {
-            this.nombreVino = vino;
-            this.nombreBodega = bodega;
+            this.nombre = nombre;
+            this.bodega = bodega;
+            this.precioARS = precioARS;
+            this.reseñas = new List<Reseña>();
+            this.varietal = varietal; //a chequear
+
         }
 
-        public string NombreVino
+        public string Nombre
         {
-            get => nombreVino;
-            set => nombreVino = value;
+            get => nombre;
+            set => nombre = value;
         }
 
-        public string NombreBodega
+        public void agregarReseña(Reseña res)
         {
-            get => nombreBodega;
-            set => nombreBodega = value;
+            reseñas.Add(res);
         }
+
+        public void eliminarReseña(Reseña res){
+            reseñas.Remove(res);
+        }
+
+
+        public void AgregarVarietal(Varietal var)
+        {
+            varietal.Add(var);
+        }
+
+        public void eliminarReseña(Varietal var)
+        {
+            varietal.Remove(var);
+        }
+
     }
 }

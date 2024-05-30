@@ -14,15 +14,17 @@ namespace BonVino.Entidades
         private string nombre;
         private string coordenadasUbicacion; //a chekear
         private int periodoActualizacion;
+        private RegionVitivinicola regionVitivinicola;
 
-        public Bodega(string descripcion, string historia, string nombre, string coordenadasUbicacion, int periodoActualizacion)
+        public Bodega(string descripcion, string historia, string nombre, 
+            string coordenadasUbicacion, int periodoActualizacion, RegionVitivinicola regionVitivinicola)
         {
             this.descripcion = descripcion;
             this.historia = historia;
             this.nombre = nombre;
             this.coordenadasUbicacion = coordenadasUbicacion;
             this.periodoActualizacion = periodoActualizacion;
-            //Region.
+            this.regionVitivinicola = regionVitivinicola;
         }
 
         public string Descripcion

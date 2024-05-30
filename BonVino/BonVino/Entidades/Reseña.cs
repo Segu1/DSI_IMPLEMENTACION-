@@ -12,14 +12,15 @@ namespace BonVino.Entidades
         private bool esPremium;
         private DateTime fechaReseña;
         private int puntaje;
+        private Vino vino;
 
-        public Reseña(string comentario, bool premium, DateTime fecha, int puntajerec)
+        public Reseña(string comentario, bool premium, DateTime fecha, int puntajerec, Vino vino)
         {
             this.comentario = comentario;
             this.esPremium = premium;
             this.fechaReseña = fecha;
             this.puntaje = puntajerec;
-            //Vino.
+            this.vino = vino;
         }
 
         public string Comentario
