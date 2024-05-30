@@ -4,8 +4,5 @@
     <Compile Update="Interfaces\BonVino.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Interfaces\Ranking.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

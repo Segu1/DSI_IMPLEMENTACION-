@@ -9,6 +9,7 @@ namespace BonVino.Entidades
     {
         private string nombreVino;  
         private string nombreBodega;
+        //Bodega, Varietal, *Reseña
 
         public Vino(string vino, string bodega)
         {
