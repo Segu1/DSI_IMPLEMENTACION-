@@ -75,7 +75,7 @@ namespace BonVino
         private void txtTipoReseña_Click(object sender, EventArgs e)
         {
 
-        }
 
+        }
     }
 }

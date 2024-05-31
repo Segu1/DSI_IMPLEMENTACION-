@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\bonvino\\interfaces\\bonvino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\bonvino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\bonvino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -103,7 +103,15 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
@@ -114,8 +122,38 @@
               "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.cs [Dise\u00F1o]",
               "RelativeToolTip": "BonVino\\Interfaces\\BonVino.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T16:24:57.069Z",
+              "WhenOpened": "2024-05-31T16:42:25.589Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BonVino.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.Designer.cs",
+              "RelativeDocumentMoniker": "BonVino\\Interfaces\\BonVino.Designer.cs",
+              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.Designer.cs",
+              "RelativeToolTip": "BonVino\\Interfaces\\BonVino.Designer.cs",
+              "ViewState": "AQIAAKYAAAAAAAAAAAAswEwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T12:50:11.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BonVino.cs",
+              "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.cs",
+              "RelativeDocumentMoniker": "BonVino\\Interfaces\\BonVino.cs",
+              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.cs",
+              "RelativeToolTip": "BonVino\\Interfaces\\BonVino.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAvwFAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T18:36:54.386Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -127,7 +165,8 @@
               "RelativeToolTip": "BonVino\\BonVino.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-29T12:51:12.83Z"
+              "WhenOpened": "2024-05-29T12:51:12.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -140,31 +179,6 @@
               "ViewState": "AQIAAAgAAAAAAAAAAAAQwA0AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T13:03:18.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BonVino.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.Designer.cs",
-              "RelativeDocumentMoniker": "BonVino\\Interfaces\\BonVino.Designer.cs",
-              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.Designer.cs",
-              "RelativeToolTip": "BonVino\\Interfaces\\BonVino.Designer.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAswJcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T12:50:11.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BonVino.cs",
-              "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.cs",
-              "RelativeDocumentMoniker": "BonVino\\Interfaces\\BonVino.cs",
-              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\BonVino.cs",
-              "RelativeToolTip": "BonVino\\Interfaces\\BonVino.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAnwEoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T18:36:54.386Z"
             },
             {
               "$type": "Document",
@@ -295,7 +309,8 @@
               "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\BonVino.csproj",
               "RelativeToolTip": "BonVino\\BonVino.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-29T19:43:31.478Z"
+              "WhenOpened": "2024-05-29T19:43:31.478Z",
+              "EditorCaption": ""
             }
           ]
         }
