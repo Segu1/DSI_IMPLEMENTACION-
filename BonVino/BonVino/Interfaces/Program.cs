@@ -1,3 +1,6 @@
+using BonVino.Entidades;
+using BonVino.Gestor;
+
 namespace BonVino.Interfaces
 {
     internal static class Program
@@ -12,6 +15,9 @@ namespace BonVino.Interfaces
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new habilitarPantalla());
+            GestorReportesDeReseñas Gestor = new GestorReportesDeReseñas();  //a chequear.
+           
+            
         }
     }
 }

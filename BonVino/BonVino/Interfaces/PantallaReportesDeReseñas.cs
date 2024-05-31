@@ -1,14 +1,15 @@
 using BonVino.Entidades;
+using BonVino.Gestor;
 
 namespace BonVino
 {
     public partial class habilitarPantalla : Form
     {
-        Boolean periodoActivo;
+        Boolean periodoValido;
         public habilitarPantalla()
         {
             InitializeComponent();
-            Boolean periodoActivo = false;
+            Boolean periodoValido = false;
         }
 
         private void ventanaPrincipal_Load(object sender, EventArgs e)
@@ -18,11 +19,30 @@ namespace BonVino
             cbArchivoAExportar.Items.Add("PDF");
             cbTipoReseña.Items.Add("Sommelier");
             cbTipoReseña.Items.Add("Amigos");
-            cbTipoReseña.Items.Add("Normales");
+            cbTipoReseña.Items.Add("Normal");
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private Boolean validar_periodo(DateTime fechaDesde, DateTime fechaHasta)
+        //valida que las fechas ingresadas esten en un periodo valido
         {
+            if (fechaDesde >= fechaHasta || fechaHasta > DateTime.Now)
+            {
+                periodoValido = false;
+
+            }
+            else if (fechaHasta >= fechaDesde && fechaHasta < DateTime.Now)
+            {
+                periodoValido = true;
+
+            }
+            return periodoValido;
+        }
+
+
+            private void button1_Click(object sender, EventArgs e)
+        {
+
 
         }
 
@@ -56,16 +76,19 @@ namespace BonVino
 
         private void timePicker_ValueChanged(object sender, EventArgs e)
         {
-            if (timePickerFechaDesde.Value >= timePickerFechaHasta.Value)
-            {
-                txtPeriodoNoValido.Visible = true;
-                periodoActivo = false;
-            }
-            else if (timePickerFechaHasta.Value >= timePickerFechaDesde.Value)
+            periodoValido = validar_periodo(timePickerFechaDesde.Value, timePickerFechaHasta.Value);
+            if (periodoValido)
             {
                 txtPeriodoNoValido.Visible = false;
-                periodoActivo = true;
-            };
+                Gestor.
+                
+                
+
+            }
+            else {
+                txtPeriodoNoValido.Visible = true;
+            }
+
         }
 
         private void txtPeriodoNoValido_Click(object sender, EventArgs e)
@@ -73,6 +96,16 @@ namespace BonVino
 
         }
         private void txtTipoReseña_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaDesde_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbTipoReseña_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

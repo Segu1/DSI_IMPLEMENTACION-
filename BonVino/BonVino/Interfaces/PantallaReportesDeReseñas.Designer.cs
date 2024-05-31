@@ -38,7 +38,7 @@ namespace BonVino
             timePickerFechaHasta = new DateTimePicker();
             txtPeriodoNoValido = new Label();
             txtFechaDesde = new Label();
-            label1 = new Label();
+            txtFechaHasta = new Label();
             txtArchivoAExportar = new Label();
             cbArchivoAExportar = new ComboBox();
             txtTipoReseña = new Label();
@@ -48,13 +48,13 @@ namespace BonVino
             // btnConfirmar
             // 
             btnConfirmar.AutoSize = true;
-            btnConfirmar.BackColor = Color.FromArgb(255, 192, 255);
+            btnConfirmar.BackColor = Color.FromArgb(128, 128, 255);
             btnConfirmar.Cursor = Cursors.AppStarting;
             btnConfirmar.Location = new Point(27, 568);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(153, 47);
             btnConfirmar.TabIndex = 0;
-            btnConfirmar.Text = "Aceptar";
+            btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = false;
             btnConfirmar.Click += button1_Click;
             // 
@@ -73,7 +73,6 @@ namespace BonVino
             timePickerFechaHasta.Size = new Size(244, 21);
             timePickerFechaHasta.TabIndex = 5;
             timePickerFechaHasta.ValueChanged += timePicker_ValueChanged;
-
             // 
             // txtPeriodoNoValido
             // 
@@ -98,18 +97,19 @@ namespace BonVino
             txtFechaDesde.Size = new Size(82, 14);
             txtFechaDesde.TabIndex = 9;
             txtFechaDesde.Text = "Fecha desde";
+            txtFechaDesde.Click += txtFechaDesde_Click;
             // 
-            // label1
+            // txtFechaHasta
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.ForeColor = Color.Beige;
-            label1.Location = new Point(27, 135);
-            label1.Name = "label1";
-            label1.Size = new Size(77, 14);
-            label1.TabIndex = 10;
-            label1.Text = "Fecha hasta";
-            label1.Click += label1_Click_1;
+            txtFechaHasta.AutoSize = true;
+            txtFechaHasta.BackColor = Color.Transparent;
+            txtFechaHasta.ForeColor = Color.Beige;
+            txtFechaHasta.Location = new Point(27, 135);
+            txtFechaHasta.Name = "txtFechaHasta";
+            txtFechaHasta.Size = new Size(77, 14);
+            txtFechaHasta.TabIndex = 10;
+            txtFechaHasta.Text = "Fecha hasta";
+            txtFechaHasta.Click += label1_Click_1;
             // 
             // txtArchivoAExportar
             // 
@@ -140,13 +140,13 @@ namespace BonVino
             txtTipoReseña.Size = new Size(94, 14);
             txtTipoReseña.TabIndex = 13;
             txtTipoReseña.Text = "Tipo de reseña";
-            txtTipoReseña.Click += txtTipoReseña_Click;
             // 
             // cbTipoReseña
             // 
+            cbTipoReseña.FormattingEnabled = true;
             cbTipoReseña.Location = new Point(27, 295);
             cbTipoReseña.Name = "cbTipoReseña";
-            cbTipoReseña.Size = new Size(125, 22);
+            cbTipoReseña.Size = new Size(121, 22);
             cbTipoReseña.TabIndex = 14;
             // 
             // habilitarPantalla
@@ -161,20 +161,20 @@ namespace BonVino
             Controls.Add(txtTipoReseña);
             Controls.Add(cbArchivoAExportar);
             Controls.Add(txtArchivoAExportar);
-            Controls.Add(label1);
+            Controls.Add(txtFechaHasta);
             Controls.Add(txtFechaDesde);
             Controls.Add(timePickerFechaDesde);
             Controls.Add(txtPeriodoNoValido);
             Controls.Add(timePickerFechaHasta);
             Controls.Add(btnConfirmar);
             Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ForeColor = SystemColors.ActiveCaptionText;
+            ForeColor = SystemColors.ControlLightLight;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "habilitarPantalla";
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BonVino: Generar Ranking";
-            TransparencyKey = Color.Silver;
+            TransparencyKey = Color.IndianRed;
             Load += ventanaPrincipal_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -189,7 +189,7 @@ namespace BonVino
         private DateTimePicker timePickerFechaHasta;
         private Label txtPeriodoNoValido;
         private Label txtFechaDesde;
-        private Label label1;
+        private Label txtFechaHasta;
         private Label txtArchivoAExportar;
         private ComboBox cbArchivoAExportar;
         private Label txtTipoReseña;
