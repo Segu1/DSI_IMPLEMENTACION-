@@ -17,5 +17,10 @@ namespace BonVino.Entidades
             this.provincia = provincia;
         }
 
+        public string getNombre { get { return nombre; } }
+        public string setNombre { set { nombre = value; } }
+        
+
+
     }
 }

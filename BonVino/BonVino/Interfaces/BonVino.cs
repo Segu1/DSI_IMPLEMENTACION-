@@ -17,7 +17,7 @@ namespace BonVino
 
         private void button1_Click(object sender, EventArgs e)
         {
-  
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace BonVino
 
         }
 
-        private void timePickerHasta_ValueChanged(object sender, EventArgs e)
+        private void timePicker_ValueChanged(object sender, EventArgs e)
         {
             if (timePickerFechaDesde.Value >= timePickerFechaHasta.Value)
             {
@@ -68,18 +68,5 @@ namespace BonVino
         }
 
 
-        private void timePickerFechaDesde_ValueChanged_1(object sender, EventArgs e)
-        {
-            if (timePickerFechaDesde.Value >= timePickerFechaHasta.Value)
-            {
-                txtPeriodoNoValido.Visible = true;
-                periodoActivo = false;
-            }
-            else if(timePickerFechaHasta.Value >= timePickerFechaDesde.Value)
-            {
-                txtPeriodoNoValido.Visible = false;
-                periodoActivo = true;
-            };
-        }
     }
 }

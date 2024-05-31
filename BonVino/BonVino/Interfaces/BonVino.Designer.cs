@@ -85,7 +85,7 @@ namespace BonVino
             timePickerFechaDesde.Name = "timePickerFechaDesde";
             timePickerFechaDesde.Size = new Size(244, 21);
             timePickerFechaDesde.TabIndex = 4;
-            timePickerFechaDesde.ValueChanged += timePickerFechaDesde_ValueChanged_1;
+            timePickerFechaDesde.ValueChanged += timePicker_ValueChanged;
             // 
             // timePickerFechaHasta
             // 
@@ -93,7 +93,7 @@ namespace BonVino
             timePickerFechaHasta.Name = "timePickerFechaHasta";
             timePickerFechaHasta.Size = new Size(244, 21);
             timePickerFechaHasta.TabIndex = 5;
-            timePickerFechaHasta.ValueChanged += timePickerHasta_ValueChanged;
+            timePickerFechaHasta.ValueChanged += timePicker_ValueChanged;
             // 
             // txtFechaHasta
             // 

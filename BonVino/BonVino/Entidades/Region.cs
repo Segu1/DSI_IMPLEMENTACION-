@@ -17,16 +17,12 @@ namespace BonVino.Entidades
             this.descripcion = descripcion;
         }
 
-        public string Nombre
-        {
-            get => nombre;
-            set => nombre = value;
-        }
+        public string getNombre { get { return nombre; } }
+        public string setNombre { set { nombre = value; } }
 
-        public string Descricpion
-        {
-            get => descripcion;
-            set => descripcion = value;
-        }
+
+        public string getDescripcion { get { return descripcion; } }
+        public string setDescripcion { set { descripcion = value; } }
+
     }
 }

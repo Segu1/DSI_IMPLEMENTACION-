@@ -23,11 +23,11 @@ namespace BonVino.Entidades
 
         }
 
-        public string Nombre
-        {
-            get => nombre;
-            set => nombre = value;
-        }
+        public string getNombre { get { return nombre; } }
+        public string setNombre { set { nombre = value; } }
+
+        public float getPrecioARS  { get { return precioARS; } }
+        public float setPrecioARS { set { precioARS = value; } }
 
         public void agregarReseña(Reseña res)
         {
