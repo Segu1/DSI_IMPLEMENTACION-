@@ -34,13 +34,15 @@ namespace BonVino
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(habilitarPantalla));
             btnConfirmar = new Button();
-            comboBox1 = new ComboBox();
-            txtTipoDeArchivo = new Label();
             timePickerFechaDesde = new DateTimePicker();
             timePickerFechaHasta = new DateTimePicker();
-            txtFechaHasta = new Label();
-            txtFechaDesde = new Label();
             txtPeriodoNoValido = new Label();
+            txtFechaDesde = new Label();
+            label1 = new Label();
+            txtArchivoAExportar = new Label();
+            cbArchivoAExportar = new ComboBox();
+            txtTipoReseña = new Label();
+            cbTipoReseña = new ComboBox();
             SuspendLayout();
             // 
             // btnConfirmar
@@ -48,36 +50,13 @@ namespace BonVino
             btnConfirmar.AutoSize = true;
             btnConfirmar.BackColor = Color.FromArgb(255, 192, 255);
             btnConfirmar.Cursor = Cursors.AppStarting;
-            btnConfirmar.Location = new Point(27, 502);
+            btnConfirmar.Location = new Point(27, 568);
             btnConfirmar.Name = "btnConfirmar";
-            btnConfirmar.Size = new Size(125, 47);
+            btnConfirmar.Size = new Size(153, 47);
             btnConfirmar.TabIndex = 0;
             btnConfirmar.Text = "Aceptar";
             btnConfirmar.UseVisualStyleBackColor = false;
             btnConfirmar.Click += button1_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "\"Excel\"", "\"Word\"", "\"Pdf\"" });
-            comboBox1.Location = new Point(27, 474);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(217, 22);
-            comboBox1.TabIndex = 1;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            // 
-            // txtTipoDeArchivo
-            // 
-            txtTipoDeArchivo.AutoSize = true;
-            txtTipoDeArchivo.FlatStyle = FlatStyle.System;
-            txtTipoDeArchivo.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTipoDeArchivo.Location = new Point(27, 451);
-            txtTipoDeArchivo.Name = "txtTipoDeArchivo";
-            txtTipoDeArchivo.Size = new Size(237, 22);
-            txtTipoDeArchivo.TabIndex = 2;
-            txtTipoDeArchivo.Text = "Seleccione archivo a exportar";
-            txtTipoDeArchivo.Click += label1_Click;
             // 
             // timePickerFechaDesde
             // 
@@ -89,50 +68,87 @@ namespace BonVino
             // 
             // timePickerFechaHasta
             // 
-            timePickerFechaHasta.Location = new Point(27, 104);
+            timePickerFechaHasta.Location = new Point(27, 152);
             timePickerFechaHasta.Name = "timePickerFechaHasta";
             timePickerFechaHasta.Size = new Size(244, 21);
             timePickerFechaHasta.TabIndex = 5;
             timePickerFechaHasta.ValueChanged += timePickerHasta_ValueChanged;
             // 
-            // txtFechaHasta
-            // 
-            txtFechaHasta.AutoSize = true;
-            txtFechaHasta.FlatStyle = FlatStyle.System;
-            txtFechaHasta.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtFechaHasta.Location = new Point(27, 80);
-            txtFechaHasta.Name = "txtFechaHasta";
-            txtFechaHasta.Size = new Size(101, 22);
-            txtFechaHasta.TabIndex = 6;
-            txtFechaHasta.Text = "Fecha Hasta";
-            txtFechaHasta.Click += label1_Click_1;
-            // 
-            // txtFechaDesde
-            // 
-            txtFechaDesde.AutoSize = true;
-            txtFechaDesde.BackColor = Color.MediumSlateBlue;
-            txtFechaDesde.FlatStyle = FlatStyle.System;
-            txtFechaDesde.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtFechaDesde.Location = new Point(27, 23);
-            txtFechaDesde.Margin = new Padding(500);
-            txtFechaDesde.Name = "txtFechaDesde";
-            txtFechaDesde.Size = new Size(103, 22);
-            txtFechaDesde.TabIndex = 7;
-            txtFechaDesde.Text = "Fecha Desde";
-            txtFechaDesde.Click += label2_Click;
-            // 
             // txtPeriodoNoValido
             // 
             txtPeriodoNoValido.AutoSize = true;
-            txtPeriodoNoValido.BackColor = SystemColors.Control;
+            txtPeriodoNoValido.BackColor = Color.Transparent;
             txtPeriodoNoValido.ForeColor = SystemColors.Desktop;
-            txtPeriodoNoValido.Location = new Point(27, 128);
+            txtPeriodoNoValido.Location = new Point(27, 176);
             txtPeriodoNoValido.Name = "txtPeriodoNoValido";
             txtPeriodoNoValido.Size = new Size(220, 14);
             txtPeriodoNoValido.TabIndex = 8;
             txtPeriodoNoValido.Text = "*Ingrese un periodo de fechas valido";
             txtPeriodoNoValido.Visible = false;
             txtPeriodoNoValido.Click += txtPeriodoNoValido_Click;
+            // 
+            // txtFechaDesde
+            // 
+            txtFechaDesde.AutoSize = true;
+            txtFechaDesde.BackColor = Color.Transparent;
+            txtFechaDesde.ForeColor = Color.Beige;
+            txtFechaDesde.Location = new Point(27, 30);
+            txtFechaDesde.Name = "txtFechaDesde";
+            txtFechaDesde.Size = new Size(82, 14);
+            txtFechaDesde.TabIndex = 9;
+            txtFechaDesde.Text = "Fecha desde";
+            txtFechaDesde.Click += label1_Click_2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.ForeColor = Color.Beige;
+            label1.Location = new Point(27, 135);
+            label1.Name = "label1";
+            label1.Size = new Size(77, 14);
+            label1.TabIndex = 10;
+            label1.Text = "Fecha hasta";
+            label1.Click += label1_Click_3;
+            // 
+            // txtArchivoAExportar
+            // 
+            txtArchivoAExportar.AutoSize = true;
+            txtArchivoAExportar.BackColor = Color.Transparent;
+            txtArchivoAExportar.ForeColor = Color.AliceBlue;
+            txtArchivoAExportar.Location = new Point(27, 402);
+            txtArchivoAExportar.Name = "txtArchivoAExportar";
+            txtArchivoAExportar.Size = new Size(111, 14);
+            txtArchivoAExportar.TabIndex = 11;
+            txtArchivoAExportar.Text = "Archivo a generar";
+            // 
+            // cbArchivoAExportar
+            // 
+            cbArchivoAExportar.FormattingEnabled = true;
+            cbArchivoAExportar.Location = new Point(27, 419);
+            cbArchivoAExportar.Name = "cbArchivoAExportar";
+            cbArchivoAExportar.Size = new Size(121, 22);
+            cbArchivoAExportar.TabIndex = 12;
+            // 
+            // txtTipoReseña
+            // 
+            txtTipoReseña.AutoSize = true;
+            txtTipoReseña.BackColor = Color.Transparent;
+            txtTipoReseña.ForeColor = Color.AliceBlue;
+            txtTipoReseña.Location = new Point(27, 278);
+            txtTipoReseña.Name = "txtTipoReseña";
+            txtTipoReseña.Size = new Size(94, 14);
+            txtTipoReseña.TabIndex = 13;
+            txtTipoReseña.Text = "Tipo de reseña";
+            txtTipoReseña.Click += label2_Click_1;
+            // 
+            // cbTipoReseña
+            // 
+            cbTipoReseña.Location = new Point(27, 295);
+            cbTipoReseña.Name = "cbTipoReseña";
+            cbTipoReseña.Size = new Size(125, 22);
+            cbTipoReseña.TabIndex = 14;
+            cbTipoReseña.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // habilitarPantalla
             // 
@@ -141,14 +157,16 @@ namespace BonVino
             AutoSize = true;
             BackColor = Color.MediumPurple;
             BackgroundImage = Properties.Resources.modern_colorful_wavy_line_background_design_wave_curve_abstract_background_for_business_landing_page_flyers_website_banner_and_presentation_free_vector;
-            ClientSize = new Size(984, 961);
-            Controls.Add(txtPeriodoNoValido);
+            ClientSize = new Size(984, 689);
+            Controls.Add(cbTipoReseña);
+            Controls.Add(txtTipoReseña);
+            Controls.Add(cbArchivoAExportar);
+            Controls.Add(txtArchivoAExportar);
+            Controls.Add(label1);
             Controls.Add(txtFechaDesde);
-            Controls.Add(txtFechaHasta);
-            Controls.Add(timePickerFechaHasta);
             Controls.Add(timePickerFechaDesde);
-            Controls.Add(txtTipoDeArchivo);
-            Controls.Add(comboBox1);
+            Controls.Add(txtPeriodoNoValido);
+            Controls.Add(timePickerFechaHasta);
             Controls.Add(btnConfirmar);
             Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ActiveCaptionText;
@@ -157,7 +175,7 @@ namespace BonVino
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BonVino: Generar Ranking";
-            TransparencyKey = Color.Gray;
+            TransparencyKey = Color.Silver;
             Load += ventanaPrincipal_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -168,13 +186,15 @@ namespace BonVino
         #endregion
 
         private Button btnConfirmar;
-        private ComboBox comboBox1;
-        private Label txtTipoDeArchivo;
         private DateTimePicker timePickerFechaDesde;
         private DateTimePicker timePickerFechaHasta;
-        private Label txtFechaHasta;
-        private Label txtFechaDesde;
         private Label txtPeriodoNoValido;
+        private Label txtFechaDesde;
+        private Label label1;
+        private Label txtArchivoAExportar;
+        private ComboBox cbArchivoAExportar;
+        private Label txtTipoReseña;
+        private ComboBox cbTipoReseña;
     }
 
 

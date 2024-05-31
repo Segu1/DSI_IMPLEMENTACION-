@@ -13,11 +13,17 @@ namespace BonVino
 
         private void ventanaPrincipal_Load(object sender, EventArgs e)
         {
+            cbArchivoAExportar.Items.Add("Excel");
+            cbArchivoAExportar.Items.Add("Pantalla");
+            cbArchivoAExportar.Items.Add("PDF");
+            cbTipoReseña.Items.Add("Sommelier");
+            cbTipoReseña.Items.Add("Amigos");
+            cbTipoReseña.Items.Add("Normales");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-  
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -26,9 +32,9 @@ namespace BonVino
 
         public string GetSelectedComboBoxItem()
         {
-            if (comboBox1.SelectedItem != null)
+            if (cbArchivoAExportar.SelectedItem != null)
             {
-                return (String)comboBox1.SelectedItem;
+                return (String)cbArchivoAExportar.SelectedItem;
             }
             return null;
         }
@@ -75,11 +81,36 @@ namespace BonVino
                 txtPeriodoNoValido.Visible = true;
                 periodoActivo = false;
             }
-            else if(timePickerFechaHasta.Value >= timePickerFechaDesde.Value)
+            else if (timePickerFechaHasta.Value >= timePickerFechaDesde.Value)
             {
                 txtPeriodoNoValido.Visible = false;
                 periodoActivo = true;
             };
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
