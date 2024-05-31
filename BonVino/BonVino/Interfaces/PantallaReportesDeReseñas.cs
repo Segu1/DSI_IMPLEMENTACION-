@@ -6,10 +6,12 @@ namespace BonVino
     public partial class habilitarPantalla : Form
     {
         Boolean periodoValido;
-        public habilitarPantalla()
+        GestorReportesDeReseñas gestor;
+        public habilitarPantalla(GestorReportesDeReseñas Gestor)
         {
             InitializeComponent();
             Boolean periodoValido = false;
+            GestorReportesDeReseñas gestor = Gestor;
         }
 
         private void ventanaPrincipal_Load(object sender, EventArgs e)
@@ -80,9 +82,8 @@ namespace BonVino
             if (periodoValido)
             {
                 txtPeriodoNoValido.Visible = false;
-                Gestor.
-                
-                
+                gestor.setFechaHastaSeleccionada = timePickerFechaHasta.Value;
+
 
             }
             else {
