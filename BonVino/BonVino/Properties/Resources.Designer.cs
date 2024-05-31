@@ -59,5 +59,36 @@ namespace BonVino.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap modern_colorful_wavy_line_background_design_wave_curve_abstract_background_for_business_landing_page_flyers_website_banner_and_presentation_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("modern-colorful-wavy-line-background-design-wave-curve-abstract-background-for-bu" +
+                        "siness-landing-page-flyers-website-banner-and-presentation-free-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pawel_czerwinski_7gUb8q8MBDY_unsplash {
+            get {
+                object obj = ResourceManager.GetObject("pawel-czerwinski-7gUb8q8MBDY-unsplash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wine_4813260_1920 {
+            get {
+                object obj = ResourceManager.GetObject("wine-4813260_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
