@@ -73,6 +73,7 @@ namespace BonVino
             timePickerFechaHasta.Size = new Size(244, 21);
             timePickerFechaHasta.TabIndex = 5;
             timePickerFechaHasta.ValueChanged += timePicker_ValueChanged;
+
             // 
             // txtPeriodoNoValido
             // 
