@@ -50,6 +50,7 @@ namespace BonVino
             btnConfirmar.AutoSize = true;
             btnConfirmar.BackColor = Color.FromArgb(128, 128, 255);
             btnConfirmar.Cursor = Cursors.AppStarting;
+            btnConfirmar.Enabled = false;
             btnConfirmar.Location = new Point(27, 568);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(153, 47);
@@ -115,6 +116,7 @@ namespace BonVino
             // 
             txtArchivoAExportar.AutoSize = true;
             txtArchivoAExportar.BackColor = Color.Transparent;
+            txtArchivoAExportar.Enabled = false;
             txtArchivoAExportar.ForeColor = Color.AliceBlue;
             txtArchivoAExportar.Location = new Point(27, 402);
             txtArchivoAExportar.Name = "txtArchivoAExportar";
@@ -124,16 +126,19 @@ namespace BonVino
             // 
             // cbArchivoAExportar
             // 
+            cbArchivoAExportar.Enabled = false;
             cbArchivoAExportar.FormattingEnabled = true;
             cbArchivoAExportar.Location = new Point(27, 419);
             cbArchivoAExportar.Name = "cbArchivoAExportar";
             cbArchivoAExportar.Size = new Size(121, 22);
             cbArchivoAExportar.TabIndex = 12;
+            cbArchivoAExportar.SelectedIndexChanged += cbArchivoAExportar_SelectedIndexChanged;
             // 
             // txtTipoReseña
             // 
             txtTipoReseña.AutoSize = true;
             txtTipoReseña.BackColor = Color.Transparent;
+            txtTipoReseña.Enabled = false;
             txtTipoReseña.ForeColor = Color.AliceBlue;
             txtTipoReseña.Location = new Point(27, 278);
             txtTipoReseña.Name = "txtTipoReseña";
@@ -143,11 +148,13 @@ namespace BonVino
             // 
             // cbTipoReseña
             // 
+            cbTipoReseña.Enabled = false;
             cbTipoReseña.FormattingEnabled = true;
             cbTipoReseña.Location = new Point(27, 295);
             cbTipoReseña.Name = "cbTipoReseña";
             cbTipoReseña.Size = new Size(121, 22);
             cbTipoReseña.TabIndex = 14;
+            cbTipoReseña.SelectedIndexChanged += cbTipoReseña_SelectedIndexChanged_1;
             // 
             // habilitarPantalla
             // 

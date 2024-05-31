@@ -11,17 +11,35 @@ namespace BonVino.Gestor
     public class GestorReportesDeReseñas
     {
         private DateTime fechaDesdeSeleccionada;
-        private DateTime fechHastaSeleccionada;
+        private DateTime fechaHastaSeleccionada;
+        private string tipoReseñaSeleccionada;
+        private string tipoVisualizacionSeleccionada;
 
-        public GestorReportesDeReseñas()
-        {
 
-        }
+
 
         public DateTime getFechaDesdeSeleccionada { get { return fechaDesdeSeleccionada; } }
-        public DateTime setFechaHastaSeleccionada { set { fechHastaSeleccionada = value; } }
+
+        public void tomarFechaDesdeYHasta(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            this.fechaDesdeSeleccionada = fechaDesde;
+            this.fechaHastaSeleccionada = fechaHasta;
+        }
+
+        public void tomarTipoReseña(string tipoReseña)
+        {
+            this.tipoReseñaSeleccionada = tipoReseña;
+        }
+
+        public void tomarTipoVisualizacionReporte(string tipoVisualizacion){
+            this.tipoVisualizacionSeleccionada = tipoVisualizacion;
+        }
+
+        public DateTime getFechaHastaSeleccionada { get { return fechaHastaSeleccionada; } }
+
+        public string getTipoReseñaSeleccionada { get { return tipoReseñaSeleccionada; } }
+
+        public string getTipoVisualizacion { get { return tipoVisualizacionSeleccionada; } }
 
     }
-
-
 }

@@ -6,12 +6,13 @@ namespace BonVino
     public partial class habilitarPantalla : Form
     {
         Boolean periodoValido;
-        GestorReportesDeReseñas gestor;
-        public habilitarPantalla(GestorReportesDeReseñas Gestor)
+        GestorReportesDeReseñas gestorReportesDeReseña;
+        public habilitarPantalla()
         {
             InitializeComponent();
             Boolean periodoValido = false;
-            GestorReportesDeReseñas gestor = Gestor;
+            gestorReportesDeReseña = new GestorReportesDeReseñas();
+
         }
 
         private void ventanaPrincipal_Load(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace BonVino
         }
 
 
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
 
@@ -76,21 +77,7 @@ namespace BonVino
 
         }
 
-        private void timePicker_ValueChanged(object sender, EventArgs e)
-        {
-            periodoValido = validar_periodo(timePickerFechaDesde.Value, timePickerFechaHasta.Value);
-            if (periodoValido)
-            {
-                txtPeriodoNoValido.Visible = false;
-                gestor.setFechaHastaSeleccionada = timePickerFechaHasta.Value;
 
-
-            }
-            else {
-                txtPeriodoNoValido.Visible = true;
-            }
-
-        }
 
         private void txtPeriodoNoValido_Click(object sender, EventArgs e)
         {
@@ -110,5 +97,48 @@ namespace BonVino
         {
 
         }
+
+        private void timePicker_ValueChanged(object sender, EventArgs e)
+        {
+            periodoValido = validar_periodo(timePickerFechaDesde.Value, timePickerFechaHasta.Value);
+            if (periodoValido)
+            {
+                txtPeriodoNoValido.Visible = false;
+                gestorReportesDeReseña.tomarFechaDesdeYHasta(timePickerFechaDesde.Value, timePickerFechaHasta.Value);
+                cbTipoReseña.Enabled = true;
+                txtTipoReseña.Enabled = true;
+            }
+            else
+            {
+                txtPeriodoNoValido.Visible = true;
+                cbTipoReseña.Enabled = false;
+                txtTipoReseña.Enabled = false;
+            }
+
+        }
+
+        private void cbTipoReseña_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cbTipoReseña.SelectedItem != null)
+            {
+                string tipoReseña = cbTipoReseña.SelectedItem as string;
+                gestorReportesDeReseña.tomarTipoReseña(tipoReseña);
+                // MessageBox.Show("Tipo: " + gestorReportesDeReseña.getTipoReseñaSeleccionada + " Desde: " + gestorReportesDeReseña.getFechaDesdeSeleccionada.ToString() + "Hasta: " + gestorReportesDeReseña.getFechaHastaSeleccionada.ToString());
+                cbArchivoAExportar.Enabled = true;
+                txtArchivoAExportar.Enabled = true;
+            }
+        }
+
+        private void cbArchivoAExportar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbArchivoAExportar.SelectedItem != null)
+            {
+                string tipoArchivo = cbArchivoAExportar.SelectedItem as string;
+                gestorReportesDeReseña.tomarTipoVisualizacionReporte(tipoArchivo);
+                cbArchivoAExportar.Enabled = true;
+                txtArchivoAExportar.Enabled = true;
+            }
+        }
     }
 }
+
