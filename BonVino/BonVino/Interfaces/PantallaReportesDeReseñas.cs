@@ -6,6 +6,7 @@ namespace BonVino
     public partial class habilitarPantalla : Form
     {
         Boolean periodoValido;
+        Boolean confirmacion;
         GestorReportesDeReseñas gestorReportesDeReseña;
         public habilitarPantalla()
         {
@@ -45,8 +46,15 @@ namespace BonVino
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show("Confirmar generacion", "Alerta", MessageBoxButtons.OKCancel);
+            if (resultado == DialogResult.OK)
+            {
+                confirmacion = true;
+                gestorReportesDeReseña.tomarConfirmacion(confirmacion);
+            }
+            else {
 
-
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,6 +145,7 @@ namespace BonVino
                 gestorReportesDeReseña.tomarTipoVisualizacionReporte(tipoArchivo);
                 cbArchivoAExportar.Enabled = true;
                 txtArchivoAExportar.Enabled = true;
+                btnConfirmar.Enabled = true;
             }
         }
     }

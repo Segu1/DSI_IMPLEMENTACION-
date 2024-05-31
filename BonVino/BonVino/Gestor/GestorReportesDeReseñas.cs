@@ -14,6 +14,7 @@ namespace BonVino.Gestor
         private DateTime fechaHastaSeleccionada;
         private string tipoReseñaSeleccionada;
         private string tipoVisualizacionSeleccionada;
+        private bool confirmacion;
 
 
 
@@ -35,11 +36,17 @@ namespace BonVino.Gestor
             this.tipoVisualizacionSeleccionada = tipoVisualizacion;
         }
 
+        public void tomarConfirmacion(bool confirmado) {
+            this.confirmacion = confirmado;
+        }
+
         public DateTime getFechaHastaSeleccionada { get { return fechaHastaSeleccionada; } }
 
         public string getTipoReseñaSeleccionada { get { return tipoReseñaSeleccionada; } }
 
         public string getTipoVisualizacion { get { return tipoVisualizacionSeleccionada; } }
+
+        public bool getConfirmacion { get { return confirmacion;} }
 
     }
 }
