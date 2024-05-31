@@ -23,16 +23,19 @@ namespace BonVino.Entidades
             this.vino = vino;
         }
 
-        public string Comentario
-        {
-            get => comentario;
-            set => comentario = value;
-        }
+        public string getComentario { get { return comentario; } }
+        public string setComentario { set { comentario = value; } }
 
-        public bool EsPremium
-        {
-            get => esPremium;
-            set => esPremium = value;
-        }
+        public bool getEsPremium { get { return esPremium; } }
+        public bool setEsPremium { set { esPremium = value; } }
+        public DateTime getFechaReseña { get { return fechaReseña; } }
+        public DateTime setFechaReseña { set { fechaReseña = value; } }
+        public int getPuntaje { get { return puntaje; } }
+        public int setPuntaje { set { puntaje = value; } }
+        public Vino getVino { get { return vino; } }
+
+        // hace falta un set vino?
+        public Vino setVino { set { vino = value; } }
+
     }
 }

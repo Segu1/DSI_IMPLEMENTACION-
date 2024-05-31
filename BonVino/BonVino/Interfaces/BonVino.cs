@@ -54,7 +54,7 @@ namespace BonVino
 
         }
 
-        private void timePickerHasta_ValueChanged(object sender, EventArgs e)
+        private void timePicker_ValueChanged(object sender, EventArgs e)
         {
             if (timePickerFechaDesde.Value >= timePickerFechaHasta.Value)
             {
@@ -73,42 +73,7 @@ namespace BonVino
 
         }
 
-
-        private void timePickerFechaDesde_ValueChanged_1(object sender, EventArgs e)
-        {
-            if (timePickerFechaDesde.Value >= timePickerFechaHasta.Value)
-            {
-                txtPeriodoNoValido.Visible = true;
-                periodoActivo = false;
-            }
-            else if (timePickerFechaHasta.Value >= timePickerFechaDesde.Value)
-            {
-                txtPeriodoNoValido.Visible = false;
-                periodoActivo = true;
-            };
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtTipoReseña_Click(object sender, EventArgs e)
         {
 
         }

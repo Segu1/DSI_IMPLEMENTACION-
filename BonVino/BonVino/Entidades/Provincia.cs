@@ -14,10 +14,11 @@ namespace BonVino.Entidades
             this.region = region;
         }
 
-       public string getNombre { get { return nombre; } }
-       public List<Region> getRegion { get { return region; } }
+        public string getNombre { get { return nombre; } }
+        public string setNombre { set { nombre = value; } }
 
-       public string setNombre { set { nombre = value; } }
+        public List<Region> getRegion { get { return region; } }
+
 
     }
 }

@@ -20,23 +20,21 @@ namespace BonVino.Entidades
             this.reseñas = new List<Reseña>();
 
         }
-        public string Nombre
-        {
-            get => nombre;
-            set => nombre = value;
-        }
 
-        public DateTime FechaValidacion
-        {
-            get => fechaValidacion;
-            set => fechaValidacion = value;
-        }
+        public string getNombre { get { return nombre; } }
+        public string setNombre { set { nombre = value; } }
 
-        public void añadirReseña(Reseña rese)
-        {
-            reseñas.Add(rese);
-        }
+        public string getNotaPresentacion { get { return notaPresentacion; } }
+        public string setNotaPresentacion { set { notaPresentacion = value; } }
 
+        public DateTime getFechaValidacion { get { return fechaValidacion; } }
+        public DateTime setFechaValidacion { set { fechaValidacion = value; } }
+
+        public List<Reseña> GetReseñas { get { return reseñas; } }
+        public void setReseña(Reseña rese){ reseñas.Add(rese);}
+
+
+        //opcional
         public void removerReseña(Reseña rese)
         {
             reseñas.Remove(rese);

@@ -64,7 +64,7 @@ namespace BonVino
             timePickerFechaDesde.Name = "timePickerFechaDesde";
             timePickerFechaDesde.Size = new Size(244, 21);
             timePickerFechaDesde.TabIndex = 4;
-            timePickerFechaDesde.ValueChanged += timePickerFechaDesde_ValueChanged_1;
+            timePickerFechaDesde.ValueChanged += timePicker_ValueChanged;
             // 
             // timePickerFechaHasta
             // 
@@ -72,7 +72,7 @@ namespace BonVino
             timePickerFechaHasta.Name = "timePickerFechaHasta";
             timePickerFechaHasta.Size = new Size(244, 21);
             timePickerFechaHasta.TabIndex = 5;
-            timePickerFechaHasta.ValueChanged += timePickerHasta_ValueChanged;
+            timePickerFechaHasta.ValueChanged += timePicker_ValueChanged;
             // 
             // txtPeriodoNoValido
             // 
@@ -97,7 +97,6 @@ namespace BonVino
             txtFechaDesde.Size = new Size(82, 14);
             txtFechaDesde.TabIndex = 9;
             txtFechaDesde.Text = "Fecha desde";
-            txtFechaDesde.Click += label1_Click_2;
             // 
             // label1
             // 
@@ -109,7 +108,7 @@ namespace BonVino
             label1.Size = new Size(77, 14);
             label1.TabIndex = 10;
             label1.Text = "Fecha hasta";
-            label1.Click += label1_Click_3;
+            label1.Click += label1_Click_1;
             // 
             // txtArchivoAExportar
             // 
@@ -140,7 +139,7 @@ namespace BonVino
             txtTipoReseña.Size = new Size(94, 14);
             txtTipoReseña.TabIndex = 13;
             txtTipoReseña.Text = "Tipo de reseña";
-            txtTipoReseña.Click += label2_Click_1;
+            txtTipoReseña.Click += txtTipoReseña_Click;
             // 
             // cbTipoReseña
             // 
@@ -148,7 +147,6 @@ namespace BonVino
             cbTipoReseña.Name = "cbTipoReseña";
             cbTipoReseña.Size = new Size(125, 22);
             cbTipoReseña.TabIndex = 14;
-            cbTipoReseña.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // habilitarPantalla
             // 
