@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\gestor\\gestorreportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\gestor\\gestorreportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\bonvino\\interfaces\\pantallareportesderese\u00F1as.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
@@ -25,6 +17,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\pantallareportesderese\u00F1as.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\pantallareportesderese\u00F1as.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\gestor\\gestorreportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\gestor\\gestorreportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\seguy\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\entidades\\sommelier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "GestorReportesDeRese\u00F1as.cs",
               "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Gestor\\GestorReportesDeRese\u00F1as.cs",
               "RelativeDocumentMoniker": "BonVino\\Gestor\\GestorReportesDeRese\u00F1as.cs",
@@ -91,33 +91,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "PantallaReportesDeRese\u00F1as.Designer.cs",
               "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.Designer.cs",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.Designer.cs",
               "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.Designer.cs",
               "RelativeToolTip": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.Designer.cs",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAswEsAAABJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T19:22:08.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PantallaReportesDeRese\u00F1as.cs",
               "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",
-              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs*",
-              "RelativeToolTip": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs*",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAWwDgAAABTAAAA",
+              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",
+              "RelativeToolTip": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",
+              "ViewState": "AQIAAIkAAAAAAAAAAAAAwJ8AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T19:19:33.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PantallaReportesDeRese\u00F1as.resx",
               "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.resx",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.resx",
@@ -129,28 +129,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PantallaReportesDeRese\u00F1as.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",
-              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs [Dise\u00F1o]",
+              "RelativeToolTip": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T18:23:51.382Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\Program.cs",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\Program.cs",
               "ToolTip": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\Program.cs",
               "RelativeToolTip": "BonVino\\Interfaces\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T19:07:09.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T19:07:09.364Z"
             },
             {
               "$type": "Document",

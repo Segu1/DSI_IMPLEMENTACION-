@@ -13,6 +13,7 @@ namespace BonVino
             InitializeComponent();
             Boolean periodoValido = false;
             gestorReportesDeReseña = new GestorReportesDeReseñas();
+            timePickerFechaDesde.Focus();
 
         }
 
@@ -52,7 +53,8 @@ namespace BonVino
                 confirmacion = true;
                 gestorReportesDeReseña.tomarConfirmacion(confirmacion);
             }
-            else {
+            else
+            {
 
             }
         }
@@ -70,20 +72,13 @@ namespace BonVino
             return null;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-
+            timePickerFechaHasta.Focus();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
 
 
@@ -93,11 +88,12 @@ namespace BonVino
         }
         private void txtTipoReseña_Click(object sender, EventArgs e)
         {
-
+            cbTipoReseña.Focus();
         }
 
         private void txtFechaDesde_Click(object sender, EventArgs e)
         {
+            timePickerFechaDesde.Focus();
 
         }
 
@@ -147,6 +143,21 @@ namespace BonVino
                 txtArchivoAExportar.Enabled = true;
                 btnConfirmar.Enabled = true;
             }
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTipoReseña_Click_1(object sender, EventArgs e)
+        {
+            cbTipoReseña.Focus();
+        }
+
+        private void txtArchivoAExportar_Click(object sender, EventArgs e)
+        {
+            cbArchivoAExportar.Focus();
         }
     }
 }
