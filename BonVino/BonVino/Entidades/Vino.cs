@@ -76,12 +76,17 @@ namespace BonVino.Entidades
             {
                 return -1; 
             }
-            }
-
-        public List<string> obtenerDatosBodegaRegionPais()
-        {
-            
         }
+
+        //public List<string> obtenerDatosBodegaRegionPais()
+        //{
+        //    this.getNombre;
+        //    this.getPrecioARS;
+        //    this.calcularPromedioDeReseñasEnPeriodo();
+
+
+            
+        //}
 
 
 

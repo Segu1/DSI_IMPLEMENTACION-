@@ -22,9 +22,8 @@ namespace BonVino.Entidades
         public string getNombre { get { return nombre; } }
         public string setNombre { set { nombre = value; } }
         
-        public string getDatosPais(Region reg) {
+        public string getDatosPais(Provincia prov) {
             string nombrePais = ""; //situacion que nunca va a ocurrir
-
 
             foreach (Provincia p in provincia)
             {
@@ -33,7 +32,6 @@ namespace BonVino.Entidades
                     nombrePais = this.nombre;
                     break;
                 };
-
             }
             return nombrePais;
         }

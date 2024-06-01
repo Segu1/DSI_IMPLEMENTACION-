@@ -64,7 +64,16 @@ namespace BonVino.Gestor
                 float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
                 if (promedioDeReseñasEnPeriodo != -1)
                 {
+
                     List<(string, float, float, string, string, string, List<(string, float)>)> datosDeVinosConPromedio = new List<(string, float, float, string, string, string, List<(string, float)>)>();
+                
+                    //[ (  (ombre, prom, ())  ,  (vino2)  ]
+
+                    //(string bodega, string region, string pais) = vin.obtenerDatosBodegaRegionPais();
+
+
+                    datosDeVinosConPromedio.Add((vin.getNombre, promedioDeReseñasEnPeriodo,  ));
+
 
 
 

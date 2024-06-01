@@ -8,23 +8,23 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\seguy\\.nuget\\packages\\": {},
+    "C:\\Users\\Esmeralda\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\BonVino.csproj",
+      "projectUniqueName": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\BonVino.csproj",
       "projectName": "BonVino",
-      "projectPath": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\BonVino.csproj",
-      "packagesPath": "C:\\Users\\seguy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seguy\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\obj\\",
+      "projectPath": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\BonVino.csproj",
+      "packagesPath": "C:\\Users\\Esmeralda\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\seguy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Esmeralda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
