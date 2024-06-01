@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BonVino.Entidades;
+
 
 namespace BonVino.Entidades
 {
@@ -20,7 +22,21 @@ namespace BonVino.Entidades
         public string getNombre { get { return nombre; } }
         public string setNombre { set { nombre = value; } }
         
+        public string getDatosPais(Region reg) {
+            string nombrePais = ""; //situacion que nunca va a ocurrir
 
+
+            foreach (Provincia p in provincia)
+            {
+                if(p.getNombre == prov.getNombre)
+                {
+                    nombrePais = this.nombre;
+                    break;
+                };
+
+            }
+            return nombrePais;
+        }
 
     }
 }

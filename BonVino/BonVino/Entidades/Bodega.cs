@@ -16,7 +16,7 @@ namespace BonVino.Entidades
         private int periodoActualizacion; //revisar si el periodo es en dias/meses/años
         private RegionVitivinicola regionVitivinicola;
 
-        public Bodega(string descripcion, string historia, string nombre, 
+        public Bodega(string descripcion, string historia, string nombre,
             string coordenadasUbicacion, int periodoActualizacion, RegionVitivinicola regionVitivinicola)
         {
             this.descripcion = descripcion;
@@ -43,6 +43,10 @@ namespace BonVino.Entidades
 
         //hace falta un set?
         public RegionVitivinicola setRegionVitivinicola { set { regionVitivinicola = value; } }
+
+        public List<string> getDatosBodega{
+
+};
 
     }
 }

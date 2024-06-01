@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BonVino.Entidades;
 using BonVino.Interfaces;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -15,9 +17,14 @@ namespace BonVino.Gestor
         private string tipoReseñaSeleccionada;
         private string tipoVisualizacionSeleccionada;
         private bool confirmacion;
+        private PantallaReportesDeReseñas pantallaReportesDeReseñas;
+        private List<Vino> vinos;
 
 
-
+        public GestorReportesDeReseñas(PantallaReportesDeReseñas pantallaReportesDeReseñas)
+        {
+            this.pantallaReportesDeReseñas = pantallaReportesDeReseñas;
+        }
 
         public DateTime getFechaDesdeSeleccionada { get { return fechaDesdeSeleccionada; } }
 
@@ -32,11 +39,13 @@ namespace BonVino.Gestor
             this.tipoReseñaSeleccionada = tipoReseña;
         }
 
-        public void tomarTipoVisualizacionReporte(string tipoVisualizacion){
+        public void tomarTipoVisualizacionReporte(string tipoVisualizacion)
+        {
             this.tipoVisualizacionSeleccionada = tipoVisualizacion;
         }
 
-        public void tomarConfirmacion(bool confirmado) {
+        public void tomarConfirmacion(bool confirmado)
+        {
             this.confirmacion = confirmado;
         }
 
@@ -46,7 +55,23 @@ namespace BonVino.Gestor
 
         public string getTipoVisualizacion { get { return tipoVisualizacionSeleccionada; } }
 
-        public bool getConfirmacion { get { return confirmacion;} }
+        public bool getConfirmacion { get { return confirmacion; } }
+
+        public void buscarVinosConReseñasEnPeriodo()
+        {
+            foreach (Vino vin in vinos)
+            {
+                float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
+                if (promedioDeReseñasEnPeriodo != -1)
+                {
+                    List<(string, float, float, string, string, string, List<(string, float)>)> datosDeVinosConPromedio = new List<(string, float, float, string, string, string, List<(string, float)>)>();
+
+
+
+                    //List<(nombre string, promedio float, precio float, nombreBodega string, NombrePais string, Nombrregion string, varietales List<string>)>
+                }
+            }
+        }
 
     }
 }

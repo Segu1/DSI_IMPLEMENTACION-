@@ -10,8 +10,10 @@ namespace BonVino.Entidades
         private string nombre;
         private Bodega bodega;
         private float precioARS;
-        private List<Reseña> reseñas;
+        private List<Reseña> reseñas; 
         private List<Varietal> varietal;
+        private int añada;
+        private DateTime fechaActualizacion;
 
         public Vino(string nombre, Bodega bodega, float precioARS, List<Varietal> varietal)
         {
@@ -28,6 +30,8 @@ namespace BonVino.Entidades
 
         public float getPrecioARS  { get { return precioARS; } }
         public float setPrecioARS { set { precioARS = value; } }
+
+        
 
         public void agregarReseña(Reseña res)
         {
@@ -48,6 +52,39 @@ namespace BonVino.Entidades
         {
             varietal.Remove(var);
         }
+
+
+
+        public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
+        {
+            float contador = 0;
+            float acumulador = 0;
+            foreach (Reseña res in reseñas) {
+                if(res.estaEnPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada) && res.sosDeSommelier())
+                {
+                    contador++;
+                    acumulador += res.getPuntaje;
+                };
+            
+            }
+
+            if (contador > 0)
+            {
+                return (acumulador / contador);
+            }
+            else
+            {
+                return -1; 
+            }
+            }
+
+        public List<string> obtenerDatosBodegaRegionPais()
+        {
+            
+        }
+
+
+
 
     }
 }

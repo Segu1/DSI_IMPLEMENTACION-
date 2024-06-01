@@ -2,7 +2,7 @@
 
 namespace BonVino
 {
-    partial class habilitarPantalla
+    partial class PantallaReportesDeReseñas
     {
         /// <summary>
         ///  Required designer variable.
@@ -32,7 +32,7 @@ namespace BonVino
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(habilitarPantalla));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaReportesDeReseñas));
             btnConfirmar = new Button();
             timePickerFechaDesde = new DateTimePicker();
             timePickerFechaHasta = new DateTimePicker();
@@ -71,15 +71,16 @@ namespace BonVino
             timePickerFechaDesde.Name = "timePickerFechaDesde";
             timePickerFechaDesde.Size = new Size(244, 21);
             timePickerFechaDesde.TabIndex = 4;
-            timePickerFechaDesde.ValueChanged += timePicker_ValueChanged;
+            timePickerFechaDesde.ValueChanged += timePickerDesde_ValueChanged;
             // 
             // timePickerFechaHasta
             // 
+            timePickerFechaHasta.Enabled = false;
             timePickerFechaHasta.Location = new Point(27, 115);
             timePickerFechaHasta.Name = "timePickerFechaHasta";
             timePickerFechaHasta.Size = new Size(244, 21);
             timePickerFechaHasta.TabIndex = 5;
-            timePickerFechaHasta.ValueChanged += timePicker_ValueChanged;
+            timePickerFechaHasta.ValueChanged += timePickerHasta_ValueChanged;
             // 
             // txtPeriodoNoValido
             // 
@@ -137,6 +138,7 @@ namespace BonVino
             // 
             // cbArchivoAExportar
             // 
+            cbArchivoAExportar.DropDownStyle = ComboBoxStyle.DropDownList;
             cbArchivoAExportar.Enabled = false;
             cbArchivoAExportar.FormattingEnabled = true;
             cbArchivoAExportar.Location = new Point(27, 296);
@@ -160,6 +162,7 @@ namespace BonVino
             // 
             // cbTipoReseña
             // 
+            cbTipoReseña.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTipoReseña.Enabled = false;
             cbTipoReseña.FormattingEnabled = true;
             cbTipoReseña.Location = new Point(27, 213);
@@ -177,14 +180,14 @@ namespace BonVino
             label1.TabIndex = 15;
             label1.Click += label1_Click_2;
             // 
-            // habilitarPantalla
+            // PantallaReportesDeReseñas
             // 
             AutoScaleDimensions = new SizeF(8F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.GhostWhite;
             BackgroundImage = Properties.Resources.modern_colorful_wavy_line_background_design_wave_curve_abstract_background_for_business_landing_page_flyers_website_banner_and_presentation_free_vector;
-            ClientSize = new Size(1016, 543);
+            ClientSize = new Size(998, 555);
             Controls.Add(label1);
             Controls.Add(cbTipoReseña);
             Controls.Add(txtTipoReseña);
@@ -199,7 +202,7 @@ namespace BonVino
             Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.ControlLightLight;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "habilitarPantalla";
+            Name = "PantallaReportesDeReseñas";
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BonVino: Generar Ranking";

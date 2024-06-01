@@ -11,7 +11,7 @@ namespace BonVino.Entidades
         private string comentario;
         private bool esPremium;
         private DateTime fechaReseña;
-        private int puntaje;
+        private float puntaje;
         private Vino vino;
 
         public Reseña(string comentario, bool premium, DateTime fecha, int puntajerec, Vino vino)
@@ -36,6 +36,19 @@ namespace BonVino.Entidades
 
         // hace falta un set vino?
         public Vino setVino { set { vino = value; } }
+
+        public bool estaEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
+        {
+            return (this.fechaReseña >= fechaDesdeSeleccionada && this.fechaReseña <= fechaHastaSeleccionada);
+           
+        }
+
+        public bool sosDeSommelier()
+        {
+            return (this.esPremium);
+        }
+
+
 
     }
 }

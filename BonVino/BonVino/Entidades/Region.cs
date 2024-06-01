@@ -24,5 +24,9 @@ namespace BonVino.Entidades
         public string getDescripcion { get { return descripcion; } }
         public string setDescripcion { set { descripcion = value; } }
 
+        public List<string> getDatosRegion() { 
+            
+        }
+
     }
 }
