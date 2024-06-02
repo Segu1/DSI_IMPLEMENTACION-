@@ -30,8 +30,8 @@ namespace BonVino.Entidades
         public bool setEsPremium { set { esPremium = value; } }
         public DateTime getFechaReseña { get { return fechaReseña; } }
         public DateTime setFechaReseña { set { fechaReseña = value; } }
-        public int getPuntaje { get { return puntaje; } }
-        public int setPuntaje { set { puntaje = value; } }
+        public float getPuntaje { get { return puntaje; } }
+        public float setPuntaje { set { puntaje = value; } }
         public Vino getVino { get { return vino; } }
 
         // hace falta un set vino?

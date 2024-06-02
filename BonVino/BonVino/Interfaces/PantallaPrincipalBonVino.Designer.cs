@@ -35,9 +35,10 @@
             // btnGenerarRanking
             // 
             btnGenerarRanking.AccessibleRole = AccessibleRole.Caret;
-            btnGenerarRanking.Location = new Point(544, 364);
+            btnGenerarRanking.Location = new Point(344, 422);
+            btnGenerarRanking.Margin = new Padding(3, 4, 3, 4);
             btnGenerarRanking.Name = "btnGenerarRanking";
-            btnGenerarRanking.Size = new Size(166, 61);
+            btnGenerarRanking.Size = new Size(190, 81);
             btnGenerarRanking.TabIndex = 0;
             btnGenerarRanking.Text = "Generar Ranking";
             btnGenerarRanking.UseVisualStyleBackColor = true;
@@ -46,11 +47,12 @@
             // PantallaPrincipalBonVino
             // 
             AcceptButton = btnGenerarRanking;
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(btnGenerarRanking);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "PantallaPrincipalBonVino";
             Text = "PantallaPrincipalBonVino";
             Load += PantallaPrincipalBonVino_Load;

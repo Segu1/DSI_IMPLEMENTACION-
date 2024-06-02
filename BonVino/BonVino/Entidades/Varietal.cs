@@ -24,7 +24,10 @@ namespace BonVino.Entidades
 
         public string getPorcentajeComposion { get { return descripcion; } }
         public float setPorcentajeComposicion { set { porcentajeComposion = value; } }
-        
 
+        public (string, float) getDatosVarietal()
+        {
+            return (this.getDescripcion, this.porcentajeComposion);
+        }
     }
 }

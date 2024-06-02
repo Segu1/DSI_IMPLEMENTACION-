@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,18 +79,28 @@ namespace BonVino.Entidades
             }
         }
 
-        //public List<string> obtenerDatosBodegaRegionPais()
-        //{
-        //    this.getNombre;
-        //    this.getPrecioARS;
-        //    this.calcularPromedioDeReseñasEnPeriodo();
+        public (string, float, string, string,string, List<(string, float)>) obtenerTodosLosDatos()
+        {
+            (string nombreBodega, string nombreRegion, string nombrePais) = this.obtenerDatosBodegaRegionPais();
 
+            return (this.getNombre, this.getPrecioARS, nombreBodega, nombreRegion, nombrePais, this.obtenerDatosVarietal());
+        }
 
-            
-        //}
+        public (string, string, string) obtenerDatosBodegaRegionPais()
+        {
+            return this.bodega.getDatosBodega();
 
+        }
 
+        public List<(string, float)> obtenerDatosVarietal()
+        {
+            List<(string, float)> varietales = [];
 
-
+            foreach (Varietal var in this.varietal)
+            {
+                varietales.Add(var.getDatosVarietal());
+            }
+            return varietales;
+        }
     }
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+6gFCT5pUTw=",
+  "dgSpecHash": "lefbXI1YmXc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\BonVino.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Esmeralda\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

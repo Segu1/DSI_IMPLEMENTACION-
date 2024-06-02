@@ -20,7 +20,6 @@ C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\ne
 C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.runtimeconfig.json
 C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.dll
 C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\BonVino.pdb
-C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.habilitarPantalla.resources
 C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.Properties.Resources.resources
 C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.csproj.GenerateResource.cache
 C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.GeneratedMSBuildEditorConfig.editorconfig
@@ -35,3 +34,8 @@ C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\ne
 C:\Users\Esmeralda\Source\Repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\ref\BonVino.dll
 C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.Interfaces.PantallaPrincipalBonVino.resources
 C:\Users\seguy\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.PantallaReportesDeReseñas.resources
+C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.csproj.AssemblyReference.cache
+C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.Interfaces.PantallaPrincipalBonVino.resources
+C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.PantallaReportesDeReseñas.resources
+C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.csproj.Up2Date

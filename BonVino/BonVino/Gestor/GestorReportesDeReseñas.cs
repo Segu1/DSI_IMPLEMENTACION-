@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using BonVino.Entidades;
 using BonVino.Interfaces;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Newtonsoft.Json;
 
 namespace BonVino.Gestor
 {
@@ -19,7 +20,7 @@ namespace BonVino.Gestor
         private bool confirmacion;
         private PantallaReportesDeReseñas pantallaReportesDeReseñas;
         private List<Vino> vinos;
-
+        private List<(string, float, string, string, string, List<(string, float)>, float)> datosDeVinosConPromedio;
 
         public GestorReportesDeReseñas(PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
@@ -47,6 +48,8 @@ namespace BonVino.Gestor
         public void tomarConfirmacion(bool confirmado)
         {
             this.confirmacion = confirmado;
+            buscarVinosConReseñasEnPeriodo();
+            ordenarVinosPorPromedioYFiltrarPrimeros10();
         }
 
         public DateTime getFechaHastaSeleccionada { get { return fechaHastaSeleccionada; } }
@@ -59,28 +62,45 @@ namespace BonVino.Gestor
 
         public void buscarVinosConReseñasEnPeriodo()
         {
+
+            // carga vinos al gestor desde un json
+
+            //CAMBIAR A RUTA RELATIVAAAAAAAAAAAAAAAAAAAA!
+            string filePath = "..\\..\\..\\Resources\\jsonVinos.json";
+            string jsonContent = File.ReadAllText(filePath);
+            // se convierte el string JSON a una lista de objetos de tipo "Vino"
+            vinos = JsonConvert.DeserializeObject<List<Vino>>(jsonContent);
+
             foreach (Vino vin in vinos)
             {
                 float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
-                if (promedioDeReseñasEnPeriodo != -1)
-                {
+                if (promedioDeReseñasEnPeriodo == -1) { return; }
 
-                    List<(string, float, float, string, string, string, List<(string, float)>)> datosDeVinosConPromedio = new List<(string, float, float, string, string, string, List<(string, float)>)>();
-                
-                    //[ (  (ombre, prom, ())  ,  (vino2)  ]
-
-                    //(string bodega, string region, string pais) = vin.obtenerDatosBodegaRegionPais();
-
-
-                    datosDeVinosConPromedio.Add((vin.getNombre, promedioDeReseñasEnPeriodo,  ));
-
-
-
-
-                    //List<(nombre string, promedio float, precio float, nombreBodega string, NombrePais string, Nombrregion string, varietales List<string>)>
-                }
+                (string nombre, float precioARS, string bodega, string region, string pais, List<(string tipoUva, float porcentaje)> varietales) = vin.obtenerTodosLosDatos();
+                datosDeVinosConPromedio.Add((nombre, precioARS, bodega, region, pais, varietales, promedioDeReseñasEnPeriodo));
+               
             }
         }
+        public void ordenarVinosPorPromedioYFiltrarPrimeros10() 
+        {
+            //datosDeVinosConPromedio.Sort((x, y) => x.Item7.CompareTo(y.Item7));
+            //datosDeVinosConPromedio.RemoveRange(10, this.datosDeVinosConPromedio.Count - 10);
+            this.mostrarDatos();
+        }
+        public void mostrarDatos()
+        {
+            this.buscarVinosConReseñasEnPeriodo();
+            string resultado = "";
 
+            //ERROR AQUI
+            foreach ( (string, float, string, string, string, List<(string, float)>, float) item in datosDeVinosConPromedio)
+            {
+                resultado += item.Item1;
+            }
+
+            
+            pantallaReportesDeReseñas.mostrarDatos(resultado);
+
+        }
     }
 }

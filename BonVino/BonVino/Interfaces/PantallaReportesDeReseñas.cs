@@ -200,6 +200,10 @@ namespace BonVino
             }
         }
 
+        public void mostrarDatos( string algo)
+        {
+            MessageBox.Show(algo);
+        }
         private void timePickerHasta_ValueChanged(object sender, EventArgs e)
         {
             periodoValido = validar_periodo(timePickerFechaDesde.Value, timePickerFechaHasta.Value);
