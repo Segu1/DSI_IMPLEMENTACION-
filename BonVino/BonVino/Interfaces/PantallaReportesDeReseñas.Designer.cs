@@ -207,6 +207,7 @@ namespace BonVino
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BonVino: Generar Ranking";
             TransparencyKey = Color.IndianRed;
+            WindowState = FormWindowState.Maximized;
             Load += ventanaPrincipal_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -55,6 +55,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "PantallaPrincipalBonVino";
             Text = "PantallaPrincipalBonVino";
+            WindowState = FormWindowState.Maximized;
             Load += PantallaPrincipalBonVino_Load;
             ResumeLayout(false);
         }

@@ -39,3 +39,4 @@ C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\ne
 C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.PantallaReportesDeReseñas.resources
 C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.csproj.Up2Date
+C:\Users\Esmeralda\source\repos\DSI_IMPLEMENTACION-\BonVino\BonVino\obj\Debug\net8.0-windows\BonVino.Interfaces.InterfazExcel.resources

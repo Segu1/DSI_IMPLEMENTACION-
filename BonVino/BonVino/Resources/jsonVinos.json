@@ -253,10 +253,10 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Torrontés",
-        "porcentajeComposicion": 94
-      }
+        {
+            "descripcion": "Torrontés",
+            "porcentajeComposicion": 94
+        }
     ],
     "reseña": [
       {

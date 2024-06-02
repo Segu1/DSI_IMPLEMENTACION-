@@ -62,6 +62,7 @@ namespace BonVino.Gestor
             this.confirmacion = confirmado;
             buscarVinosConReseñasEnPeriodo();
             ordenarVinosPorPromedioYFiltrarPrimeros10();
+            generarArchivo();
         }
 
         public DateTime getFechaHastaSeleccionada { get { return fechaHastaSeleccionada; } }
@@ -96,12 +97,11 @@ namespace BonVino.Gestor
         }
         public void ordenarVinosPorPromedioYFiltrarPrimeros10() 
         {
-            datosDeVinosConPromedio.Sort((x, y) => x.Item7.CompareTo(y.Item7));
+            datosDeVinosConPromedio.Sort((x, y) => y.Item7.CompareTo(x.Item7));
             if(datosDeVinosConPromedio.Count > 10)
             {
                 datosDeVinosConPromedio.RemoveRange(10, this.datosDeVinosConPromedio.Count - 10);
             }
-            generarArchivo();
         }
         public void generarArchivo()
         {
