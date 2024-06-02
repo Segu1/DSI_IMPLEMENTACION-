@@ -3,7 +3,7 @@
   "nombre": "Cabernet Sauvignon Reserva",
   "precioARS": 1400.75,
   "añada": 2017,
-  "fechaActualizacion": "2024-05-01T00:00:00",
+  "fechaActualizacion": "05/01/2024 00:00:00 PM",
   "imagenEtiqueta": "url_de_la_imagen",
   "notaDeCataBodega": 4.7,
   "bodega": {
@@ -33,13 +33,13 @@
   ],
   "reseña": [
     {
-      "fechaReseña": "2023-11-22T00:00:00",
+      "fechaReseña": "11/22/2023 00:00:00 PM",
       "puntaje": 95,
       "comentario": "Vino con taninos bien marcados y notas a madera.",
       "esPremium": true
     }, 
     {
-      "fechaReseña": "2024-05-22T00:00:00",
+      "fechaReseña": "05/22/2024 00:00:00 PM",
       "puntaje": 85,
       "comentario": "Vino elegante y potente para ocaciones especiales.",
       "esPremium": true
@@ -51,7 +51,7 @@
   "nombre": "Syrah Gran Reserva",
   "precioARS": 1600.00,
   "añada": 2019,
-  "fechaActualizacion": "2024-04-15T00:00:00",
+  "fechaActualizacion": "04/15/2024 00:00:00 PM",
   "imagenEtiqueta": "url_de_la_imagen",
   "notaDeCataBodega": 4.8,
   "bodega": {
@@ -77,12 +77,13 @@
   ],
   "reseña": [
     {
-      "fechaReseña": "2023-12-05T00:00:00",
+      "fechaReseña": "12/05/2023 00:00:00 PM",
       "puntaje": 93,
       "comentario": "Excelente estructura y notas especiadas.",
       "esPremium": true
-    },    {
-      "fechaReseña": "2024-05-22T00:00:00",
+    },
+    {
+      "fechaReseña": "05/22/2024 00:00:00 PM",
       "puntaje": 80,
       "comentario": "Vino con taninos bien marcados y especiado.",
       "esPremium": true
@@ -94,7 +95,7 @@
   "nombre": "Chardonnay Clásico",
   "precioARS": 900.00,
   "añada": 2020,
-  "fechaActualizacion": "2024-03-30T00:00:00",
+  "fechaActualizacion": "03/30/2024 00:00:00 PM",
   "imagenEtiqueta": "url_de_la_imagen",
   "notaDeCataBodega": 4.2,
   "bodega": {
@@ -121,17 +122,16 @@
       "descripcion": "Bonarda",
       "porcentajeComposicion": 80
     }
-    
   ],
   "reseña": [
     {
-      "fechaReseña": "2023-10-20T00:00:00",
+      "fechaReseña": "10/20/2023 00:00:00 PM",
       "puntaje": 88,
       "comentario": "Refrescante, con notas cítricas y un toque de roble.",
       "esPremium": false
     },   
     {
-      "fechaReseña": "2024-05-22T00:00:00",
+      "fechaReseña": "05/22/2024 00:00:00 PM",
       "puntaje": 90,
       "comentario": "Vino pastoso y robusto.",
       "esPremium": true
@@ -143,7 +143,7 @@
   "nombre": "Merlot Reserva",
   "precioARS": 1100.25,
   "añada": 2016,
-  "fechaActualizacion": "2024-02-28T00:00:00",
+  "fechaActualizacion": "02/28/2024 00:00:00 PM",
   "imagenEtiqueta": "url_de_la_imagen",
   "notaDeCataBodega": 4.3,
   "bodega": {
@@ -169,13 +169,13 @@
   ],
   "reseña": [
     {
-      "fechaReseña": "2024-01-12T00:00:00",
+      "fechaReseña": "01/12/2024 00:00:00 PM",
       "puntaje": 89,
       "comentario": "Suave y elegante, con notas de cereza.",
       "esPremium": false
     },
     {
-      "fechaReseña": "2024-05-22T00:00:00",
+      "fechaReseña": "05/22/2024 00:00:00 PM",
       "puntaje": 90,
       "comentario": "Vino con taninos bien marcados y notas a madera.",
       "esPremium": true
@@ -187,7 +187,7 @@
   "nombre": "Pinot Noir Clásico",
   "precioARS": 1300.00,
   "añada": 2021,
-  "fechaActualizacion": "2024-05-10T00:00:00",
+  "fechaActualizacion": "05/10/2024 00:00:00 PM",
   "imagenEtiqueta": "url_de_la_imagen",
   "notaDeCataBodega": 4.6,
   "bodega": {
@@ -217,468 +217,457 @@
   ],
   "reseña": [
     {
-      "fechaReseña": "2024-03-15T00:00:00",
+      "fechaReseña": "03/15/2024 00:00:00 PM",
       "puntaje": 91,
       "comentario": "Elegante, con notas de frutas rojas y especias.",
       "esPremium": true
     },
     {
-      "fechaReseña": "2024-05-22T00:00:00",
+      "fechaReseña": "05/22/2024 00:00:00 PM",
       "puntaje": 90,
       "comentario": "Vino generoso e intenso.",
       "esPremium": true
     }
   ]
 },
-
-{
-  "nombre": "Torrontés Especial",
-  "precioARS": 800.50,
-  "añada": 2019,
-  "fechaActualizacion": "2024-04-01T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.4,
-  "bodega": {
-    "nombre": "Bodega del Norte",
-    "descripcion": "Especialistas en vinos blancos y frescos.",
-    "periodoActualizacion": "Trimestral",
-    "regionVitivinicola": {
-      "nombre": "Salta",
-      "descripcion": "Región famosa por sus Torrontés aromáticos.",
-      "provincia": {
+  {
+    "nombre": "Torrontés Especial",
+    "precioARS": 800.50,
+    "añada": 2019,
+    "fechaActualizacion": "04/01/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.4,
+    "bodega": {
+      "nombre": "Bodega del Norte",
+      "descripcion": "Especialistas en vinos blancos y frescos.",
+      "periodoActualizacion": "Trimestral",
+      "regionVitivinicola": {
         "nombre": "Salta",
-        "pais": {
-          "nombre": "Argentina"
+        "descripcion": "Región famosa por sus Torrontés aromáticos.",
+        "provincia": {
+          "nombre": "Salta",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
-  },
-  "varietal": [
-    {
-      "descripcion": "Torrontés",
-      "porcentajeComposicion": 94
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-02-20T00:00:00",
-      "puntaje": 87,
-      "comentario": "Aromático y fresco, ideal para el verano.",
-      "esPremium": false
     },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 94,
-      "comentario": "Dulce y suave para acompañar un postre.",
-      "esPremium": true
-    }
-  ]
-},
-
-{
-  "nombre": "Malbec Joven",
-  "precioARS": 700.00,
-  "añada": 2022,
-  "fechaActualizacion": "2024-05-05T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.0,
-  "bodega": {
-    "nombre": "Bodega del Sol",
-    "descripcion": "Pequeña bodega con vinos jóvenes y frescos.",
-    "periodoActualizacion": "Mensual",
-    "regionVitivinicola": {
-      "nombre": "Mendoza",
-      "descripcion": "La región más importante de Argentina para Malbec.",
-      "provincia": {
+    "varietal": [
+      {
+        "descripcion": "Torrontés",
+        "porcentajeComposicion": 94
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "02/20/2024 00:00:00 PM",
+        "puntaje": 87,
+        "comentario": "Aromático y fresco, ideal para el verano.",
+        "esPremium": false
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 94,
+        "comentario": "Dulce y suave para acompañar un postre.",
+        "esPremium": true
+      }
+    ]
+  },
+  {
+    "nombre": "Malbec Joven",
+    "precioARS": 700.00,
+    "añada": 2022,
+    "fechaActualizacion": "05/05/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.0,
+    "bodega": {
+      "nombre": "Bodega del Sol",
+      "descripcion": "Pequeña bodega con vinos jóvenes y frescos.",
+      "periodoActualizacion": "Mensual",
+      "regionVitivinicola": {
         "nombre": "Mendoza",
-        "pais": {
-          "nombre": "Argentina"
+        "descripcion": "La región más importante de Argentina para Malbec.",
+        "provincia": {
+          "nombre": "Mendoza",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
+    },
+    "varietal": [
+      {
+        "descripcion": "Malbec",
+        "porcentajeComposicion": 97
+      },
+      {
+        "descripcion": "Pinot noir",
+        "porcentajeComposicion": 89
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "04/25/2024 00:00:00 PM",
+        "puntaje": 85,
+        "comentario": "Fresco y afrutado, perfecto para diario.",
+        "esPremium": false
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 90,
+        "comentario": "Robusto y con cuerpo para acompañar carnes rojas.",
+        "esPremium": true
+      }
+    ]
   },
-  "varietal": [
-    {
-      "descripcion": "Malbec",
-      "porcentajeComposicion": 97
-    },
-    {
-      "descripcion": "Pinot noir",
-      "porcentajeComposicion": 89
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-04-25T00:00:00",
-      "puntaje": 85,
-      "comentario": "Fresco y afrutado, perfecto para diario.",
-      "esPremium": false
-    },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 90,
-      "comentario": "Robusto y con cuerpo para acompañar carnes rojas.",
-      "esPremium": true
-    }
-  ]
-},
-
-{
-  "nombre": "Tempranillo Reserva",
-  "precioARS": 1500.25,
-  "añada": 2018,
-  "fechaActualizacion": "2024-03-01T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.5,
-  "bodega": {
-    "nombre": "Bodega Andina",
-    "descripcion": "Renombrada bodega con excelentes reservas.",
-    "periodoActualizacion": "Anual",
-    "regionVitivinicola": {
-      "nombre": "Catamarca",
-      "descripcion": "Clima seco y soleado ideal para Tempranillo.",
-      "provincia": {
+  {
+    "nombre": "Tempranillo Reserva",
+    "precioARS": 1500.25,
+    "añada": 2018,
+    "fechaActualizacion": "03/01/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.5,
+    "bodega": {
+      "nombre": "Bodega Andina",
+      "descripcion": "Renombrada bodega con excelentes reservas.",
+      "periodoActualizacion": "Anual",
+      "regionVitivinicola": {
         "nombre": "Catamarca",
-        "pais": {
-          "nombre": "Argentina"
+        "descripcion": "Clima seco y soleado ideal para Tempranillo.",
+        "provincia": {
+          "nombre": "Catamarca",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
-  },
-  "varietal": [
-    {
-      "descripcion": "Tempranillo",
-      "porcentajeComposicion": 98
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-02-10T00:00:00",
-      "puntaje": 92,
-      "comentario": "Robusto, con notas de cuero y tabaco.",
-      "esPremium": true
     },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 98,
-      "comentario": "Vino Perfectamente límpido.",
-      "esPremium": true
-    }
-  ]
-},
-
-{
-  "nombre": "Sauvignon Blanc Clásico",
-  "precioARS": 950.00,
-  "añada": 2021,
-  "fechaActualizacion": "2024-05-20T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.1,
-  "bodega": {
-    "nombre": "Bodega La Primavera",
-    "descripcion": "Conocida por sus vinos frescos y frutales.",
-    "periodoActualizacion": "Trimestral",
-    "regionVitivinicola": {
-      "nombre": "San Rafael",
-      "descripcion": "Región con excelente clima para Sauvignon Blanc.",
-      "provincia": {
-        "nombre": "Mendoza",
-        "pais": {
-          "nombre": "Argentina"
+    "varietal": [
+      {
+        "descripcion": "Tempranillo",
+        "porcentajeComposicion": 98
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "02/10/2024 00:00:00 PM",
+        "puntaje": 92,
+        "comentario": "Robusto, con notas de cuero y tabaco.",
+        "esPremium": true
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 98,
+        "comentario": "Vino Perfectamente límpido.",
+        "esPremium": true
+      }
+    ]
+  },
+  {
+    "nombre": "Sauvignon Blanc Clásico",
+    "precioARS": 950.00,
+    "añada": 2021,
+    "fechaActualizacion": "05/20/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.1,
+    "bodega": {
+      "nombre": "Bodega La Primavera",
+      "descripcion": "Conocida por sus vinos frescos y frutales.",
+      "periodoActualizacion": "Trimestral",
+      "regionVitivinicola": {
+        "nombre": "San Rafael",
+        "descripcion": "Región con excelente clima para Sauvignon Blanc.",
+        "provincia": {
+          "nombre": "Mendoza",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
+    },
+    "varietal": [
+      {
+        "descripcion": "Sauvignon Blanc",
+        "porcentajeComposicion": 100
+      },
+      {
+        "descripcion": "Torrontes",
+        "porcentajeComposicion": 93
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "04/05/2024 00:00:00 PM",
+        "puntaje": 86,
+        "comentario": "Refrescante y cítrico, ideal para mariscos.",
+        "esPremium": false
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 91,
+        "comentario": "Vino con cualidades bien marcadas y reconocibles.",
+        "esPremium": true
+      }
+    ]
   },
-  "varietal": [
-    {
-      "descripcion": "Sauvignon Blanc",
-      "porcentajeComposicion": 100
-    },
-    {
-      "descripcion": "Torrontes",
-      "porcentajeComposicion": 93
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-04-05T00:00:00",
-      "puntaje": 86,
-      "comentario": "Refrescante y cítrico, ideal para mariscos.",
-      "esPremium": false
-    },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 91,
-      "comentario": "Vino con cualidades bien marcadas y reconocibles.",
-      "esPremium": true
-    }
-  ]
-},
-
-{
-  "nombre": "Bonarda Clásico",
-  "precioARS": 1100.00,
-  "añada": 2020,
-  "fechaActualizacion": "2024-04-10T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.3,
-  "bodega": {
-    "nombre": "Bodega El Amanecer",
-    "descripcion": "Famosa por sus tintos de cuerpo medio.",
-    "periodoActualizacion": "Anual",
-    "regionVitivinicola": {
-      "nombre": "San Juan",
-      "descripcion": "Clima ideal para Bonarda.",
-      "provincia": {
+  {
+    "nombre": "Bonarda Clásico",
+    "precioARS": 1100.00,
+    "añada": 2020,
+    "fechaActualizacion": "04/10/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.3,
+    "bodega": {
+      "nombre": "Bodega El Amanecer",
+      "descripcion": "Famosa por sus tintos de cuerpo medio.",
+      "periodoActualizacion": "Anual",
+      "regionVitivinicola": {
         "nombre": "San Juan",
-        "pais": {
-          "nombre": "Argentina"
+        "descripcion": "Clima ideal para Bonarda.",
+        "provincia": {
+          "nombre": "San Juan",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
+    },
+    "varietal": [
+      {
+        "descripcion": "Bonarda",
+        "porcentajeComposicion": 100
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "03/15/2024 00:00:00 PM",
+        "puntaje": 89,
+        "comentario": "Agradable y afrutado, con taninos suaves.",
+        "esPremium": false
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 90,
+        "comentario": "Sensación de plenitud y textura suave.",
+        "esPremium": true
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 93,
+        "comentario": "Con una gran gama de sensaciones olfativas y gustativas.",
+        "esPremium": true
+      }
+    ]
   },
-  "varietal": [
-    {
-      "descripcion": "Bonarda",
-      "porcentajeComposicion": 100
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-03-15T00:00:00",
-      "puntaje": 89,
-      "comentario": "Agradable y afrutado, con taninos suaves.",
-      "esPremium": false
-    },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 90,
-      "comentario": "Sensación de plenitud y textura suave..",
-      "esPremium": true
-    },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 93,
-      "comentario": "Con una gran gama de sensaciones olfativas y gustativas.",
-      "esPremium": true
-    }
-  ]
-},
-
 {
-  "nombre": "Petit Verdot Reserva",
-  "precioARS": 1750.00,
-  "añada": 2019,
-  "fechaActualizacion": "2024-04-15T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.9,
-  "bodega": {
-    "nombre": "Bodega Las Nubes",
-    "descripcion": "Destacada por sus vinos exclusivos y de edición limitada.",
-    "periodoActualizacion": "Anual",
-    "regionVitivinicola": {
-      "nombre": "Cafayate",
-      "descripcion": "Conocida por sus viñedos de altura.",
-      "provincia": {
-        "nombre": "Salta",
-        "pais": {
-          "nombre": "Argentina"
+    "nombre": "Petit Verdot Reserva",
+    "precioARS": 1750.00,
+    "añada": 2019,
+    "fechaActualizacion": "04/15/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.9,
+    "bodega": {
+      "nombre": "Bodega Las Nubes",
+      "descripcion": "Destacada por sus vinos exclusivos y de edición limitada.",
+      "periodoActualizacion": "Anual",
+      "regionVitivinicola": {
+        "nombre": "Cafayate",
+        "descripcion": "Conocida por sus viñedos de altura.",
+        "provincia": {
+          "nombre": "Salta",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
+    },
+    "varietal": [
+      {
+        "descripcion": "Petit Verdot",
+        "porcentajeComposicion": 85
+      },
+      {
+        "descripcion": "Garnacha",
+        "porcentajeComposicion": 95
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "03/10/2024 00:00:00 PM",
+        "puntaje": 94,
+        "comentario": "Intenso y complejo, con notas de mora y especias.",
+        "esPremium": true
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 90,
+        "comentario": "Fino y con clase; armonioso y sin impresiones agresivas.",
+        "esPremium": true
+      }
+    ]
   },
-  "varietal": [
-    {
-      "descripcion": "Petit Verdot",
-      "porcentajeComposicion": 85
-    },
-    {
-      "descripcion": "Garnacha",
-      "porcentajeComposicion": 95
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-03-10T00:00:00",
-      "puntaje": 94,
-      "comentario": "Intenso y complejo, con notas de mora y especias.",
-      "esPremium": true
-    },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 90,
-      "comentario": "Fino y con clase; armonioso y sin impresiones agresivas.",
-      "esPremium": true
-    }
-  ]
-},
-
-{
-  "nombre": "Tempranillo Crianza",
-  "precioARS": 1300.75,
-  "añada": 2018,
-  "fechaActualizacion": "2024-03-25T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.6,
-  "bodega": {
-    "nombre": "Bodega Tierra del Sol",
-    "descripcion": "Tradición y calidad en cada botella.",
-    "periodoActualizacion": "Semestral",
-    "regionVitivinicola": {
-      "nombre": "Tucumán",
-      "descripcion": "Clima ideal para vinos de crianza.",
-      "provincia": {
+  {
+    "nombre": "Tempranillo Crianza",
+    "precioARS": 1300.75,
+    "añada": 2018,
+    "fechaActualizacion": "03/25/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.6,
+    "bodega": {
+      "nombre": "Bodega Tierra del Sol",
+      "descripcion": "Tradición y calidad en cada botella.",
+      "periodoActualizacion": "Semestral",
+      "regionVitivinicola": {
         "nombre": "Tucumán",
-        "pais": {
-          "nombre": "Argentina"
+        "descripcion": "Clima ideal para vinos de crianza.",
+        "provincia": {
+          "nombre": "Tucumán",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
-  },
-  "varietal": [
-    {
-      "descripcion": "Tempranillo",
-      "porcentajeComposicion": 99
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-02-05T00:00:00",
-      "puntaje": 90,
-      "comentario": "Bien equilibrado, con notas de frutos secos y vainilla.",
-      "esPremium": true
     },
-    {
-      "fechaReseña": "2024-05-22T00:00:00",
-      "puntaje": 90,
-      "comentario": "Gustos y aromas que se prolongan después de degustar el vino.",
-      "esPremium": true
-    }
-  ]
-},
-
-{
-  "nombre": "Garnacha Clásico",
-  "precioARS": 1150.50,
-  "añada": 2020,
-  "fechaActualizacion": "2024-04-05T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.4,
-  "bodega": {
-    "nombre": "Bodega El Horizonte",
-    "descripcion": "Innovadora y comprometida con la sostenibilidad.",
-    "periodoActualizacion": "Trimestral",
-    "regionVitivinicola": {
-      "nombre": "San Luis",
-      "descripcion": "Conocida por su diversidad de microclimas.",
-      "provincia": {
+    "varietal": [
+      {
+        "descripcion": "Tempranillo",
+        "porcentajeComposicion": 99
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "02/05/2024 00:00:00 PM",
+        "puntaje": 90,
+        "comentario": "Bien equilibrado, con notas de frutos secos y vainilla.",
+        "esPremium": true
+      },
+      {
+        "fechaReseña": "05/22/2024 00:00:00 PM",
+        "puntaje": 90,
+        "comentario": "Gustos y aromas que se prolongan después de degustar el vino.",
+        "esPremium": true
+      }
+    ]
+  },
+  {
+    "nombre": "Garnacha Clásico",
+    "precioARS": 1150.50,
+    "añada": 2020,
+    "fechaActualizacion": "04/05/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.4,
+    "bodega": {
+      "nombre": "Bodega El Horizonte",
+      "descripcion": "Innovadora y comprometida con la sostenibilidad.",
+      "periodoActualizacion": "Trimestral",
+      "regionVitivinicola": {
         "nombre": "San Luis",
-        "pais": {
-          "nombre": "Argentina"
+        "descripcion": "Conocida por su diversidad de microclimas.",
+        "provincia": {
+          "nombre": "San Luis",
+          "pais": {
+            "nombre": "Argentina"
+          }
         }
       }
-    }
-  },
-  "varietal": [
-    {
-      "descripcion": "Garnacha",
-      "porcentajeComposicion": 97
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-03-01T00:00:00",
-      "puntaje": 87,
-      "comentario": "Aromas florales y frutales, muy agradable.",
-      "esPremium": false
-    }
-  ]
-},
-
-{
-  "nombre": "Malbec Premium",
-  "precioARS": 2000.00,
-  "añada": 2018,
-  "fechaActualizacion": "2024-05-20T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.9,
-  "bodega": {
-    "nombre": "Bodega Alto Cielo",
-    "descripcion": "Vinos de alta gama con reconocimiento internacional.",
-    "periodoActualizacion": "Anual",
-    "regionVitivinicola": {
-      "nombre": "Valle de Uco",
-      "descripcion": "Región de alta calidad vitivinícola.",
-      "provincia": {
-        "nombre": "Mendoza",
-        "pais": {
-          "nombre": "Argentina"
-        }
-      }
-    }
-  },
-  "varietal": [
-    {
-      "descripcion": "Malbec",
-      "porcentajeComposicion": 100
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-03-25T00:00:00",
-      "puntaje": 95,
-      "comentario": "Profundo, con taninos sedosos y un final prolongado.",
-      "esPremium": true
-    }
-  ]
-},
-
-
-{
-  "nombre": "Sangiovese Clásico",
-  "precioARS": 1050.00,
-  "añada": 2021,
-  "fechaActualizacion": "2024-05-10T00:00:00",
-  "imagenEtiqueta": "url_de_la_imagen",
-  "notaDeCataBodega": 4.3,
-  "bodega": {
-    "nombre": "Bodega Las Lomas",
-    "descripcion": "Conocida por su autenticidad y tradición italiana.",
-    "periodoActualizacion": "Bianual",
-    "regionVitivinicola": {
-      "nombre": "Cordoba",
-      "descripcion": "Región con excelente potencial para Sangiovese.",
-      "provincia": {
-        "nombre": "Cordoba",
-        "pais": {
-          "nombre": "Argentina"
-        }
-      }
-    }
-  },
-  "varietal": [
-    {
-      "descripcion": "Sangiovese",
-      "porcentajeComposicion": 100
     },
-    {
-      "descripcion": "Barbera",
-      "porcentajeComposicion": 95
-    }
-  ],
-  "reseña": [
-    {
-      "fechaReseña": "2024-04-01T00:00:00",
-      "puntaje": 89,
-      "comentario": "Vibrante y frutal, con un toque de especias.",
-      "esPremium": false
+    "varietal": [
+      {
+        "descripcion": "Garnacha",
+        "porcentajeComposicion": 97
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "03/01/2024 00:00:00 PM",
+        "puntaje": 87,
+        "comentario": "Aromas florales y frutales, muy agradable.",
+        "esPremium": false
+      }
+    ]
+  },
+  {
+    "nombre": "Malbec Premium",
+    "precioARS": 2000.00,
+    "añada": 2018,
+    "fechaActualizacion": "05/20/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.9,
+    "bodega": {
+      "nombre": "Bodega Alto Cielo",
+      "descripcion": "Vinos de alta gama con reconocimiento internacional.",
+      "periodoActualizacion": "Anual",
+      "regionVitivinicola": {
+        "nombre": "Valle de Uco",
+        "descripcion": "Región de alta calidad vitivinícola.",
+        "provincia": {
+          "nombre": "Mendoza",
+          "pais": {
+            "nombre": "Argentina"
+          }
+        }
+      }
     },
-    {
-      "fechaReseña": "2024-04-01T00:00:00",
-      "puntaje": 85,
-      "comentario": " Con dominante ácida y afrutada.",
-      "esPremium": false
-    }
-  ]
-}
+    "varietal": [
+      {
+        "descripcion": "Malbec",
+        "porcentajeComposicion": 100
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "03/25/2024 00:00:00 PM",
+        "puntaje": 95,
+        "comentario": "Profundo, con taninos sedosos y un final prolongado.",
+        "esPremium": true
+      }
+    ]
+  },
+  {
+    "nombre": "Sangiovese Clásico",
+    "precioARS": 1050.00,
+    "añada": 2021,
+    "fechaActualizacion": "05/10/2024 00:00:00 PM",
+    "imagenEtiqueta": "url_de_la_imagen",
+    "notaDeCataBodega": 4.3,
+    "bodega": {
+      "nombre": "Bodega Las Lomas",
+      "descripcion": "Conocida por su autenticidad y tradición italiana.",
+      "periodoActualizacion": "Bianual",
+      "regionVitivinicola": {
+        "nombre": "Córdoba",
+        "descripcion": "Región con excelente potencial para Sangiovese.",
+        "provincia": {
+          "nombre": "Córdoba",
+          "pais": {
+            "nombre": "Argentina"
+          }
+        }
+      }
+    },
+    "varietal": [
+      {
+        "descripcion": "Sangiovese",
+        "porcentajeComposicion": 100
+      },
+      {
+        "descripcion": "Barbera",
+        "porcentajeComposicion": 95
+      }
+    ],
+    "reseña": [
+      {
+        "fechaReseña": "04/01/2024 00:00:00 PM",
+        "puntaje": 89,
+        "comentario": "Vibrante y frutal, con un toque de especias.",
+        "esPremium": false
+      },
+      {
+        "fechaReseña": "04/01/2024 00:00:00 PM",
+        "puntaje": 85,
+        "comentario": "Con dominante ácida y afrutada.",
+        "esPremium": false
+      }
+    ]
+  }
 ]

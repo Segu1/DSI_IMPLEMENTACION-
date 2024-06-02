@@ -21,31 +21,40 @@ namespace BonVino.Gestor
         private PantallaReportesDeReseñas pantallaReportesDeReseñas;
         private List<Vino> vinos;
         private List<(string, float, string, string, string, List<(string, float)>, float)> datosDeVinosConPromedio;
-
+        private InterfazExcel interfazExcel;
         public GestorReportesDeReseñas(PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
             this.pantallaReportesDeReseñas = pantallaReportesDeReseñas;
             this.vinos = new List<Vino>();
-            //this.interfazExcel = new InterfazExcel();
+            this.interfazExcel = new InterfazExcel();
             this.datosDeVinosConPromedio = new List<(string, float, string, string, string, List<(string, float)>, float)>();
         }
 
         public DateTime getFechaDesdeSeleccionada { get { return fechaDesdeSeleccionada; } }
 
+
+        public void tomarOpcionGenerarRankingVinos()
+        {
+            pantallaReportesDeReseñas.solicitarFechaDesdeYHasta();
+        }
         public void tomarFechaDesdeYHasta(DateTime fechaDesde, DateTime fechaHasta)
         {
             this.fechaDesdeSeleccionada = fechaDesde;
             this.fechaHastaSeleccionada = fechaHasta;
+
+            pantallaReportesDeReseñas.solicitarTipoReseña();
         }
 
         public void tomarTipoReseña(string tipoReseña)
         {
             this.tipoReseñaSeleccionada = tipoReseña;
+            pantallaReportesDeReseñas.solicitarTipoVisualizacionReporte();
         }
 
         public void tomarTipoVisualizacionReporte(string tipoVisualizacion)
         {
             this.tipoVisualizacionSeleccionada = tipoVisualizacion;
+            pantallaReportesDeReseñas.solicitarConfirmacion();
         }
 
         public void tomarConfirmacion(bool confirmado)
@@ -92,22 +101,11 @@ namespace BonVino.Gestor
             {
                 datosDeVinosConPromedio.RemoveRange(10, this.datosDeVinosConPromedio.Count - 10);
             }
-            this.mostrarDatos();
+            generarArchivo();
         }
-        public void mostrarDatos()
+        public void generarArchivo()
         {
-            this.buscarVinosConReseñasEnPeriodo();
-            string resultado = "-----";
-
-            //ERROR AQUI
-            foreach ( (string, float, string, string, string, List<(string, float)>, float) item in datosDeVinosConPromedio)
-            {
-                resultado += item.ToString();
-            }
-
-            
-            pantallaReportesDeReseñas.mostrarDatos(resultado);
-
+            interfazExcel.exportarAExcel(datosDeVinosConPromedio);
         }
     }
 }

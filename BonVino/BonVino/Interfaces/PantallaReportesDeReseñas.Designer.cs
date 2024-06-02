@@ -58,7 +58,7 @@ namespace BonVino
             btnConfirmar.TabIndex = 0;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = false;
-            btnConfirmar.Click += button1_Click;
+            btnConfirmar.Click += tomarConfirmacion;
             // 
             // timePickerFechaDesde
             // 
@@ -69,18 +69,18 @@ namespace BonVino
             timePickerFechaDesde.CalendarTrailingForeColor = Color.FromArgb(46, 45, 77);
             timePickerFechaDesde.Location = new Point(27, 47);
             timePickerFechaDesde.Name = "timePickerFechaDesde";
-            timePickerFechaDesde.Size = new Size(244, 21);
+            timePickerFechaDesde.Size = new Size(244, 25);
             timePickerFechaDesde.TabIndex = 4;
-            timePickerFechaDesde.ValueChanged += timePickerDesde_ValueChanged;
+            timePickerFechaDesde.ValueChanged += tomarFechaDesde;
             // 
             // timePickerFechaHasta
             // 
             timePickerFechaHasta.Enabled = false;
             timePickerFechaHasta.Location = new Point(27, 115);
             timePickerFechaHasta.Name = "timePickerFechaHasta";
-            timePickerFechaHasta.Size = new Size(244, 21);
+            timePickerFechaHasta.Size = new Size(244, 25);
             timePickerFechaHasta.TabIndex = 5;
-            timePickerFechaHasta.ValueChanged += timePickerHasta_ValueChanged;
+            timePickerFechaHasta.ValueChanged += tomarFechaHasta;
             // 
             // txtPeriodoNoValido
             // 
@@ -89,7 +89,7 @@ namespace BonVino
             txtPeriodoNoValido.ForeColor = SystemColors.Desktop;
             txtPeriodoNoValido.Location = new Point(27, 139);
             txtPeriodoNoValido.Name = "txtPeriodoNoValido";
-            txtPeriodoNoValido.Size = new Size(220, 14);
+            txtPeriodoNoValido.Size = new Size(275, 17);
             txtPeriodoNoValido.TabIndex = 8;
             txtPeriodoNoValido.Text = "*Ingrese un periodo de fechas valido";
             txtPeriodoNoValido.Visible = false;
@@ -99,12 +99,12 @@ namespace BonVino
             // 
             txtFechaDesde.AutoSize = true;
             txtFechaDesde.BackColor = Color.Transparent;
-            txtFechaDesde.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFechaDesde.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFechaDesde.ForeColor = Color.FromArgb(228, 227, 211);
             txtFechaDesde.Location = new Point(27, 20);
             txtFechaDesde.Name = "txtFechaDesde";
             txtFechaDesde.Padding = new Padding(5);
-            txtFechaDesde.Size = new Size(85, 24);
+            txtFechaDesde.Size = new Size(103, 28);
             txtFechaDesde.TabIndex = 9;
             txtFechaDesde.Text = "Fecha desde";
             txtFechaDesde.Click += txtFechaDesde_Click;
@@ -113,12 +113,12 @@ namespace BonVino
             // 
             txtFechaHasta.AutoSize = true;
             txtFechaHasta.BackColor = Color.Transparent;
-            txtFechaHasta.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFechaHasta.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtFechaHasta.ForeColor = Color.FromArgb(228, 227, 211);
             txtFechaHasta.Location = new Point(27, 88);
             txtFechaHasta.Name = "txtFechaHasta";
             txtFechaHasta.Padding = new Padding(5);
-            txtFechaHasta.Size = new Size(84, 24);
+            txtFechaHasta.Size = new Size(99, 28);
             txtFechaHasta.TabIndex = 10;
             txtFechaHasta.Text = "Fecha hasta";
             txtFechaHasta.Click += label1_Click_1;
@@ -131,7 +131,7 @@ namespace BonVino
             txtArchivoAExportar.ForeColor = Color.AliceBlue;
             txtArchivoAExportar.Location = new Point(27, 279);
             txtArchivoAExportar.Name = "txtArchivoAExportar";
-            txtArchivoAExportar.Size = new Size(111, 14);
+            txtArchivoAExportar.Size = new Size(141, 17);
             txtArchivoAExportar.TabIndex = 11;
             txtArchivoAExportar.Text = "Archivo a generar";
             txtArchivoAExportar.Click += txtArchivoAExportar_Click;
@@ -143,9 +143,9 @@ namespace BonVino
             cbArchivoAExportar.FormattingEnabled = true;
             cbArchivoAExportar.Location = new Point(27, 296);
             cbArchivoAExportar.Name = "cbArchivoAExportar";
-            cbArchivoAExportar.Size = new Size(121, 22);
+            cbArchivoAExportar.Size = new Size(121, 25);
             cbArchivoAExportar.TabIndex = 12;
-            cbArchivoAExportar.SelectedIndexChanged += cbArchivoAExportar_SelectedIndexChanged;
+            cbArchivoAExportar.SelectedIndexChanged += tomarTipoVisualizacionReporte;
             // 
             // txtTipoReseña
             // 
@@ -155,7 +155,7 @@ namespace BonVino
             txtTipoReseña.ForeColor = Color.AliceBlue;
             txtTipoReseña.Location = new Point(27, 196);
             txtTipoReseña.Name = "txtTipoReseña";
-            txtTipoReseña.Size = new Size(94, 14);
+            txtTipoReseña.Size = new Size(116, 17);
             txtTipoReseña.TabIndex = 13;
             txtTipoReseña.Text = "Tipo de reseña";
             txtTipoReseña.Click += txtTipoReseña_Click_1;
@@ -167,22 +167,22 @@ namespace BonVino
             cbTipoReseña.FormattingEnabled = true;
             cbTipoReseña.Location = new Point(27, 213);
             cbTipoReseña.Name = "cbTipoReseña";
-            cbTipoReseña.Size = new Size(121, 22);
+            cbTipoReseña.Size = new Size(121, 25);
             cbTipoReseña.TabIndex = 14;
-            cbTipoReseña.SelectedIndexChanged += cbTipoReseña_SelectedIndexChanged_1;
+            cbTipoReseña.SelectedIndexChanged += tomarTipoReseña;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(340, 334);
             label1.Name = "label1";
-            label1.Size = new Size(0, 14);
+            label1.Size = new Size(0, 17);
             label1.TabIndex = 15;
             label1.Click += label1_Click_2;
             // 
             // PantallaReportesDeReseñas
             // 
-            AutoScaleDimensions = new SizeF(8F, 14F);
+            AutoScaleDimensions = new SizeF(9F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.GhostWhite;
