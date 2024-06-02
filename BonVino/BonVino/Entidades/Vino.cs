@@ -11,18 +11,19 @@ namespace BonVino.Entidades
         private string nombre;
         private Bodega bodega;
         private float precioARS;
-        private List<Reseña> reseñas; 
-        private List<Varietal> varietal;
+        private List<Reseña> reseña { get; set; }
+        private List<Varietal> varietal { get; set; }
         private int añada;
         private DateTime fechaActualizacion;
 
-        public Vino(string nombre, Bodega bodega, float precioARS, List<Varietal> varietal)
+        public Vino(string nombre, Bodega bodega,DateTime fechaActualizacion, float precioARS, List<Varietal> varietal, List<Reseña> reseña)
         {
             this.nombre = nombre;
             this.bodega = bodega;
             this.precioARS = precioARS;
-            this.reseñas = new List<Reseña>();
+            this.reseña = reseña;
             this.varietal = varietal; //a chequear
+            this.fechaActualizacion = fechaActualizacion;
 
         }
 
@@ -36,11 +37,11 @@ namespace BonVino.Entidades
 
         public void agregarReseña(Reseña res)
         {
-            reseñas.Add(res);
+            reseña.Add(res);
         }
 
         public void eliminarReseña(Reseña res){
-            reseñas.Remove(res);
+            reseña.Remove(res);
         }
 
 
@@ -49,20 +50,26 @@ namespace BonVino.Entidades
             varietal.Add(var);
         }
 
-        public void eliminarReseña(Varietal var)
+        public void eliminarVarietal(Varietal var)
         {
             varietal.Remove(var);
         }
 
 
 
-        public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
+        public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada, PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
-            float contador = 0;
+            int contador = 0;
             float acumulador = 0;
-            foreach (Reseña res in reseñas) {
-                if(res.estaEnPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada) && res.sosDeSommelier())
+            foreach (Reseña res in reseña) 
+            {
+                pantallaReportesDeReseñas.mostrarDatos(fechaDesdeSeleccionada.ToString() + fechaHastaSeleccionada.ToString() + res.getFechaReseña.ToString());
+
+
+                if (res.estaEnPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada) && res.sosDeSommelier())
                 {
+                    //pantallaReportesDeReseñas.mostrarDatos(fechaDesdeSeleccionada.ToString() + fechaHastaSeleccionada.ToString()+ res.getFechaReseña.ToString());
+
                     contador++;
                     acumulador += res.getPuntaje;
                 };
@@ -78,6 +85,7 @@ namespace BonVino.Entidades
                 return -1; 
             }
         }
+
 
         public (string, float, string, string,string, List<(string, float)>) obtenerTodosLosDatos()
         {

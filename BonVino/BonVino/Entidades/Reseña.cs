@@ -14,13 +14,12 @@ namespace BonVino.Entidades
         private float puntaje;
         private Vino vino;
 
-        public Reseña(string comentario, bool premium, DateTime fecha, int puntajerec, Vino vino)
+        public Reseña(string comentario, bool premium, DateTime fechaReseña, int puntaje)
         {
             this.comentario = comentario;
             this.esPremium = premium;
-            this.fechaReseña = fecha;
-            this.puntaje = puntajerec;
-            this.vino = vino;
+            this.fechaReseña = fechaReseña;
+            this.puntaje = puntaje;
         }
 
         public string getComentario { get { return comentario; } }
@@ -39,13 +38,11 @@ namespace BonVino.Entidades
 
         public bool estaEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
         {
-            return (this.fechaReseña >= fechaDesdeSeleccionada && this.fechaReseña <= fechaHastaSeleccionada);
-           
+            return this.fechaReseña >= fechaDesdeSeleccionada && this.fechaReseña <= fechaHastaSeleccionada;
         }
-
         public bool sosDeSommelier()
         {
-            return (this.esPremium);
+            return this.esPremium;
         }
 
 

@@ -25,6 +25,9 @@ namespace BonVino.Gestor
         public GestorReportesDeReseñas(PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
             this.pantallaReportesDeReseñas = pantallaReportesDeReseñas;
+            this.vinos = new List<Vino>();
+            //this.interfazExcel = new InterfazExcel();
+            this.datosDeVinosConPromedio = new List<(string, float, string, string, string, List<(string, float)>, float)>();
         }
 
         public DateTime getFechaDesdeSeleccionada { get { return fechaDesdeSeleccionada; } }
@@ -64,21 +67,22 @@ namespace BonVino.Gestor
         {
 
             // carga vinos al gestor desde un json
-
-            //CAMBIAR A RUTA RELATIVAAAAAAAAAAAAAAAAAAAA!
             string filePath = "..\\..\\..\\Resources\\jsonVinos.json";
             string jsonContent = File.ReadAllText(filePath);
+
+
             // se convierte el string JSON a una lista de objetos de tipo "Vino"
             vinos = JsonConvert.DeserializeObject<List<Vino>>(jsonContent);
 
+
             foreach (Vino vin in vinos)
             {
-                float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
-                if (promedioDeReseñasEnPeriodo == -1) { return; }
-
+                float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada, pantallaReportesDeReseñas);
+                if (promedioDeReseñasEnPeriodo == -1) {
+                    return; 
+                }
                 (string nombre, float precioARS, string bodega, string region, string pais, List<(string tipoUva, float porcentaje)> varietales) = vin.obtenerTodosLosDatos();
                 datosDeVinosConPromedio.Add((nombre, precioARS, bodega, region, pais, varietales, promedioDeReseñasEnPeriodo));
-               
             }
         }
         public void ordenarVinosPorPromedioYFiltrarPrimeros10() 
@@ -95,7 +99,7 @@ namespace BonVino.Gestor
             //ERROR AQUI
             foreach ( (string, float, string, string, string, List<(string, float)>, float) item in datosDeVinosConPromedio)
             {
-                resultado += item.Item1;
+                resultado += item.ToString();
             }
 
             

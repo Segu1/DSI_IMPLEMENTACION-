@@ -25,14 +25,15 @@ namespace BonVino.Entidades
         public string getDatosPais(Provincia prov) {
             string nombrePais = ""; //situacion que nunca va a ocurrir
 
-            foreach (Provincia p in provincia)
-            {
-                if(p.getNombre == prov.getNombre)
-                {
-                    nombrePais = this.nombre;
-                    break;
-                };
-            }
+            //foreach (Provincia p in provincia)
+            //{
+            //    if(p.getNombre == prov.getNombre)
+            //    {
+            //        nombrePais = this.nombre;
+            //        break;
+            //    };
+            //}
+            nombrePais = this.nombre;
             return nombrePais;
         }
 

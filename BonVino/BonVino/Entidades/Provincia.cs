@@ -28,15 +28,17 @@ namespace BonVino.Entidades
         { //Cambiar a region vitivinicola
             
                 string nombrePais = "";
-                foreach (RegionVitivinicola reg in this.region)
-                {
-                    if (reg == region)
-                    {
-                        nombrePais = this._pais.getDatosPais(this);
-                        break;
-                    };
+                //foreach (RegionVitivinicola reg in this.region)
+                //{
+                //    if (reg == region)
+                //    {
+                //        nombrePais = this._pais.getDatosPais(this);
+                //        break;
+                //    };
 
-                }
+                //}
+                nombrePais = this._pais.getDatosPais(this);
+
                 return nombrePais;
             
         }

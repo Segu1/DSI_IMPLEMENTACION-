@@ -199,7 +199,7 @@ namespace BonVino
 
             }
         }
-
+        //borrar este metodo.
         public void mostrarDatos( string algo)
         {
             MessageBox.Show(algo);
