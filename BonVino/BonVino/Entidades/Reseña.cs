@@ -14,10 +14,10 @@ namespace BonVino.Entidades
         private float puntaje;
         private Vino vino;
 
-        public Reseña(string comentario, bool premium, DateTime fechaReseña, int puntaje)
+        public Reseña(string comentario, bool esPremium, DateTime fechaReseña, int puntaje)
         {
             this.comentario = comentario;
-            this.esPremium = premium;
+            this.esPremium = esPremium;
             this.fechaReseña = fechaReseña;
             this.puntaje = puntaje;
         }
@@ -42,7 +42,7 @@ namespace BonVino.Entidades
         }
         public bool sosDeSommelier()
         {
-            return this.esPremium;
+            return this.getEsPremium;
         }
 
 

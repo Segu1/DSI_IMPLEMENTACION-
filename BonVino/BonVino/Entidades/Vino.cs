@@ -63,12 +63,9 @@ namespace BonVino.Entidades
             float acumulador = 0;
             foreach (Reseña res in reseña) 
             {
-                pantallaReportesDeReseñas.mostrarDatos(fechaDesdeSeleccionada.ToString() + fechaHastaSeleccionada.ToString() + res.getFechaReseña.ToString());
-
 
                 if (res.estaEnPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada) && res.sosDeSommelier())
                 {
-                    //pantallaReportesDeReseñas.mostrarDatos(fechaDesdeSeleccionada.ToString() + fechaHastaSeleccionada.ToString()+ res.getFechaReseña.ToString());
 
                     contador++;
                     acumulador += res.getPuntaje;

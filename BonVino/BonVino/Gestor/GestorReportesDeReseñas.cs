@@ -87,14 +87,17 @@ namespace BonVino.Gestor
         }
         public void ordenarVinosPorPromedioYFiltrarPrimeros10() 
         {
-            //datosDeVinosConPromedio.Sort((x, y) => x.Item7.CompareTo(y.Item7));
-            //datosDeVinosConPromedio.RemoveRange(10, this.datosDeVinosConPromedio.Count - 10);
+            datosDeVinosConPromedio.Sort((x, y) => x.Item7.CompareTo(y.Item7));
+            if(datosDeVinosConPromedio.Count > 10)
+            {
+                datosDeVinosConPromedio.RemoveRange(10, this.datosDeVinosConPromedio.Count - 10);
+            }
             this.mostrarDatos();
         }
         public void mostrarDatos()
         {
             this.buscarVinosConReseñasEnPeriodo();
-            string resultado = "";
+            string resultado = "-----";
 
             //ERROR AQUI
             foreach ( (string, float, string, string, string, List<(string, float)>, float) item in datosDeVinosConPromedio)
