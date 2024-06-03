@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BonVino")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5662d59a32c244c37d7224dc10bce12797e0776c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39f5043feb3f8af32ea6764c7702d4e2f8024503")]
 [assembly: System.Reflection.AssemblyProductAttribute("BonVino")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BonVino")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

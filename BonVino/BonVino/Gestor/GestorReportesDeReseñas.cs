@@ -36,10 +36,12 @@ namespace BonVino.Gestor
 
         public void tomarOpcionGenerarRankingVinos()
         {
+            // da comienzo a la solicitud de ingreso de periodo
             pantallaReportesDeReseñas.solicitarFechaDesdeYHasta();
         }
         public void tomarFechaDesdeYHasta(DateTime fechaDesde, DateTime fechaHasta)
         {
+            // toma y guarda el periodo y da comienzo a la solictud de un tipo de reseña.
             this.fechaDesdeSeleccionada = fechaDesde;
             this.fechaHastaSeleccionada = fechaHasta;
 
@@ -48,25 +50,29 @@ namespace BonVino.Gestor
 
         public void tomarTipoReseña(string tipoReseña)
         {
+            //toma y guarda el tipo de reseña seleccionada y da comienzo a la solictud de un tipo de visualización.
             this.tipoReseñasSeleccionada = tipoReseña;
             pantallaReportesDeReseñas.solicitarTipoVisualizacionReporte();
         }
 
         public void tomarTipoVisualizacionReporte(string tipoVisualizacion)
         {
+            //toma y guarda el tipo de visualización y da comienzo a la solicitud de confimación.
             this.tipoVisualizacionSeleccionada = tipoVisualizacion;
             pantallaReportesDeReseñas.solicitarConfirmacion();
         }
 
         public void tomarConfirmacion(bool confirmado)
         {
+            // toma y guarda la confirmacion y realiza da comienzo a la generacion del ranking.
+
             this.confirmacion = confirmado;
             buscarVinosConReseñasEnPeriodo();
 
+            //en caso de que no existan reseñas en periodo cargadas por sommeliers, se le notifica al usuario
             if (datosDeVinosConPromedio.Count() == 0)
             {
-                MessageBox.Show("No hay reseñas creadas por sommeliers");
-                pantallaReportesDeReseñas.Close();
+                pantallaReportesDeReseñas.informarFaltaReseñas();
                 return;
             }
 
@@ -87,15 +93,13 @@ namespace BonVino.Gestor
 
         public void buscarVinosConReseñasEnPeriodo()
         {
+            //busca y guarda todos los datos de cada vino, incluyendo el promedio de las calificaciones de sus reseñas.
 
             // carga vinos al gestor desde un json
             string filePath = "..\\..\\..\\Resources\\jsonVinos.json";
             string jsonContent = File.ReadAllText(filePath);
-
-
             // se convierte el string JSON a una lista de objetos de tipo "Vino"
             vinos = JsonConvert.DeserializeObject<List<Vino>>(jsonContent);
-
 
             foreach (Vino vin in vinos)
             {
@@ -109,6 +113,8 @@ namespace BonVino.Gestor
         }
         public void ordenarVinosPorPromedioYFiltrarPrimeros10() 
         {
+            // ordena todos los vinos segun el promedio de calificaciones de mayor a menor, y luego filtra los primeros 10.
+
             datosDeVinosConPromedio.Sort((x, y) => y.Item7.CompareTo(x.Item7));
             if(datosDeVinosConPromedio.Count > 10)
             {
@@ -117,7 +123,9 @@ namespace BonVino.Gestor
         }
         public void generarArchivo()
         {
-            //archivoExcel = gestoExcel.generarArchivo()
+            // da comienzo a la generacion del archivo con los resultados del ranking.
+
+            //archivoExcel = gestorExcel.generarArchivo()
             interfazExcel.exportarAExcel(datosDeVinosConPromedio);
         }
 

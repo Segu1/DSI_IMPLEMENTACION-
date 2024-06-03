@@ -52,12 +52,14 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(1307, 653);
+            BackgroundImage = Properties.Resources.modern_colorful_wavy_line_background_design_wave_curve_abstract_background_for_business_landing_page_flyers_website_banner_and_presentation_free_vector;
+            ClientSize = new Size(1182, 653);
             Controls.Add(btnGenerarRanking);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "PantallaPrincipalBonVino";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PantallaPrincipalBonVino";
             Load += PantallaPrincipalBonVino_Load;
             ResumeLayout(false);

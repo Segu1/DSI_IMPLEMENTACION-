@@ -36,6 +36,8 @@ namespace BonVino.Interfaces
         {
             PantallaReportesDeReseñas pantallaPrincipalBonVino = new PantallaReportesDeReseñas();
             pantallaPrincipalBonVino.tomarOpcionGenerarRankingVinos();
+            // para volver a la pantalla principal en caso de cancelar o de que no hay resñas hay q cambiar aca
+
             this.Hide();
         }
 

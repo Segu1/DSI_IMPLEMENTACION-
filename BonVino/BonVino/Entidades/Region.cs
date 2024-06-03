@@ -22,6 +22,8 @@ namespace BonVino.Entidades
         public string setNombre { set { nombre = value; } }
         public (string, string) getDatosRegion() {
 
+            // da comienzo a la busqueda de datos de ubicacion y retorna el resultado de la busqueda y el nombre de la region.
+
             return (this.getNombre, this._provincia.getDatosProvincia(this));
         }
 

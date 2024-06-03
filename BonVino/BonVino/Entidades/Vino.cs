@@ -36,6 +36,8 @@ namespace BonVino.Entidades
 
         public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada, PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
+            // calcula y devuelve el promedio de calificaciones de todas las reseñas de vino.
+
             int contador = 0;
             float acumulador = 0;
             foreach (Reseña res in reseña) 
@@ -62,19 +64,17 @@ namespace BonVino.Entidades
 
         public (string, float, string, string,string, List<(string, float)>) obtenerTodosLosDatos()
         {
-            (string nombreBodega, string nombreRegion, string nombrePais) = this.obtenerDatosBodegaRegionPais();
+            //obtiene los datos propios del vino y da comienzo a la busqueda de datos de ubicacion y varietales. 
+
+            (string nombreBodega, string nombreRegion, string nombrePais) = this.bodega.getDatosBodega(); ;
 
             return (this.getNombre, this.getPrecioARS, nombreBodega, nombreRegion, nombrePais, this.obtenerDatosVarietal());
         }
 
-        public (string, string, string) obtenerDatosBodegaRegionPais()
-        {
-            return this.bodega.getDatosBodega();
-
-        }
-
         public List<(string, float)> obtenerDatosVarietal()
         {
+            //da comienzo al loop "buscar varitales" y devuelve la lista de varietales
+            
             List<(string, float)> varietales = [];
 
             foreach (Varietal var in this.varietal)

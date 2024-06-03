@@ -19,6 +19,7 @@ namespace BonVino.Interfaces
 
         public void exportarAExcel(List<(string, float, string, string, string, List<(string, float)>, float)> datosAExportar)
         {
+            // recorre cada dato de los vinos y los agrega a una fila. Luego, muestra la tabla con los resultados.
             foreach ((string, float, string, string, string, List<(string, float)>, float) datosVino in datosAExportar)
             {
                 (string nombre, float precioARS, string bodega, string region, string pais, List<(string , float )> listaVarietales, float promedioCalificacion) = datosVino;

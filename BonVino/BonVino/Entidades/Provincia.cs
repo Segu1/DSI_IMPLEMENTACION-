@@ -25,8 +25,9 @@ namespace BonVino.Entidades
         public List<RegionVitivinicola> getRegion { get { return region; } } //Cambi ocar
 
         public string getDatosProvincia(RegionVitivinicola region)
-        { //Cambiar a region vitivinicola
-            
+        {
+                //busca el nombre del pais y devuelve ese resultado.
+
                 string nombrePais = "";
                 //foreach (RegionVitivinicola reg in this.region)
                 //{

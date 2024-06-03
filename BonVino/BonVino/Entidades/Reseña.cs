@@ -30,10 +30,12 @@ namespace BonVino.Entidades
 
         public bool estaEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
         {
+            //devuelve true si la fecha en la que se realizo la reseña esta en el periodo seleccionado.
             return this.fechaReseña >= fechaDesdeSeleccionada && this.fechaReseña <= fechaHastaSeleccionada;
         }
         public bool sosDeSommelier()
         {
+            // toda reseña que es premium, implica que fue hecha por un sommelier
             return this.getEsPremium;
         }
 

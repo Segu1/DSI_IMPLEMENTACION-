@@ -22,13 +22,9 @@ namespace BonVino
             centrarTodosLosComponentes();
         }
 
-        private void CenterControlInForm(Control control)
-        {
-            control.Left = (this.ClientSize.Width - control.Width) / 2;
-        }
-
         public void tomarOpcionGenerarRankingVinos()
         {
+            //inicializa la pantalla y dispara la secuencia del caso de uso.
             habilitarPantalla();
             gestorReportesDeReseña.tomarOpcionGenerarRankingVinos();
         }
@@ -40,39 +36,34 @@ namespace BonVino
 
         public void solicitarFechaDesdeYHasta()
         {
+            //habilita el input fecha desde.
             timePickerFechaDesde.Enabled = true;
         }
 
         public void solicitarTipoReseña()
         {
+            //habilita el input tipo reseña.
             cbTipoReseña.Enabled = true;
             txtTipoReseña.Enabled = true;
         }
 
         public void solicitarTipoVisualizacionReporte()
         {
+            //habilita el input tipo visualizacion.
             cbArchivoAExportar.Enabled = true;
             txtArchivoAExportar.Enabled = true;
         }
 
         public void solicitarConfirmacion()
         {
+            //habilita el boton de confirmacion.
             btnConfirmar.Enabled = true;
         }
-        private void ventanaPrincipal_Load(object sender, EventArgs e)
-        {
-            cbArchivoAExportar.Items.Add("Excel");
-            cbArchivoAExportar.Items.Add("Pantalla");
-            cbArchivoAExportar.Items.Add("PDF");
-            cbTipoReseña.Items.Add("Sommelier");
-            cbTipoReseña.Items.Add("Amigos");
-            cbTipoReseña.Items.Add("Normal");
 
-        }
-
-        private Boolean validarPeriodo(DateTime fechaDesde, DateTime fechaHasta)
-        //valida que las fechas ingresadas esten en un periodo valido
+        private bool validarPeriodo(DateTime fechaDesde, DateTime fechaHasta)
         {
+            //valida que las fechas ingresadas esten en un periodo valido ( fecha hasta > fecha desde).
+
             if (fechaDesde >= fechaHasta || fechaHasta > DateTime.Now)
             {
                 periodoValido = false;
@@ -88,6 +79,8 @@ namespace BonVino
 
         private void tomarFechaDesde(object sender, EventArgs e)
         {
+            // toma la fecha desde y si se valida el periodo, habilita la fecha hasta, sino la deshabilita
+
             timePickerFechaHasta.Enabled = true;
             fechaDesdeSeleccionada = timePickerFechaDesde.Value;
             fechaHastaSeleccionada = timePickerFechaHasta.Value;
@@ -116,6 +109,8 @@ namespace BonVino
 
         private void tomarFechaHasta(object sender, EventArgs e)
         {
+            // toma la fecha hasta y si se valida el periodo, se envia las fechas desde y hasta al gestor.
+
             fechaDesdeSeleccionada = timePickerFechaDesde.Value;
             fechaHastaSeleccionada = timePickerFechaHasta.Value;
             periodoValido = validarPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada);
@@ -144,6 +139,7 @@ namespace BonVino
         }
         private void tomarTipoReseña(object sender, EventArgs e)
         {
+            //toma el tipo de reseña y se la envia al gestor
             if (cbTipoReseña.SelectedItem != null)
             {
                 tipoReseñaSeleccionada = cbTipoReseña.SelectedItem as string;
@@ -154,6 +150,7 @@ namespace BonVino
 
         private void tomarTipoVisualizacionReporte(object sender, EventArgs e)
         {
+            //toma el tipo de visualizacion y se la envia al gestor
             if (cbArchivoAExportar.SelectedItem != null)
             {
                 tipoVisualizacionSeleccionada = cbArchivoAExportar.SelectedItem as string;
@@ -163,6 +160,7 @@ namespace BonVino
 
         private void tomarConfirmacion(object sender, EventArgs e)
         {
+            //toma el la confirmacion y se la envia al gestor
             confirmacion = true;
             gestorReportesDeReseña.tomarConfirmacion(confirmacion);
 
@@ -170,10 +168,16 @@ namespace BonVino
 
         public void informarGeneracionExitosaDeArchivo()
         {
+            //informa al usuario que el archivo se ha generado.
             DialogResult resultado = MessageBox.Show("El archivo se generó exitosamente.", "Alerta", MessageBoxButtons.OKCancel);
 
         }
 
+        internal void informarFaltaReseñas()
+        {
+            MessageBox.Show("No hay reseñas creadas por sommeliers");
+            this.Close();
+        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
@@ -240,6 +244,22 @@ namespace BonVino
         {
             this.Close();
         }
+        private void CenterControlInForm(Control control)
+        {
+            control.Left = (this.ClientSize.Width - control.Width) / 2;
+        }
+        private void ventanaPrincipal_Load(object sender, EventArgs e)
+        {
+            cbArchivoAExportar.Items.Add("Excel");
+            cbArchivoAExportar.Items.Add("Pantalla");
+            cbArchivoAExportar.Items.Add("PDF");
+            cbTipoReseña.Items.Add("Sommelier");
+            cbTipoReseña.Items.Add("Amigos");
+            cbTipoReseña.Items.Add("Normal");
+
+        }
+
     }
+
 }
 

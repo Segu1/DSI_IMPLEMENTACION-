@@ -184,13 +184,14 @@ namespace BonVino
             // 
             // btnCancelar
             // 
+            btnCancelar.BackColor = Color.PeachPuff;
             btnCancelar.ForeColor = SystemColors.ActiveCaptionText;
             btnCancelar.Location = new Point(64, 531);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
             btnCancelar.TabIndex = 16;
             btnCancelar.Text = "Cancelar";
-            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
             // PantallaReportesDeReseñas
