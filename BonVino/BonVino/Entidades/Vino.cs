@@ -13,8 +13,8 @@ namespace BonVino.Entidades
         private float precioARS;
         private List<Reseña> reseña { get; set; }
         private List<Varietal> varietal { get; set; }
-        private int añada;
         private DateTime fechaActualizacion;
+      
 
         public Vino(string nombre, Bodega bodega,DateTime fechaActualizacion, float precioARS, List<Varietal> varietal, List<Reseña> reseña)
         {
@@ -33,29 +33,6 @@ namespace BonVino.Entidades
         public float getPrecioARS  { get { return precioARS; } }
         public float setPrecioARS { set { precioARS = value; } }
 
-        
-
-        public void agregarReseña(Reseña res)
-        {
-            reseña.Add(res);
-        }
-
-        public void eliminarReseña(Reseña res){
-            reseña.Remove(res);
-        }
-
-
-        public void AgregarVarietal(Varietal var)
-        {
-            varietal.Add(var);
-        }
-
-        public void eliminarVarietal(Varietal var)
-        {
-            varietal.Remove(var);
-        }
-
-
 
         public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada, PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
@@ -66,7 +43,6 @@ namespace BonVino.Entidades
 
                 if (res.estaEnPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada) && res.sosDeSommelier())
                 {
-
                     contador++;
                     acumulador += res.getPuntaje;
                 };

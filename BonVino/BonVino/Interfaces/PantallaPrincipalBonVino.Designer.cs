@@ -35,13 +35,15 @@
             // btnGenerarRanking
             // 
             btnGenerarRanking.AccessibleRole = AccessibleRole.Caret;
-            btnGenerarRanking.Location = new Point(344, 422);
+            btnGenerarRanking.BackColor = Color.WhiteSmoke;
+            btnGenerarRanking.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGenerarRanking.Location = new Point(0, 0);
             btnGenerarRanking.Margin = new Padding(3, 4, 3, 4);
             btnGenerarRanking.Name = "btnGenerarRanking";
             btnGenerarRanking.Size = new Size(190, 81);
             btnGenerarRanking.TabIndex = 0;
             btnGenerarRanking.Text = "Generar Ranking";
-            btnGenerarRanking.UseVisualStyleBackColor = true;
+            btnGenerarRanking.UseVisualStyleBackColor = false;
             btnGenerarRanking.Click += btnGenerarRanking_Click;
             // 
             // PantallaPrincipalBonVino
@@ -49,13 +51,14 @@
             AcceptButton = btnGenerarRanking;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            BackColor = Color.FromArgb(128, 128, 255);
+            ClientSize = new Size(1307, 653);
             Controls.Add(btnGenerarRanking);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "PantallaPrincipalBonVino";
             Text = "PantallaPrincipalBonVino";
-            WindowState = FormWindowState.Maximized;
             Load += PantallaPrincipalBonVino_Load;
             ResumeLayout(false);
         }

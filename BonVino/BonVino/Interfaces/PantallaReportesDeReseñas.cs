@@ -8,11 +8,23 @@ namespace BonVino
     {
         bool periodoValido = false;
         bool confirmacion;
+        DateTime fechaDesdeSeleccionada;
+        DateTime fechaHastaSeleccionada;
+        string tipoVisualizacionSeleccionada;
+        string tipoReseñaSeleccionada;
+
         GestorReportesDeReseñas gestorReportesDeReseña;
+
         public PantallaReportesDeReseñas()
         {
             InitializeComponent();
             gestorReportesDeReseña = new GestorReportesDeReseñas(this);
+            centrarTodosLosComponentes();
+        }
+
+        private void CenterControlInForm(Control control)
+        {
+            control.Left = (this.ClientSize.Width - control.Width) / 2;
         }
 
         public void tomarOpcionGenerarRankingVinos()
@@ -58,7 +70,7 @@ namespace BonVino
 
         }
 
-        private Boolean validar_periodo(DateTime fechaDesde, DateTime fechaHasta)
+        private Boolean validarPeriodo(DateTime fechaDesde, DateTime fechaHasta)
         //valida que las fechas ingresadas esten en un periodo valido
         {
             if (fechaDesde >= fechaHasta || fechaHasta > DateTime.Now)
@@ -77,7 +89,9 @@ namespace BonVino
         private void tomarFechaDesde(object sender, EventArgs e)
         {
             timePickerFechaHasta.Enabled = true;
-            periodoValido = validar_periodo(timePickerFechaDesde.Value, timePickerFechaHasta.Value);
+            fechaDesdeSeleccionada = timePickerFechaDesde.Value;
+            fechaHastaSeleccionada = timePickerFechaHasta.Value;
+            periodoValido = validarPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada);
             if (periodoValido)
             {
                 txtPeriodoNoValido.Visible = false;
@@ -102,7 +116,10 @@ namespace BonVino
 
         private void tomarFechaHasta(object sender, EventArgs e)
         {
-            periodoValido = validar_periodo(timePickerFechaDesde.Value, timePickerFechaHasta.Value);
+            fechaDesdeSeleccionada = timePickerFechaDesde.Value;
+            fechaHastaSeleccionada = timePickerFechaHasta.Value;
+            periodoValido = validarPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada);
+
             if (periodoValido)
             {
                 txtPeriodoNoValido.Visible = false;
@@ -129,8 +146,8 @@ namespace BonVino
         {
             if (cbTipoReseña.SelectedItem != null)
             {
-                string tipoReseña = cbTipoReseña.SelectedItem as string;
-                gestorReportesDeReseña.tomarTipoReseña(tipoReseña);
+                tipoReseñaSeleccionada = cbTipoReseña.SelectedItem as string;
+                gestorReportesDeReseña.tomarTipoReseña(tipoReseñaSeleccionada);
 
             }
         }
@@ -139,26 +156,23 @@ namespace BonVino
         {
             if (cbArchivoAExportar.SelectedItem != null)
             {
-                string tipoArchivo = cbArchivoAExportar.SelectedItem as string;
-                gestorReportesDeReseña.tomarTipoVisualizacionReporte(tipoArchivo);
+                tipoVisualizacionSeleccionada = cbArchivoAExportar.SelectedItem as string;
+                gestorReportesDeReseña.tomarTipoVisualizacionReporte(tipoVisualizacionSeleccionada);
             }
         }
 
         private void tomarConfirmacion(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("Confirmar generacion", "Alerta", MessageBoxButtons.OKCancel);
-            if (resultado == DialogResult.OK)
-            {
-                confirmacion = true;
-                gestorReportesDeReseña.tomarConfirmacion(confirmacion);
-            }
-            else
-            {
-                this.Close();
-            }
+            confirmacion = true;
+            gestorReportesDeReseña.tomarConfirmacion(confirmacion);
+
         }
 
+        public void informarGeneracionExitosaDeArchivo()
+        {
+            DialogResult resultado = MessageBox.Show("El archivo se generó exitosamente.", "Alerta", MessageBoxButtons.OKCancel);
 
+        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -206,7 +220,26 @@ namespace BonVino
         {
 
         }
+        private void centrarTodosLosComponentes()
+        {
+            CenterControlInForm(txtFechaDesde);
+            CenterControlInForm(txtFechaHasta);
+            CenterControlInForm(txtPeriodoNoValido);
+            CenterControlInForm(txtTipoReseña);
+            CenterControlInForm(txtArchivoAExportar);
 
+            CenterControlInForm(timePickerFechaDesde);
+            CenterControlInForm(timePickerFechaHasta);
+            CenterControlInForm(cbArchivoAExportar);
+            CenterControlInForm(cbTipoReseña);
+            CenterControlInForm(btnConfirmar);
+            CenterControlInForm(btnCancelar);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

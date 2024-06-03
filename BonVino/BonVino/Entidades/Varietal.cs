@@ -27,7 +27,7 @@ namespace BonVino.Entidades
 
         public (string, float) getDatosVarietal()
         {
-            return (this.descripcion, this.porcentajeComposion);
+            return (this.tipoUva.getNombre, this.porcentajeComposion);
         }
     }
 }

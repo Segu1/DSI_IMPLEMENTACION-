@@ -15,13 +15,14 @@ namespace BonVino.Gestor
     {
         private DateTime fechaDesdeSeleccionada;
         private DateTime fechaHastaSeleccionada;
-        private string tipoReseñaSeleccionada;
+        private string tipoReseñasSeleccionada;
         private string tipoVisualizacionSeleccionada;
         private bool confirmacion;
         private PantallaReportesDeReseñas pantallaReportesDeReseñas;
         private List<Vino> vinos;
         private List<(string, float, string, string, string, List<(string, float)>, float)> datosDeVinosConPromedio;
         private InterfazExcel interfazExcel;
+        //private string archivoExcel;
         public GestorReportesDeReseñas(PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
             this.pantallaReportesDeReseñas = pantallaReportesDeReseñas;
@@ -47,7 +48,7 @@ namespace BonVino.Gestor
 
         public void tomarTipoReseña(string tipoReseña)
         {
-            this.tipoReseñaSeleccionada = tipoReseña;
+            this.tipoReseñasSeleccionada = tipoReseña;
             pantallaReportesDeReseñas.solicitarTipoVisualizacionReporte();
         }
 
@@ -61,13 +62,24 @@ namespace BonVino.Gestor
         {
             this.confirmacion = confirmado;
             buscarVinosConReseñasEnPeriodo();
+
+            if (datosDeVinosConPromedio.Count() == 0)
+            {
+                MessageBox.Show("No hay reseñas creadas por sommeliers");
+                pantallaReportesDeReseñas.Close();
+                return;
+            }
+
             ordenarVinosPorPromedioYFiltrarPrimeros10();
             generarArchivo();
+            pantallaReportesDeReseñas.informarGeneracionExitosaDeArchivo();
+
+            finCU();
         }
 
         public DateTime getFechaHastaSeleccionada { get { return fechaHastaSeleccionada; } }
 
-        public string getTipoReseñaSeleccionada { get { return tipoReseñaSeleccionada; } }
+        public string getTipoReseñaSeleccionada { get { return tipoReseñasSeleccionada; } }
 
         public string getTipoVisualizacion { get { return tipoVisualizacionSeleccionada; } }
 
@@ -105,7 +117,13 @@ namespace BonVino.Gestor
         }
         public void generarArchivo()
         {
+            //archivoExcel = gestoExcel.generarArchivo()
             interfazExcel.exportarAExcel(datosDeVinosConPromedio);
+        }
+
+        public void finCU()
+        {
+            pantallaReportesDeReseñas.WindowState = FormWindowState.Minimized;
         }
     }
 }

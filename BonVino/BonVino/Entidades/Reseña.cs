@@ -8,23 +8,17 @@ namespace BonVino.Entidades
 {
     public class Reseña
     {
-        private string comentario;
         private bool esPremium;
         private DateTime fechaReseña;
         private float puntaje;
         private Vino vino;
 
-        public Reseña(string comentario, bool esPremium, DateTime fechaReseña, int puntaje)
+        public Reseña( bool esPremium, DateTime fechaReseña, int puntaje)
         {
-            this.comentario = comentario;
             this.esPremium = esPremium;
             this.fechaReseña = fechaReseña;
             this.puntaje = puntaje;
         }
-
-        public string getComentario { get { return comentario; } }
-        public string setComentario { set { comentario = value; } }
-
         public bool getEsPremium { get { return esPremium; } }
         public bool setEsPremium { set { esPremium = value; } }
         public DateTime getFechaReseña { get { return fechaReseña; } }
@@ -32,8 +26,6 @@ namespace BonVino.Entidades
         public float getPuntaje { get { return puntaje; } }
         public float setPuntaje { set { puntaje = value; } }
         public Vino getVino { get { return vino; } }
-
-        // hace falta un set vino?
         public Vino setVino { set { vino = value; } }
 
         public bool estaEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)

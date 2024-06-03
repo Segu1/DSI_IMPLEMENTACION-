@@ -24,11 +24,17 @@
   "varietal": [
     {
       "descripcion": "Cabernet Sauvignon",
-      "porcentajeComposicion": 85
+        "porcentajeComposicion": 85,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     },
     {
-      "descripcion": "Malbec",
-      "porcentajeComposicion": 95
+        "descripcion": "Malbec",
+        "porcentajeComposicion": 95,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     }
   ],
   "reseña": [
@@ -71,8 +77,11 @@
   },
   "varietal": [
     {
-      "descripcion": "Syrah",
-      "porcentajeComposicion": 96
+        "descripcion": "Syrah",
+        "porcentajeComposicion": 96,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     }
   ],
   "reseña": [
@@ -115,12 +124,18 @@
   },
   "varietal": [
     {
-      "descripcion": "Chardonnay",
-      "porcentajeComposicion": 100
+        "descripcion": "Chardonnay",
+        "porcentajeComposicion": 100,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     },
     {
       "descripcion": "Bonarda",
-      "porcentajeComposicion": 80
+      "porcentajeComposicion": 80,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     }
   ],
   "reseña": [
@@ -163,8 +178,11 @@
   },
   "varietal": [
     {
-      "descripcion": "Merlot",
-      "porcentajeComposicion": 100
+        "descripcion": "Merlot",
+        "porcentajeComposicion": 100,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     }
   ],
   "reseña": [
@@ -207,12 +225,18 @@
   },
   "varietal": [
     {
-      "descripcion": "Pinot Noir",
-      "porcentajeComposicion": 100
+        "descripcion": "Pinot Noir",
+        "porcentajeComposicion": 100,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     },
     {
-      "descripcion": "Chardonnay",
-      "porcentajeComposicion": 85
+        "descripcion": "Chardonnay",
+        "porcentajeComposicion": 85,
+        "tipoUva": {
+            "nombre": "Cabernet"
+        }
     }
   ],
   "reseña": [
@@ -255,7 +279,10 @@
     "varietal": [
         {
             "descripcion": "Torrontés",
-            "porcentajeComposicion": 94
+            "porcentajeComposicion": 94,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
         }
     ],
     "reseña": [
@@ -296,14 +323,20 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Malbec",
-        "porcentajeComposicion": 97
-      },
-      {
-        "descripcion": "Pinot noir",
-        "porcentajeComposicion": 89
-      }
+        {
+            "descripcion": "Malbec",
+            "porcentajeComposicion": 97,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        },
+        {
+            "descripcion": "Pinot noir",
+            "porcentajeComposicion": 89,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -343,10 +376,13 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Tempranillo",
-        "porcentajeComposicion": 98
-      }
+        {
+            "descripcion": "Tempranillo",
+            "porcentajeComposicion": 98,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -386,14 +422,20 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Sauvignon Blanc",
-        "porcentajeComposicion": 100
-      },
-      {
-        "descripcion": "Torrontes",
-        "porcentajeComposicion": 93
-      }
+        {
+            "descripcion": "Sauvignon Blanc",
+            "porcentajeComposicion": 100,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        },
+        {
+            "descripcion": "Torrontes",
+            "porcentajeComposicion": 93,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -433,10 +475,13 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Bonarda",
-        "porcentajeComposicion": 100
-      }
+        {
+            "descripcion": "Bonarda",
+            "porcentajeComposicion": 100,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -482,14 +527,20 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Petit Verdot",
-        "porcentajeComposicion": 85
-      },
-      {
-        "descripcion": "Garnacha",
-        "porcentajeComposicion": 95
-      }
+        {
+            "descripcion": "Petit Verdot",
+            "porcentajeComposicion": 85,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        },
+        {
+            "descripcion": "Garnacha",
+            "porcentajeComposicion": 95,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -529,10 +580,13 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Tempranillo",
-        "porcentajeComposicion": 99
-      }
+        {
+            "descripcion": "Tempranillo",
+            "porcentajeComposicion": 99,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -572,10 +626,13 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Garnacha",
-        "porcentajeComposicion": 97
-      }
+        {
+            "descripcion": "Garnacha",
+            "porcentajeComposicion": 97,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -609,10 +666,13 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Malbec",
-        "porcentajeComposicion": 100
-      }
+        {
+            "descripcion": "Malbec",
+            "porcentajeComposicion": 100,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
@@ -646,14 +706,20 @@
       }
     },
     "varietal": [
-      {
-        "descripcion": "Sangiovese",
-        "porcentajeComposicion": 100
-      },
-      {
-        "descripcion": "Barbera",
-        "porcentajeComposicion": 95
-      }
+        {
+            "descripcion": "Sangiovese",
+            "porcentajeComposicion": 100,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        },
+        {
+            "descripcion": "Barbera",
+            "porcentajeComposicion": 95,
+            "tipoUva": {
+                "nombre": "Cabernet"
+            }
+        }
     ],
     "reseña": [
       {
