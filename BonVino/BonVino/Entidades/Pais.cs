@@ -19,9 +19,14 @@ namespace BonVino.Entidades
             this.provincia = provincia;
         }
 
+
         public string getNombre { get { return nombre; } }
         public string setNombre { set { nombre = value; } }
-        
+
+        public List<Provincia> getProvincia { get { return provincia; } }
+        public List<Provincia> setProvincia { set { provincia = value; } }
+
+
         public string getDatosPais(Provincia prov) {
             string nombrePais = ""; //situacion que nunca va a ocurrir
 

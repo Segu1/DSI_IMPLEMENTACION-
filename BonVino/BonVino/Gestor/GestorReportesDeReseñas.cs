@@ -8,6 +8,8 @@ using BonVino.Entidades;
 using BonVino.Interfaces;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json;
+using System.Drawing;
+using System.Collections;
 
 namespace BonVino.Gestor
 {
@@ -88,13 +90,7 @@ namespace BonVino.Gestor
         public void buscarVinosConReseñasEnPeriodo()
         {
 
-            // carga vinos al gestor desde un json
-            string filePath = "..\\..\\..\\Resources\\jsonVinos.json";
-            string jsonContent = File.ReadAllText(filePath);
-
-
-            // se convierte el string JSON a una lista de objetos de tipo "Vino"
-            vinos = JsonConvert.DeserializeObject<List<Vino>>(jsonContent);
+            generarObjetos();
 
 
             foreach (Vino vin in vinos)
@@ -124,6 +120,41 @@ namespace BonVino.Gestor
         public void finCU()
         {
             pantallaReportesDeReseñas.WindowState = FormWindowState.Minimized;
+        }
+
+        public void generarObjetos()
+        {
+            string filePathUbicaciones = "..\\..\\..\\Resources\\jsonUbicacion.json";
+            string jsonContentUbicaciones = File.ReadAllText(filePathUbicaciones);
+            List<Pais> paises = JsonConvert.DeserializeObject<List<Pais>>(jsonContentUbicaciones);
+
+            // carga vinos al gestor desde un json
+            string filePath = "..\\..\\..\\Resources\\jsonVinos.json";
+            string jsonContent = File.ReadAllText(filePath);
+            // se convierte el string JSON a una lista de objetos de tipo "Vino"
+            vinos = JsonConvert.DeserializeObject<List<Vino>>(jsonContent);
+
+            foreach (Vino vin in vinos)
+            {
+                foreach (Pais pais in paises)
+                { 
+                    //corregir aca
+                    List<Provincia> todasLasProvincias = pais.getProvincia;
+
+                
+                    foreach (Provincia prov in todasLasProvincias)
+                    {
+
+                        Random random = new Random();
+                        int indiceAleatorio = random.Next(prov.getRegion.Count);
+                        RegionVitivinicola elementoAleatorio = prov.getRegion[indiceAleatorio];
+
+                        Bodega bodega = vin.getBodega;
+                        bodega.setRegionVitivinicola(elementoAleatorio);
+
+                    }
+                }
+            }
         }
     }
 }

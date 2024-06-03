@@ -33,7 +33,7 @@ namespace BonVino.Entidades
         public float getPrecioARS  { get { return precioARS; } }
         public float setPrecioARS { set { precioARS = value; } }
 
-
+        public Bodega getBodega { get { return bodega; } }
         public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada, PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
             int contador = 0;

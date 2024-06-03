@@ -26,9 +26,10 @@ namespace BonVino.Entidades
         public string setDescripcion { set { descripcion = value; } }
 
         public RegionVitivinicola getRegionVitivinicola { get { return regionVitivinicola; } }
-
-        //hace falta un set?
-        public RegionVitivinicola setRegionVitivinicola { set { regionVitivinicola = value; } }
+        public void setRegionVitivinicola(RegionVitivinicola value) 
+        { 
+            this.regionVitivinicola = value;  
+        }
 
         public (string, string, string) getDatosBodega(){
 

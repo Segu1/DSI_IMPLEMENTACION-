@@ -1,0 +1,99 @@
+[
+{
+  "pais": {
+    "nombre": "Argentina",
+    "provincia": [
+      {
+        "nombre": "San Juan",
+        "regionVitivinicola": [
+          {
+            "nombre": "San Juan"
+          }
+        ]
+      },
+      {
+        "nombre": "La Rioja",
+        "regionVitivinicola": [
+          {
+            "nombre": "La Rioja"
+          }
+        ]
+      },
+      {
+        "nombre": "Neuquén",
+        "regionVitivinicola": [
+          {
+            "nombre": "Neuquén"
+          }
+        ]
+      },
+      {
+        "nombre": "Río Negro",
+        "regionVitivinicola": [
+          {
+            "nombre": "Río Negro"
+          }
+        ]
+      },
+      {
+        "nombre": "Chubut",
+        "regionVitivinicola": [
+          {
+            "nombre": "Chubut"
+          }
+        ]
+      },
+      {
+        "nombre": "Salta",
+        "regionVitivinicola": [
+          {
+            "nombre": "Salta"
+          },
+          {
+            "nombre": "Cafayate"
+          }
+        ]
+      },
+      {
+        "nombre": "Mendoza",
+        "regionVitivinicola": [
+          {
+            "nombre": "Mendoza"
+          },
+          {
+            "nombre": "San Rafael"
+          },
+          {
+            "nombre": "Valle de Uco"
+          }
+        ]
+      },
+      {
+        "nombre": "Catamarca",
+        "regionVitivinicola": [
+          {
+            "nombre": "Catamarca"
+          }
+        ]
+      },
+      {
+        "nombre": "Tucumán",
+        "regionVitivinicola": [
+          {
+            "nombre": "Tucumán"
+          }
+        ]
+      },
+      {
+        "nombre": "San Luis",
+        "regionVitivinicola": [
+          {
+            "nombre": "San Luis"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+]

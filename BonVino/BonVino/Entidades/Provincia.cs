@@ -10,7 +10,7 @@ namespace BonVino.Entidades
     public class Provincia
     {
         private string nombre;
-        private List<RegionVitivinicola> region;
+        private List<RegionVitivinicola> region = new List<RegionVitivinicola>();
         private readonly Pais _pais;
         public Provincia(string nombre, List<RegionVitivinicola> region, Pais pais)
         {
@@ -22,7 +22,8 @@ namespace BonVino.Entidades
         public string getNombre { get { return nombre; } }
         public string setNombre { set { nombre = value; } }
 
-        public List<RegionVitivinicola> getRegion { get { return region; } } //Cambi ocar
+        public List<RegionVitivinicola> getRegion { get { return region; } }
+        public List<RegionVitivinicola> setRegion { set { region = value; } }
 
         public string getDatosProvincia(RegionVitivinicola region)
         { //Cambiar a region vitivinicola

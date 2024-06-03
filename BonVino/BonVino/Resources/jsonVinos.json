@@ -9,17 +9,8 @@
   "bodega": {
     "nombre": "Bodega El Sol",
     "descripcion": "Bodega familiar con vinos de alta calidad.",
-    "periodoActualizacion": "Mensual",
-    "regionVitivinicola": {
-      "nombre": "San Juan",
-      "descripcion": "Región con clima seco ideal para Cabernet Sauvignon.",
-      "provincia": {
-        "nombre": "San Juan",
-        "pais": {
-          "nombre": "Argentina"
-        }
-      }
-    }
+    "periodoActualizacion": "Mensual"
+
   },
   "varietal": [
     {
