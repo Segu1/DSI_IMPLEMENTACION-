@@ -34,7 +34,7 @@ namespace BonVino.Entidades
         public float setPrecioARS { set { precioARS = value; } }
 
 
-        public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada, PantallaReportesDeReseñas pantallaReportesDeReseñas)
+        public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
         {
             // calcula y devuelve el promedio de calificaciones de todas las reseñas de vino.
 

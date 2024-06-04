@@ -6,6 +6,9 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <PackageId>BonVino</PackageId>
+    <Title>BonVino</Title>
+    <Copyright>UTN 3K5 "los cohesivos"</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

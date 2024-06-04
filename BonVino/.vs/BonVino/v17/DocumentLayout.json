@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\pantallaprincipalbonvino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\pantallaprincipalbonvino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\pantallareportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion-\\bonvino\\bonvino\\interfaces\\pantallaprincipalbonvino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\pantallaprincipalbonvino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PantallaPrincipalBonVino.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaPrincipalBonVino.cs",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\PantallaPrincipalBonVino.cs",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PantallaReportesDeRese\u00F1as.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION-\\BonVino\\BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\PantallaReportesDeRese\u00F1as.cs",

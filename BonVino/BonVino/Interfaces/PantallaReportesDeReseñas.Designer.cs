@@ -50,10 +50,11 @@ namespace BonVino
             // btnConfirmar
             // 
             btnConfirmar.AutoSize = true;
-            btnConfirmar.BackColor = Color.FromArgb(128, 128, 255);
+            btnConfirmar.BackColor = Color.FromArgb(255, 224, 192);
             btnConfirmar.Cursor = Cursors.AppStarting;
             btnConfirmar.Enabled = false;
             btnConfirmar.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnConfirmar.ForeColor = SystemColors.ActiveCaptionText;
             btnConfirmar.Location = new Point(27, 430);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(173, 68);
@@ -88,7 +89,7 @@ namespace BonVino
             // 
             txtPeriodoNoValido.AutoSize = true;
             txtPeriodoNoValido.BackColor = Color.Transparent;
-            txtPeriodoNoValido.ForeColor = SystemColors.Desktop;
+            txtPeriodoNoValido.ForeColor = SystemColors.GradientActiveCaption;
             txtPeriodoNoValido.Location = new Point(27, 190);
             txtPeriodoNoValido.Name = "txtPeriodoNoValido";
             txtPeriodoNoValido.Size = new Size(275, 17);
@@ -200,7 +201,7 @@ namespace BonVino
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.GhostWhite;
-            BackgroundImage = Properties.Resources.modern_colorful_wavy_line_background_design_wave_curve_abstract_background_for_business_landing_page_flyers_website_banner_and_presentation_free_vector;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1182, 653);
             Controls.Add(btnCancelar);
             Controls.Add(label1);
