@@ -4,6 +4,7 @@ using System.DirectoryServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace BonVino.Entidades
 {
     public class Vino
@@ -14,8 +15,8 @@ namespace BonVino.Entidades
         private List<Reseña> reseña { get; set; }
         private List<Varietal> varietal { get; set; }
         private DateTime fechaActualizacion;
+        private float promedioDeVinoEnPeriodo = 0;
       
-
         public Vino(string nombre, Bodega bodega,DateTime fechaActualizacion, float precioARS, List<Varietal> varietal, List<Reseña> reseña)
         {
             this.nombre = nombre;
@@ -34,12 +35,14 @@ namespace BonVino.Entidades
         public float setPrecioARS { set { precioARS = value; } }
 
 
+        
         public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
         {
             // calcula y devuelve el promedio de calificaciones de todas las reseñas de vino.
 
             int contador = 0;
             float acumulador = 0;
+
             foreach (Reseña res in reseña) 
             {
 
@@ -53,12 +56,26 @@ namespace BonVino.Entidades
 
             if (contador > 0)
             {
-                return (acumulador / contador);
+                return promedioDeVinoEnPeriodo = (acumulador / contador);
             }
             else
             {
                 return -1; 
             }
+        }
+        public bool tieneReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
+        {
+            // calcula y devuelve si tiene reseñas de vino.
+
+            foreach (Reseña res in reseña)
+            {
+                if (res.estaEnPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada) && res.sosDeSommelier())
+                {
+                    return true;
+                }
+
+            }
+            return false;
         }
 
 

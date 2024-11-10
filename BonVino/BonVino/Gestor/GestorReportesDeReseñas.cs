@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BonVino.Entidades;
+﻿using BonVino.Entidades;
 using BonVino.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace BonVino.Gestor
 {
-    public class GestorReportesDeReseñas
+    public class GestorReportesDeReseñas : IAgregadoGestor
     {
         private DateTime fechaDesdeSeleccionada;
         private DateTime fechaHastaSeleccionada;
@@ -100,23 +95,54 @@ namespace BonVino.Gestor
             string jsonContent = File.ReadAllText(filePath);
             // se convierte el string JSON a una lista de objetos de tipo "Vino"
             vinos = JsonConvert.DeserializeObject<List<Vino>>(jsonContent);
-
+            /*
             foreach (Vino vin in vinos)
             {
-                float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada, pantallaReportesDeReseñas);
-                if (promedioDeReseñasEnPeriodo == -1) {
-                    return; 
+                float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
+                if (promedioDeReseñasEnPeriodo == -1)
+                {
+                    return;
                 }
                 (string nombre, float precioARS, string bodega, string region, string pais, List<(string tipoUva, float porcentaje)> varietales) = vin.obtenerTodosLosDatos();
                 datosDeVinosConPromedio.Add((nombre, precioARS, bodega, region, pais, varietales, promedioDeReseñasEnPeriodo));
+            }*/
+            if (vinos.Count > 0)
+            {
+                IIterador iteradorDeVinos = crearIterador(vinos.Cast<object>().ToList());
+                iteradorDeVinos.primero();  // Asumiendo que esto mueve el iterador al primer elemento
+
+                while (!iteradorDeVinos.haTerminado())  // Iterar hasta el final
+                {
+                    // Lógica para procesar el elemento actual
+                    Vino vinoActual = (Vino)iteradorDeVinos.actual();
+                    //estamso en un vino qu ecumple el filtro
+                    float promedioDeReseñasEnPeriodo = vinoActual.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
+
+                    iteradorDeVinos.siguiente();  // Mover al siguiente elemento
+                }
             }
+
         }
-        public void ordenarVinosPorPromedioYFiltrarPrimeros10() 
+
+        public IIterador crearIterador(List<Object> elements)
+        {
+           
+            // Crea y devuelve una instancia de IteradorVinos con la lista de vinos y las fechas
+            return new IteradorVinos(elements.OfType<Vino>().ToList(), new List<DateTime> { fechaDesdeSeleccionada, fechaHastaSeleccionada });
+
+            /*
+            if (elements is Vino vin)
+            {
+                new IteradorVinos(vin, [fechaDesdeSeleccionada, fechaHastaSeleccionada]); 
+            }*/
+        }
+
+        public void ordenarVinosPorPromedioYFiltrarPrimeros10()
         {
             // ordena todos los vinos segun el promedio de calificaciones de mayor a menor, y luego filtra los primeros 10.
 
             datosDeVinosConPromedio.Sort((x, y) => y.Item7.CompareTo(x.Item7));
-            if(datosDeVinosConPromedio.Count > 10)
+            if (datosDeVinosConPromedio.Count > 10)
             {
                 datosDeVinosConPromedio.RemoveRange(10, this.datosDeVinosConPromedio.Count - 10);
             }
@@ -133,5 +159,7 @@ namespace BonVino.Gestor
         {
             pantallaReportesDeReseñas.WindowState = FormWindowState.Minimized;
         }
+
+        
     }
 }
