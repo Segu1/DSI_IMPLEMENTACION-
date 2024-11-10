@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BonVino.Entidades
 {
-    internal interface IIterador
+    public interface IIterador
     {
         public void siguiente();
 

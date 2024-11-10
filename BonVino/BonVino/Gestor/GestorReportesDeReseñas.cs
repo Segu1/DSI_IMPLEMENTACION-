@@ -108,7 +108,7 @@ namespace BonVino.Gestor
             }*/
             if (vinos.Count > 0)
             {
-                IIterador iteradorDeVinos = crearIterador(vinos.Cast<object>().ToList());
+                IIterador iteradorDeVinos = CrearIterador(vinos.Cast<object>().ToList());
                 iteradorDeVinos.primero();  // Asumiendo que esto mueve el iterador al primer elemento
 
                 while (!iteradorDeVinos.haTerminado())  // Iterar hasta el final
@@ -124,7 +124,7 @@ namespace BonVino.Gestor
 
         }
 
-        public IIterador crearIterador(List<Object> elements)
+        public IIterador CrearIterador(List<Object> elements)
         {
            
             // Crea y devuelve una instancia de IteradorVinos con la lista de vinos y las fechas

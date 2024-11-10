@@ -7,8 +7,8 @@ using BonVino.Entidades;
 
 namespace BonVino.Gestor
 {
-    internal interface IAgregadoGestor
+    public interface IAgregadoGestor
     {
-        public IIterador crearIterador(List<object> elements);
+        public IIterador CrearIterador(List<object> elements);
     }
 }
