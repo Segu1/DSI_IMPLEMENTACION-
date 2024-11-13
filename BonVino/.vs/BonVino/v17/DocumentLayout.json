@@ -81,14 +81,6 @@
           "SelectedChildIndex": 17,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "GestorReportesDeRese\u00F1as.cs",
@@ -99,8 +91,7 @@
               "ViewState": "AQIAACgBAAAAAAAAAAAuwDMBAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T06:36:34.028Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -113,8 +104,7 @@
               "ViewState": "AQIAAAgAAAAAAAAAAAAAABEAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T16:07:03.491Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -127,8 +117,7 @@
               "ViewState": "AQIAAAgAAAAAAAAAAAAwwA4AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T21:05:55.679Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -141,8 +130,7 @@
               "ViewState": "AQIAAAcAAAAAAAAAAADgvw4AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T21:09:24.463Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -155,8 +143,7 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T20:27:41.441Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -169,8 +156,7 @@
               "ViewState": "AQIAABQAAAAAAAAAAAA7wBcAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T20:17:38.176Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -183,8 +169,7 @@
               "ViewState": "AQIAAAUAAAAAAAAAAAAAABEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T15:55:51.1Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -197,8 +182,15 @@
               "ViewState": "AQIAABkAAAAAAAAAAADwvxYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T08:01:13.675Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
@@ -210,8 +202,7 @@
               "RelativeToolTip": "BonVino\\Entidades\\Vino.cs",
               "ViewState": "AQIAAE4AAAAAAAAAAAAIwEcAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T13:03:18.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T13:03:18.451Z"
             },
             {
               "$type": "Document",
@@ -223,8 +214,7 @@
               "RelativeToolTip": "BonVino\\Entidades\\IAgregado.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T16:47:10.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T16:47:10.858Z"
             },
             {
               "$type": "Document",
@@ -236,8 +226,7 @@
               "RelativeToolTip": "BonVino\\Entidades\\Iteradorvinos.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAqwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T07:05:42.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T07:05:42.818Z"
             },
             {
               "$type": "Document",
@@ -249,8 +238,7 @@
               "RelativeToolTip": "BonVino\\Entidades\\IteradorVarietal.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAwwCEAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T07:02:13.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T07:02:13.454Z"
             },
             {
               "$type": "Document",
@@ -262,8 +250,7 @@
               "RelativeToolTip": "BonVino\\Entidades\\IteradorRese\u00F1a.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAYwDYAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T07:01:20.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T07:01:20.197Z"
             },
             {
               "$type": "Document",
@@ -275,8 +262,7 @@
               "RelativeToolTip": "BonVino\\Entidades\\IIterador.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T07:01:14.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T07:01:14.583Z"
             },
             {
               "$type": "Document",
@@ -288,8 +274,7 @@
               "RelativeToolTip": "BonVino\\Interfaces\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T19:07:09.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T19:07:09.364Z"
             },
             {
               "$type": "Document",
@@ -313,8 +298,7 @@
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\BonVino.csproj",
               "RelativeToolTip": "BonVino\\BonVino.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-29T19:43:31.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T19:43:31.478Z"
             }
           ]
         }
