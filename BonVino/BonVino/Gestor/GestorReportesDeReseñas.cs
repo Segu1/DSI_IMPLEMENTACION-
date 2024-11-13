@@ -309,7 +309,8 @@ namespace BonVino.Gestor
                     Varietal varietal = new Varietal()
                     {
                         IdVarietal = int.Parse(dr["id"].ToString()),
-                        Descripcion = dr["descripcion"].ToString()
+                        Descripcion = dr["descripcion"].ToString(),
+                        PorcentajeComposion = float.Parse(dr["porcentaje_composicion"].ToString()),
                     };
 
                     // Obtener el TipoUva para este varietal

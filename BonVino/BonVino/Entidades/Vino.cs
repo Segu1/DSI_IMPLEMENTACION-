@@ -105,15 +105,16 @@ namespace BonVino.Entidades
             IIterador iteradorVarietal = CrearIterador(Varietales.Cast<object>().ToList());
             iteradorVarietal.primero();
 
-            try
+            while (!iteradorVarietal.haTerminado())  // Iterar hasta el final
             {
                 Varietal varietalActual = (Varietal)iteradorVarietal.actual();
-                varietales.Add(varietalActual.getDatosVarietal());
-            }
-            finally
-            {
+                if (varietalActual is not null)
+                {
+                    varietales.Add(varietalActual.getDatosVarietal());
+                }
                 iteradorVarietal.siguiente();
             }
+            
             return varietales;
         }
 
