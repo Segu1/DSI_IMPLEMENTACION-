@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace BonVino.Entidades
 {
     public class Provincia
     {
-        public int IdProvincia { get; set; }
-        public string Nombre { get; set; }
-        public int IdPais { get; set; }
+        private int IdProvincia;
+        private string Nombre;
+        private int IdPais;
         public  Pais Pais { get; set; }
+
+        public int getIdProvincia() { return IdProvincia; }
+        public void setIdProvincia(int value) { IdProvincia = value; }
+        public string getNombre() { return Nombre; }
+        public void setNombre(string value) { Nombre = value; }
+        public int getIdPais() { return IdPais; }
+        public void setIdPais(int value) { IdPais = value; }
         public List<RegionVitivinicola> Region { get; set; }
 
         public Provincia() { }
@@ -29,15 +37,7 @@ namespace BonVino.Entidades
                 //busca el nombre del Pais y devuelve ese resultado.
 
                 string nombrePais = "";
-                //foreach (RegionVitivinicola reg in this.Region)
-                //{
-                //    if (reg == Region)
-                //    {
-                //        nombrePais = this.Pais.getDatosPais(this);
-                //        break;
-                //    };
-
-                //}
+   
                 nombrePais = this.Pais.getDatosPais(this);
 
                 return nombrePais;

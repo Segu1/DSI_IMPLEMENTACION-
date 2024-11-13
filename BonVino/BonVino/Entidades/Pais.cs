@@ -10,10 +10,14 @@ namespace BonVino.Entidades
 {
     public class Pais
     {
-        public int IdPais { get; set; }
-        public string Nombre { get; set; }
+        private int IdPais;
+        private string Nombre;
         public List<Provincia> Provincia { get; set; }
 
+        public int getIdPais() { return IdPais; }
+        public void setIdPais(int value) { IdPais = value; }
+        public string getNombre() { return Nombre; }
+        public void setNombre(string value) { Nombre = value; }
         public Pais() { }
         public Pais(int idPais, string nombre)
         {

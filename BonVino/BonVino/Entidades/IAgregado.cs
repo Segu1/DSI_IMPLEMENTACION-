@@ -8,6 +8,6 @@ namespace BonVino.Entidades
 {
     public interface IAgregado
     {
-        public IIterador CrearIterador(List<object> elements);
+        public IIterador CrearIterador(List<object> elements, List<DateTime> filtros);
     }
 }

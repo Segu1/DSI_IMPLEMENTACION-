@@ -55,7 +55,7 @@ namespace BonVino.Entidades
 
         public bool cumpleFiltros(Vino vin)
         {
-            return vin.tieneReseñasEnPeriodo(filtros[0], filtros[1]);
+            return vin.tieneReseñasEnPeriodo(filtros);
         }
 
         /*

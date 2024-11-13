@@ -8,21 +8,21 @@ namespace BonVino.Entidades
 {
     internal class IteradorVarietal : IIterador
     {
-        private List<Varietal> varietal;
+        private List<Varietal> varietales;
         private int posicionActual = 0;
 
-        public IteradorVarietal(List<Varietal> varietal)
+        public IteradorVarietal(List<Varietal> varietales)
         {
-            this.varietal = varietal;
+            this.varietales = varietales;
         }
         public object actual()
         {
-            return varietal[posicionActual];
+            return varietales[posicionActual];
         }
 
         public bool haTerminado()
         {
-            if(posicionActual < varietal.Count)
+            if(posicionActual < varietales.Count)
             {
                 return false;
             }

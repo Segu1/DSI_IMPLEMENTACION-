@@ -16,6 +16,5 @@ namespace BonVino.Entidades
 
         public object actual();
 
-        // public bool cumpleFiltros(Object elemento);
     }
 }

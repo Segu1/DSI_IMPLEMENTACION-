@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BonVino.Entidades
 {
     public class TipoUva
     {
-        public int IdTipoUva { get; set; }
-        public string Nombre { get; set; }
+        private int IdTipoUva;
+        private string Nombre;
+
+        public int getIdTipoUva() { return IdTipoUva; }
+        public void setIdTipoUva(int value) { IdTipoUva = value; }
+        public string getNombre() { return Nombre; }
+        public void setNombre(string value) { Nombre = value; }
 
         public TipoUva() { }
 

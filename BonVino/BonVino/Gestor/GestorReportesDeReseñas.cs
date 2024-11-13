@@ -6,6 +6,8 @@ using System.Xml.Linq;
 using Microsoft.EntityFrameworkCore;
 using System.Data.SQLite;
 using System.Configuration;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Drawing;
 
 namespace BonVino.Gestor
 {
@@ -68,7 +70,7 @@ namespace BonVino.Gestor
             // toma y guarda la confirmacion y realiza da comienzo a la generacion del ranking.
 
             this.confirmacion = confirmado;
-            buscarVinosConReseñasEnPeriodo();
+            listarVinosConReseñasEnPeriodo();
 
             //en caso de que no existan reseñas en periodo cargadas por sommeliers, se le notifica al usuario
             if (datosDeVinosConPromedio.Count() == 0)
@@ -92,13 +94,14 @@ namespace BonVino.Gestor
 
         public bool getConfirmacion { get { return confirmacion; } }
 
-        public void buscarVinosConReseñasEnPeriodo()
+        public void listarVinosConReseñasEnPeriodo()
         {
             ObtenerVinos();
 
-            string nombres = string.Join("\n", vinos.Select(v => v.Nombre));
 
-            IIterador iteradorDeVinos = CrearIterador(vinos.Cast<object>().ToList());
+            List<DateTime> filtros = new List<DateTime> { fechaDesdeSeleccionada, fechaHastaSeleccionada };
+
+            IIterador iteradorDeVinos = CrearIterador(vinos.Cast<object>().ToList(), filtros);
             iteradorDeVinos.primero();  // Asumiendo que esto mueve el iterador al primer elemento
             while (!iteradorDeVinos.haTerminado())  // Iterar hasta el final
             {
@@ -107,7 +110,7 @@ namespace BonVino.Gestor
                 {
 
                     //estamso en un vino qu ecumple el filtro
-                    float promedioDeReseñasEnPeriodo = vinoActual.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
+                    float promedioDeReseñasEnPeriodo = vinoActual.calcularPromedioDeReseñasEnPeriodo(filtros);
                     if (promedioDeReseñasEnPeriodo  != -1) {
                         (string nombre, float precioARS, string bodega, string region, string pais, List<(string tipoUva, float porcentaje)> varietales) = vinoActual.obtenerTodosLosDatos();
                         datosDeVinosConPromedio.Add((nombre, precioARS, bodega, region, pais, varietales, promedioDeReseñasEnPeriodo));
@@ -120,10 +123,11 @@ namespace BonVino.Gestor
 
         }
 
-        public IIterador CrearIterador(List<Object> elements)
+        public IIterador CrearIterador(List<object> elementos, List<DateTime> filtros)
         {
+
             // Crea y devuelve una instancia de IteradorVinos con la lista de vinos y las fechas
-            return new IteradorVinos(elements.OfType<Vino>().ToList(), new List<DateTime> { fechaDesdeSeleccionada, fechaHastaSeleccionada });
+            return new IteradorVinos(elementos.OfType<Vino>().ToList(), filtros);
         }
 
         public void ordenarVinosPorPromedioYFiltrarPrimeros10()
@@ -163,20 +167,19 @@ namespace BonVino.Gestor
                 {
                     while (dr.Read())
                     {
-                        Vino vino = new Vino()
-                        {
-                            IdVino = int.Parse(dr["id"].ToString()),
-                            Nombre = dr["nombre"].ToString(),
-                            PrecioARS = float.Parse(dr["precioARS"].ToString()),
-                            Añada = int.Parse(dr["añada"].ToString()),
-                            ImagenEtiqueta = dr["imagen_etiqueta"].ToString(),
-                            FechaActualizacion = dr.IsDBNull(dr.GetOrdinal("fecha_actualizacion")) ? DateTime.MinValue : dr.GetDateTime(dr.GetOrdinal("fecha_actualizacion")),
-                            NotaDeCataBodega = float.Parse(dr["nota_de_cata_bodega"].ToString()),
-                        };
+                        Vino vino = new Vino();
+                        vino.setIdVino(int.Parse(dr["id"].ToString()));
+                        vino.setNombre(dr["nombre"].ToString());
+                        vino.setPrecioARS(float.Parse(dr["precioARS"].ToString()));
+                        vino.setAñada(int.Parse(dr["añada"].ToString()));
+                        vino.setImagenEtiqueta(dr["imagen_etiqueta"].ToString());
+                        vino.setFechaActualizacion(dr.IsDBNull(dr.GetOrdinal("fecha_actualizacion")) ? DateTime.MinValue : dr.GetDateTime(dr.GetOrdinal("fecha_actualizacion")));
+                        vino.setNotaDeCataBodega(float.Parse(dr["nota_de_cata_bodega"].ToString()));
+                        
 
-                        vino.Reseñas = ObtenerReseñasPorVino(vino.IdVino, conexion);
-                        vino.Bodega = ObtenerBodegaDeVino(vino.IdVino, conexion);
-                        vino.Varietales = ObtenerVarietalesDeVino(vino.IdVino, conexion);
+                        vino.Reseñas = ObtenerReseñasPorVino(vino.getIdVino(), conexion);
+                        vino.Bodega = ObtenerBodegaDeVino(vino.getIdVino(), conexion);
+                        vino.Varietales = ObtenerVarietalesDeVino(vino.getIdVino(), conexion);
                         vinos.Add(vino);
                     }
                 }
@@ -194,15 +197,16 @@ namespace BonVino.Gestor
             {
                 while (drReseña.Read())
                 {
-                    reseñas.Add(new Reseña()
-                    {
-                        IdReseña = drReseña.IsDBNull(drReseña.GetOrdinal("id")) ? 0 : int.Parse(drReseña["id"].ToString()),
-                        EsPremium = !drReseña.IsDBNull(drReseña.GetOrdinal("es_premium")) && drReseña.GetBoolean(drReseña.GetOrdinal("es_premium")),
-                        FechaReseña = drReseña.IsDBNull(drReseña.GetOrdinal("fecha_reseña")) ? DateTime.MinValue : drReseña.GetDateTime(drReseña.GetOrdinal("fecha_reseña")),
-                        Puntaje = drReseña.IsDBNull(drReseña.GetOrdinal("puntaje")) ? 0 : float.Parse(drReseña["puntaje"].ToString()),
-                        Comentario = drReseña["comentario"]?.ToString() ?? string.Empty,
-                        IdVino = idVino,
-                    });
+                    Reseña reseña = new Reseña(
+                        drReseña.IsDBNull(drReseña.GetOrdinal("id")) ? 0 : int.Parse(drReseña["id"].ToString()),
+                        !drReseña.IsDBNull(drReseña.GetOrdinal("es_premium")) && drReseña.GetBoolean(drReseña.GetOrdinal("es_premium")),
+                        drReseña.IsDBNull(drReseña.GetOrdinal("fecha_reseña")) ? DateTime.MinValue : drReseña.GetDateTime(drReseña.GetOrdinal("fecha_reseña")),
+                        drReseña.IsDBNull(drReseña.GetOrdinal("puntaje")) ? 0 : float.Parse(drReseña["puntaje"].ToString()),
+                        drReseña["comentario"]?.ToString() ?? string.Empty,
+                        idVino
+                        );
+                    
+                    reseñas.Add(reseña);
                 }
             }
             return reseñas;
@@ -218,16 +222,15 @@ namespace BonVino.Gestor
             {
                 if (dr.Read())
                 {
-                    bodega = new Bodega()
-                    {
-                        Descripcion = dr["descripcion"].ToString(),
-                        IdBodega = int.Parse(dr["id"].ToString()),
-                        Nombre = dr["nombre"].ToString(),
-                        IdRegion = int.Parse(dr["id_region_vitivinicola"].ToString())
-                    };
+                    bodega = new Bodega(
+                        dr["descripcion"].ToString(),
+                        int.Parse(dr["id"].ToString()),
+                        dr["nombre"].ToString(),
+                        int.Parse(dr["id_region_vitivinicola"].ToString())
+                        );
                 }
             }
-            bodega.RegionVitivinicola = ObtenerRegionDeBodega(bodega.IdBodega, conexion);
+            bodega.RegionVitivinicola = ObtenerRegionDeBodega(bodega.getIdBodega(), conexion);
             return bodega;
         }
         private RegionVitivinicola ObtenerRegionDeBodega(int idBodega, SQLiteConnection conexion)
@@ -241,15 +244,14 @@ namespace BonVino.Gestor
             {
                 if (dr.Read())
                 {
-                    region = new RegionVitivinicola()
-                    {
-                        IdRegionVitivinicola = int.Parse(dr["id"].ToString()),
-                        Nombre = dr["nombre"].ToString(),
-                        IdProvincia = int.Parse(dr["id_provincia"].ToString())
-                    };
+                    region = new RegionVitivinicola(
+                         int.Parse(dr["id"].ToString()),
+                        dr["nombre"].ToString(),
+                        int.Parse(dr["id_provincia"].ToString())
+                        );
                 }
             }
-            region.Provincia = ObtenerProvinciaDeRegion(region.IdRegionVitivinicola, conexion);
+            region.Provincia = ObtenerProvinciaDeRegion(region.getIdRegionVitivinicola(), conexion);
             return region;
         }
         private Provincia ObtenerProvinciaDeRegion(int idRegion, SQLiteConnection conexion)
@@ -263,15 +265,14 @@ namespace BonVino.Gestor
             {
                 if (dr.Read())
                 {
-                    provincia = new Provincia()
-                    {
-                        IdProvincia = int.Parse(dr["id"].ToString()),
-                        Nombre = dr["nombre"].ToString(),
-                        IdPais = int.Parse(dr["pais_id"].ToString())
-                    };
+                    provincia = new Provincia(
+                        int.Parse(dr["id"].ToString()),
+                        dr["nombre"].ToString(),
+                        int.Parse(dr["pais_id"].ToString())                    
+                        );
                 }
             }
-            provincia.Pais = ObtenerPaisDeProvincia(provincia.IdProvincia, conexion);
+            provincia.Pais = ObtenerPaisDeProvincia(provincia.getIdProvincia(), conexion);
             return provincia;
         }
         private Pais ObtenerPaisDeProvincia(int idProvincia, SQLiteConnection conexion)
@@ -285,11 +286,10 @@ namespace BonVino.Gestor
             {
                 if (dr.Read())
                 {
-                    pais = new Pais()
-                    {
-                        IdPais = int.Parse(dr["id"].ToString()),
-                        Nombre = dr["nombre"].ToString()
-                    };
+                    pais = new Pais(
+                        int.Parse(dr["id"].ToString()),
+                        dr["nombre"].ToString()
+                     );
                 }
             }
             return pais;
@@ -306,15 +306,14 @@ namespace BonVino.Gestor
             {
                 while (dr.Read())
                 {
-                    Varietal varietal = new Varietal()
-                    {
-                        IdVarietal = int.Parse(dr["id"].ToString()),
-                        Descripcion = dr["descripcion"].ToString(),
-                        PorcentajeComposion = float.Parse(dr["porcentaje_composicion"].ToString()),
-                    };
+                    Varietal varietal = new Varietal(
+                        int.Parse(dr["id"].ToString()),
+                        dr["descripcion"].ToString(),
+                        float.Parse(dr["porcentaje_composicion"].ToString()),
+                        int.Parse(dr["id_tipo_uva"].ToString()));
 
                     // Obtener el TipoUva para este varietal
-                    varietal.TipoUva = ObtenerTipoDeUvaDeVarietal(varietal.IdVarietal, conexion);
+                    varietal.TipoUva = ObtenerTipoDeUvaDeVarietal(varietal.getIdVarietal(), conexion);
 
                     // Añadir el varietal con su TipoUva
                     varietales.Add(varietal);
@@ -334,11 +333,9 @@ namespace BonVino.Gestor
             {
                 if (dr.Read())
                 {
-                    tipoUva = new TipoUva()
-                    {
-                        IdTipoUva = int.Parse(dr["id"].ToString()),
-                        Nombre = dr["nombre"].ToString()
-                    };
+                    tipoUva = new TipoUva(
+                        int.Parse(dr["id"].ToString()),
+                        dr["nombre"].ToString());
                 }
             }
             return tipoUva;

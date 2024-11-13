@@ -10,18 +10,32 @@ namespace BonVino.Entidades
 {
     public class Vino : IAgregado
     {
-        public int IdVino { get; set; }
-        public float PrecioARS { get; set; }
-        public string Nombre { get; set; }
-        public int Añada { get; set; }
-        public string ImagenEtiqueta { get; set; }
-        public DateTime FechaActualizacion { get; set; }
-        public float NotaDeCataBodega { get; set; }
+        private int IdVino { get; set; }
+
+        private float PrecioARS;
+        private string Nombre { get; set; }
+        private int Añada { get; set; }
+        private string ImagenEtiqueta { get; set; }
+        private DateTime FechaActualizacion { get; set; }
+        private float NotaDeCataBodega { get; set; }
         public Bodega Bodega { get; set; }
         public List<Reseña> Reseñas { get; set; }
         public List<Varietal> Varietales { get; set; }
 
-        public float promedioDeVinoEnPeriodo = 0;
+        public int getIdVino() { return IdVino; }
+        public void setIdVino(int value) { IdVino = value; }
+        public float getPrecioARS() { return PrecioARS; }
+        public void setPrecioARS(float value) { PrecioARS = value; }
+        public string getNombre() { return Nombre; }
+        public void setNombre(string value) { Nombre = value; }
+        public int getAñada () { return Añada; }
+        public void setAñada(int value) { Añada = value; }
+        public string getImagenEtiqueta() { return ImagenEtiqueta; }
+        public void setImagenEtiqueta(string value) { ImagenEtiqueta = value; }
+        public float getNotaDeCataBodega() { return NotaDeCataBodega; }
+        public void setNotaDeCataBodega(float value) { NotaDeCataBodega = value; }
+        public DateTime getFechaActualizacion() { return FechaActualizacion; }
+        public void setFechaActualizacion(DateTime value) { FechaActualizacion = value; }
 
         public Vino() { }
 
@@ -36,14 +50,16 @@ namespace BonVino.Entidades
             NotaDeCataBodega = notaDeCataBodega;
         }
 
-        public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
+        public float calcularPromedioDeReseñasEnPeriodo(List<DateTime> filtros)
         {
+            DateTime fechaDesdeSeleccionada = filtros[0];
+            DateTime fechaHastaSeleccionada = filtros[1];
             // calcula si esta en periodo y si la reseña es de somelier
 
             int contador = 0;
             float acumulador = 0;
 
-            IIterador iteradorReseña = CrearIterador(Reseñas.Cast<object>().ToList(), fechaDesdeSeleccionada, fechaHastaSeleccionada);
+            IIterador iteradorReseña = CrearIterador(Reseñas.Cast<object>().ToList(), filtros);
             iteradorReseña.primero();  // Asumiendo que esto mueve el iterador al primer elemento
 
             while (!iteradorReseña.haTerminado())  // Iterar hasta el final
@@ -53,27 +69,37 @@ namespace BonVino.Entidades
                 if (reseñaActual is not null)
                 {
                     contador++;
-                    acumulador += reseñaActual.Puntaje;
+                    acumulador += reseñaActual.getPuntaje();
                 }
                 iteradorReseña.siguiente();
             }
 
-            if (contador > 0)
+            return calcularPromedio(contador, acumulador);
+        }
+
+        public float calcularPromedio(int cantidadReseñas, float puntajeAcumulado)
+        {
+            if (cantidadReseñas > 0)
             {
-                return promedioDeVinoEnPeriodo = (acumulador / contador);
+                return (puntajeAcumulado / cantidadReseñas);
             }
             else
             {
                 return -1;
             }
         }
-        public IIterador CrearIterador(List<Object> elements, DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
+        public IIterador CrearIterador(List<Object> elements, List<DateTime> filtros)
         {
+            DateTime fechaDesdeSeleccionada = filtros[0];
+            DateTime fechaHastaSeleccionada = filtros[1];
             // Crea y devuelve una instancia de IteradorReseña con la lista de reseñas y las fechas
-            return new IteradorReseña(elements.OfType<Reseña>().ToList(), new List<DateTime> { fechaDesdeSeleccionada, fechaHastaSeleccionada });
+            return new IteradorReseña(elements.OfType<Reseña>().ToList(), filtros);
         }
-        public bool tieneReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
+        public bool tieneReseñasEnPeriodo(List<DateTime> filtros)
         {
+            DateTime fechaDesdeSeleccionada = filtros[0];
+            DateTime fechaHastaSeleccionada = filtros[1];
+            
             // calcula y devuelve si tiene reseñas de vino.
 
             foreach (Reseña res in Reseñas)
@@ -93,10 +119,10 @@ namespace BonVino.Entidades
 
             (string nombreBodega, string nombreRegion, string nombrePais) = this.Bodega.getDatosBodega(); ;
 
-            return (this.Nombre, this.PrecioARS, nombreBodega, nombreRegion, nombrePais, this.obtenerDatosVarietal());
+            return (this.Nombre, this.PrecioARS, nombreBodega, nombreRegion, nombrePais, this.obtenerDatosVarietales());
         }
 
-        public List<(string, float)> obtenerDatosVarietal()
+        public List<(string, float)> obtenerDatosVarietales()
         {
             //da comienzo al loop "buscar varitales" y devuelve la lista de varietales
 
