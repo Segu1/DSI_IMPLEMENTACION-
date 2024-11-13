@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace BonVino.Gestor
 {
-    public class GestorReportesDeReseñas : IAgregadoGestor
+    public class GestorReportesDeReseñas : IAgregado
     {
         private DateTime fechaDesdeSeleccionada;
         private DateTime fechaHastaSeleccionada;
@@ -17,6 +17,7 @@ namespace BonVino.Gestor
         private List<Vino> vinos;
         private List<(string, float, string, string, string, List<(string, float)>, float)> datosDeVinosConPromedio;
         private InterfazExcel interfazExcel;
+
         //private string archivoExcel;
         public GestorReportesDeReseñas(PantallaReportesDeReseñas pantallaReportesDeReseñas)
         {
@@ -106,6 +107,24 @@ namespace BonVino.Gestor
                 (string nombre, float precioARS, string bodega, string region, string pais, List<(string tipoUva, float porcentaje)> varietales) = vin.obtenerTodosLosDatos();
                 datosDeVinosConPromedio.Add((nombre, precioARS, bodega, region, pais, varietales, promedioDeReseñasEnPeriodo));
             }*/
+            IIterador iteradorDeVinos = CrearIterador(vinos.Cast<object>().ToList());
+            iteradorDeVinos.primero();  // Asumiendo que esto mueve el iterador al primer elemento
+
+            while (!iteradorDeVinos.haTerminado())  // Iterar hasta el final
+            {
+                try
+                {
+                    Vino vinoActual = (Vino)iteradorDeVinos.actual();
+                    //estamso en un vino qu ecumple el filtro
+                    float promedioDeReseñasEnPeriodo = vinoActual.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
+                }
+                finally
+                {
+                    iteradorDeVinos.siguiente();  // Mover al siguiente elemento
+                }
+            }
+
+            /*
             if (vinos.Count > 0)
             {
                 IIterador iteradorDeVinos = CrearIterador(vinos.Cast<object>().ToList());
@@ -121,20 +140,14 @@ namespace BonVino.Gestor
                     iteradorDeVinos.siguiente();  // Mover al siguiente elemento
                 }
             }
+            */
 
         }
 
         public IIterador CrearIterador(List<Object> elements)
         {
-           
             // Crea y devuelve una instancia de IteradorVinos con la lista de vinos y las fechas
             return new IteradorVinos(elements.OfType<Vino>().ToList(), new List<DateTime> { fechaDesdeSeleccionada, fechaHastaSeleccionada });
-
-            /*
-            if (elements is Vino vin)
-            {
-                new IteradorVinos(vin, [fechaDesdeSeleccionada, fechaHastaSeleccionada]); 
-            }*/
         }
 
         public void ordenarVinosPorPromedioYFiltrarPrimeros10()
@@ -151,7 +164,7 @@ namespace BonVino.Gestor
         {
             // da comienzo a la generacion del archivo con los resultados del ranking.
 
-            //archivoExcel = gestorExcel.generarArchivo()
+            // archivoExcel = gestorExcel.generarArchivo()
             interfazExcel.exportarAExcel(datosDeVinosConPromedio);
         }
 

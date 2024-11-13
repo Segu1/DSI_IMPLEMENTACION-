@@ -20,7 +20,46 @@ namespace BonVino.Entidades
 
         public object actual()
         {
-            vinos[posicionActual].tieneReseñasEnPeriodo(filtros[0], filtros[1]);
+            if(cumpleFiltros(vinos[posicionActual]))
+            {
+                return vinos[posicionActual];
+            }
+            return null;
+        }
+
+        public bool haTerminado()
+        {
+            if (posicionActual < vinos.Count)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void primero()
+        {
+            posicionActual = 0;
+        }
+
+        public void siguiente()
+        {
+            posicionActual++;
+        }
+
+        public bool cumpleFiltros(Vino vin)
+        {
+            return vin.tieneReseñasEnPeriodo(filtros[0], filtros[1]);
+        }
+
+        /*
+        public IteradorVinos(List<Vino> vinos, List<DateTime> filtros)
+        {
+            this.vinos = vinos;
+            this.filtros = filtros;
+        }
+
+        public object actual()
+        {
             return vinos[posicionActual];
         }
 
@@ -32,7 +71,6 @@ namespace BonVino.Entidades
                 {
                     posicionActual++;
                 }
-                vinos[posicionActual++].tieneReseñasEnPeriodo(filtros[0], filtros[1]);
                 return true;
             }
             return false;
@@ -55,6 +93,6 @@ namespace BonVino.Entidades
         {
             return vin.tieneReseñasEnPeriodo(filtros[0], filtros[1]);
         }
-
+        */
     }
 }

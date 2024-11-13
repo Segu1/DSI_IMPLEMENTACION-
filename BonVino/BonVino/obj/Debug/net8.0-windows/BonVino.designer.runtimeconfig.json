@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Esmeralda\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Esmeralda\\.nuget\\packages",
+      "C:\\Users\\tomii\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\tomii\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
