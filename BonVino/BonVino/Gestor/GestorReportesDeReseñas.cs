@@ -3,11 +3,16 @@ using BonVino.Interfaces;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Data.SQLite;
+using System.Configuration;
 
 namespace BonVino.Gestor
 {
     public class GestorReportesDeReseñas : IAgregado
     {
+        private static string cadena = ConfigurationManager.ConnectionStrings["MyDatabaseContext"].ConnectionString;
+
         private DateTime fechaDesdeSeleccionada;
         private DateTime fechaHastaSeleccionada;
         private string tipoReseñasSeleccionada;
@@ -89,58 +94,29 @@ namespace BonVino.Gestor
 
         public void buscarVinosConReseñasEnPeriodo()
         {
-            //busca y guarda todos los datos de cada vino, incluyendo el promedio de las calificaciones de sus reseñas.
+            ObtenerVinos();
 
-            // carga vinos al gestor desde un json
-            string filePath = "..\\..\\..\\Resources\\jsonVinos.json";
-            string jsonContent = File.ReadAllText(filePath);
-            // se convierte el string JSON a una lista de objetos de tipo "Vino"
-            vinos = JsonConvert.DeserializeObject<List<Vino>>(jsonContent);
-            /*
-            foreach (Vino vin in vinos)
-            {
-                float promedioDeReseñasEnPeriodo = vin.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
-                if (promedioDeReseñasEnPeriodo == -1)
-                {
-                    return;
-                }
-                (string nombre, float precioARS, string bodega, string region, string pais, List<(string tipoUva, float porcentaje)> varietales) = vin.obtenerTodosLosDatos();
-                datosDeVinosConPromedio.Add((nombre, precioARS, bodega, region, pais, varietales, promedioDeReseñasEnPeriodo));
-            }*/
+            string nombres = string.Join("\n", vinos.Select(v => v.Nombre));
+
             IIterador iteradorDeVinos = CrearIterador(vinos.Cast<object>().ToList());
             iteradorDeVinos.primero();  // Asumiendo que esto mueve el iterador al primer elemento
-
             while (!iteradorDeVinos.haTerminado())  // Iterar hasta el final
             {
-                try
+                Vino vinoActual = (Vino)iteradorDeVinos.actual();
+                if (vinoActual is not null)
                 {
-                    Vino vinoActual = (Vino)iteradorDeVinos.actual();
+
                     //estamso en un vino qu ecumple el filtro
                     float promedioDeReseñasEnPeriodo = vinoActual.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
-                }
-                finally
-                {
-                    iteradorDeVinos.siguiente();  // Mover al siguiente elemento
-                }
-            }
-
-            /*
-            if (vinos.Count > 0)
-            {
-                IIterador iteradorDeVinos = CrearIterador(vinos.Cast<object>().ToList());
-                iteradorDeVinos.primero();  // Asumiendo que esto mueve el iterador al primer elemento
-
-                while (!iteradorDeVinos.haTerminado())  // Iterar hasta el final
-                {
-                    // Lógica para procesar el elemento actual
-                    Vino vinoActual = (Vino)iteradorDeVinos.actual();
-                    //estamso en un vino qu ecumple el filtro
-                    float promedioDeReseñasEnPeriodo = vinoActual.calcularPromedioDeReseñasEnPeriodo(this.fechaDesdeSeleccionada, this.fechaHastaSeleccionada);
+                    if (promedioDeReseñasEnPeriodo  != -1) {
+                        (string nombre, float precioARS, string bodega, string region, string pais, List<(string tipoUva, float porcentaje)> varietales) = vinoActual.obtenerTodosLosDatos();
+                        datosDeVinosConPromedio.Add((nombre, precioARS, bodega, region, pais, varietales, promedioDeReseñasEnPeriodo));
+                    }
 
                     iteradorDeVinos.siguiente();  // Mover al siguiente elemento
+
                 }
             }
-            */
 
         }
 
@@ -173,6 +149,61 @@ namespace BonVino.Gestor
             pantallaReportesDeReseñas.WindowState = FormWindowState.Minimized;
         }
 
-        
+
+        public void ObtenerVinos()
+        {
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
+            {
+                conexion.Open();
+                string query = "select * from Vino";
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                using (SQLiteDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        Vino vino = new Vino()
+                        {
+                            IdVino = int.Parse(dr["id"].ToString()),
+                            Nombre = dr["nombre"].ToString(),
+                            PrecioARS = float.Parse(dr["precioARS"].ToString()),
+                            Añada = int.Parse(dr["añada"].ToString()),
+                            ImagenEtiqueta = dr["imagen_etiqueta"].ToString(),
+                            FechaActualizacion = dr.IsDBNull(dr.GetOrdinal("fecha_actualizacion")) ? DateTime.MinValue : dr.GetDateTime(dr.GetOrdinal("fecha_actualizacion")),
+                            NotaDeCataBodega = float.Parse(dr["nota_de_cata_bodega"].ToString()),
+                        };
+
+                        vino.Reseñas = ObtenerReseñasPorVino(vino.IdVino, conexion);
+                        vinos.Add(vino);
+                    }
+                }
+
+            }
+        }
+        private List<Reseña> ObtenerReseñasPorVino(int idVino, SQLiteConnection conexion)
+        {
+            List<Reseña> reseñas = new List<Reseña>();
+            string queryReseña = "SELECT * FROM Reseña WHERE id_vino = @IdVino";
+            SQLiteCommand cmdReseña = new SQLiteCommand(queryReseña, conexion);
+            cmdReseña.Parameters.AddWithValue("@IdVino", idVino);
+
+            using (SQLiteDataReader drReseña = cmdReseña.ExecuteReader())
+            {
+                while (drReseña.Read())
+                {
+                    reseñas.Add(new Reseña()
+                    {
+                        IdReseña = drReseña.IsDBNull(drReseña.GetOrdinal("id")) ? 0 : int.Parse(drReseña["id"].ToString()),
+                        EsPremium = !drReseña.IsDBNull(drReseña.GetOrdinal("es_premium")) && drReseña.GetBoolean(drReseña.GetOrdinal("es_premium")),
+                        FechaReseña = drReseña.IsDBNull(drReseña.GetOrdinal("fecha_reseña")) ? DateTime.MinValue : drReseña.GetDateTime(drReseña.GetOrdinal("fecha_reseña")),
+                        Puntaje = drReseña.IsDBNull(drReseña.GetOrdinal("puntaje")) ? 0 : float.Parse(drReseña["puntaje"].ToString()),
+                        Comentario = drReseña["comentario"]?.ToString() ?? string.Empty,
+                        IdVino = idVino,
+                    });
+                }
+            }
+            return reseñas;
+        }
     }
 }

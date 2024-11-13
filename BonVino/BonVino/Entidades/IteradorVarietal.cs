@@ -24,9 +24,9 @@ namespace BonVino.Entidades
         {
             if(posicionActual < varietal.Count)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         public void primero()

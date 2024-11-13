@@ -10,33 +10,32 @@ namespace BonVino.Entidades
 {
     public class Vino : IAgregado
     {
-        private string nombre;
-        private Bodega bodega;
-        private float precioARS;
-        private List<Reseña> reseña { get; set; }
-        private List<Varietal> varietal { get; set; }
-        private DateTime fechaActualizacion;
-        private float promedioDeVinoEnPeriodo = 0;
-      
-        public Vino(string nombre, Bodega bodega,DateTime fechaActualizacion, float precioARS, List<Varietal> varietal, List<Reseña> reseña)
-        {
-            this.nombre = nombre;
-            this.bodega = bodega;
-            this.precioARS = precioARS;
-            this.reseña = reseña;
-            this.varietal = varietal; //a chequear
-            this.fechaActualizacion = fechaActualizacion;
+        public int IdVino { get; set; }
+        public float PrecioARS { get; set; }
+        public string Nombre { get; set; }
+        public int Añada { get; set; }
+        public string ImagenEtiqueta { get; set; }
+        public DateTime FechaActualizacion { get; set; }
+        public float NotaDeCataBodega { get; set; }
+        public Bodega Bodega { get; set; }
+        public List<Reseña> Reseñas { get; set; }
+        public List<Varietal> Varietales { get; set; }
 
+        public float promedioDeVinoEnPeriodo = 0;
+
+        public Vino() { }
+
+        public Vino(int idVino, float precioARS, string nombre, int añada, string imagenEtiqueta, DateTime fechaActualizacion, float notaDeCataBodega)
+        {
+            IdVino = idVino;
+            PrecioARS = precioARS;
+            Nombre = nombre;
+            Añada = añada;
+            ImagenEtiqueta = imagenEtiqueta;
+            FechaActualizacion = fechaActualizacion;
+            NotaDeCataBodega = notaDeCataBodega;
         }
 
-        public string getNombre { get { return nombre; } }
-        public string setNombre { set { nombre = value; } }
-
-        public float getPrecioARS  { get { return precioARS; } }
-        public float setPrecioARS { set { precioARS = value; } }
-
-
-        
         public float calcularPromedioDeReseñasEnPeriodo(DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
         {
             // calcula si esta en periodo y si la reseña es de somelier
@@ -44,25 +43,19 @@ namespace BonVino.Entidades
             int contador = 0;
             float acumulador = 0;
 
-            IIterador iteradorReseña = CrearIterador(reseña.Cast<object>().ToList(), fechaHastaSeleccionada, fechaHastaSeleccionada);
+            IIterador iteradorReseña = CrearIterador(Reseñas.Cast<object>().ToList(), fechaDesdeSeleccionada, fechaHastaSeleccionada);
             iteradorReseña.primero();  // Asumiendo que esto mueve el iterador al primer elemento
 
             while (!iteradorReseña.haTerminado())  // Iterar hasta el final
             {
-                try
+                Reseña reseñaActual = (Reseña)iteradorReseña.actual();
+                // estamos en una reseña que cumple el filtro
+                if (reseñaActual is not null)
                 {
-                    Reseña reseñaActual = (Reseña)iteradorReseña.actual();
-                    // estamos en una reseña que cumple el filtro
-                    if (reseñaActual.sosDeSommelier())
-                    {
-                        contador++;
-                        acumulador += reseñaActual.getPuntaje;
-                    }
+                    contador++;
+                    acumulador += reseñaActual.Puntaje;
                 }
-                finally
-                {
-                    iteradorReseña.siguiente();
-                }
+                iteradorReseña.siguiente();
             }
 
             if (contador > 0)
@@ -71,7 +64,7 @@ namespace BonVino.Entidades
             }
             else
             {
-                return -1; 
+                return -1;
             }
         }
         public IIterador CrearIterador(List<Object> elements, DateTime fechaDesdeSeleccionada, DateTime fechaHastaSeleccionada)
@@ -83,34 +76,33 @@ namespace BonVino.Entidades
         {
             // calcula y devuelve si tiene reseñas de vino.
 
-            foreach (Reseña res in reseña)
+            foreach (Reseña res in Reseñas)
             {
                 if (res.estaEnPeriodo(fechaDesdeSeleccionada, fechaHastaSeleccionada) && res.sosDeSommelier())
                 {
                     return true;
                 }
-
             }
             return false;
         }
 
 
-        public (string, float, string, string,string, List<(string, float)>) obtenerTodosLosDatos()
+        public (string, float, string, string, string, List<(string, float)>) obtenerTodosLosDatos()
         {
             //obtiene los datos propios del vino y da comienzo a la busqueda de datos de ubicacion y varietales. 
 
-            (string nombreBodega, string nombreRegion, string nombrePais) = this.bodega.getDatosBodega(); ;
+            (string nombreBodega, string nombreRegion, string nombrePais) = this.Bodega.getDatosBodega(); ;
 
-            return (this.getNombre, this.getPrecioARS, nombreBodega, nombreRegion, nombrePais, this.obtenerDatosVarietal());
+            return (this.Nombre, this.PrecioARS, nombreBodega, nombreRegion, nombrePais, this.obtenerDatosVarietal());
         }
 
         public List<(string, float)> obtenerDatosVarietal()
         {
             //da comienzo al loop "buscar varitales" y devuelve la lista de varietales
-            
+
             List<(string, float)> varietales = [];
 
-            IIterador iteradorVarietal = CrearIterador(varietal.Cast<object>().ToList());
+            IIterador iteradorVarietal = CrearIterador(Varietales.Cast<object>().ToList());
             iteradorVarietal.primero();
 
             try

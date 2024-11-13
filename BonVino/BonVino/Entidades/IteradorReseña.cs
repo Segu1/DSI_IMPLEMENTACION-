@@ -19,20 +19,27 @@ namespace BonVino.Entidades
 
         public object actual()
         {
-            if (cumpleFiltros(reseña[posicionActual]))
+            while (posicionActual < reseña.Count)
             {
-                return reseña[posicionActual];
+                if (!cumpleFiltros(reseña[posicionActual]))
+                {
+                    posicionActual++; //lo deja en uno que cumple
+                }
+                else
+                {
+                    return reseña[posicionActual];
+                }
             }
-            return null;
+            return null; //en caso que ninguno cumpla
         }
 
         public bool haTerminado()
         {
             if (posicionActual < reseña.Count)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         public void primero()
