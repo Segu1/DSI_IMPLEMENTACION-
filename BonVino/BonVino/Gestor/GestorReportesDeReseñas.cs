@@ -175,6 +175,8 @@ namespace BonVino.Gestor
                         };
 
                         vino.Reseñas = ObtenerReseñasPorVino(vino.IdVino, conexion);
+                        vino.Bodega = ObtenerBodegaDeVino(vino.IdVino, conexion);
+                        vino.Varietales = ObtenerVarietalesDeVino(vino.IdVino, conexion);
                         vinos.Add(vino);
                     }
                 }
@@ -205,5 +207,141 @@ namespace BonVino.Gestor
             }
             return reseñas;
         }
+        private Bodega ObtenerBodegaDeVino(int idVino, SQLiteConnection conexion)
+        {
+            Bodega bodega = null;
+            string query = "SELECT * FROM Bodega WHERE id = (SELECT id_bodega FROM Vino WHERE id = @IdVino)";
+            SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+            cmd.Parameters.AddWithValue("@IdVino", idVino);
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    bodega = new Bodega()
+                    {
+                        Descripcion = dr["descripcion"].ToString(),
+                        IdBodega = int.Parse(dr["id"].ToString()),
+                        Nombre = dr["nombre"].ToString(),
+                        IdRegion = int.Parse(dr["id_region_vitivinicola"].ToString())
+                    };
+                }
+            }
+            bodega.RegionVitivinicola = ObtenerRegionDeBodega(bodega.IdBodega, conexion);
+            return bodega;
+        }
+        private RegionVitivinicola ObtenerRegionDeBodega(int idBodega, SQLiteConnection conexion)
+        {
+            RegionVitivinicola region = null;
+            string query = "SELECT * FROM RegionVitivinicola WHERE id = (SELECT id_region_vitivinicola FROM Bodega WHERE id = @IdBodega)";
+            SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+            cmd.Parameters.AddWithValue("@IdBodega", idBodega);
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    region = new RegionVitivinicola()
+                    {
+                        IdRegionVitivinicola = int.Parse(dr["id"].ToString()),
+                        Nombre = dr["nombre"].ToString(),
+                        IdProvincia = int.Parse(dr["id_provincia"].ToString())
+                    };
+                }
+            }
+            region.Provincia = ObtenerProvinciaDeRegion(region.IdRegionVitivinicola, conexion);
+            return region;
+        }
+        private Provincia ObtenerProvinciaDeRegion(int idRegion, SQLiteConnection conexion)
+        {
+            Provincia provincia = null;
+            string query = "SELECT * FROM Provincia WHERE id = (SELECT id_provincia FROM RegionVitivinicola WHERE id = @IdRegion)";
+            SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+            cmd.Parameters.AddWithValue("@IdRegion", idRegion);
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    provincia = new Provincia()
+                    {
+                        IdProvincia = int.Parse(dr["id"].ToString()),
+                        Nombre = dr["nombre"].ToString(),
+                        IdPais = int.Parse(dr["pais_id"].ToString())
+                    };
+                }
+            }
+            provincia.Pais = ObtenerPaisDeProvincia(provincia.IdProvincia, conexion);
+            return provincia;
+        }
+        private Pais ObtenerPaisDeProvincia(int idProvincia, SQLiteConnection conexion)
+        {
+            Pais pais = null;
+            string query = "SELECT * FROM Pais WHERE id = (SELECT pais_id FROM Provincia WHERE id = @IdProvincia)";
+            SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+            cmd.Parameters.AddWithValue("@IdProvincia", idProvincia);
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    pais = new Pais()
+                    {
+                        IdPais = int.Parse(dr["id"].ToString()),
+                        Nombre = dr["nombre"].ToString()
+                    };
+                }
+            }
+            return pais;
+        }
+
+        private List<Varietal> ObtenerVarietalesDeVino(int idVino, SQLiteConnection conexion)
+        {
+            List<Varietal> varietales = new List<Varietal>();
+            string query = "SELECT * FROM Varietal WHERE id IN (SELECT id_varietal FROM VarietalXVino WHERE id_vino = @IdVino)";
+            SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+            cmd.Parameters.AddWithValue("@IdVino", idVino);
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    Varietal varietal = new Varietal()
+                    {
+                        IdVarietal = int.Parse(dr["id"].ToString()),
+                        Descripcion = dr["descripcion"].ToString()
+                    };
+
+                    // Obtener el TipoUva para este varietal
+                    varietal.TipoUva = ObtenerTipoDeUvaDeVarietal(varietal.IdVarietal, conexion);
+
+                    // Añadir el varietal con su TipoUva
+                    varietales.Add(varietal);
+                }
+            }
+            return varietales;
+        }
+
+        private TipoUva ObtenerTipoDeUvaDeVarietal(int idVarietal, SQLiteConnection conexion)
+        {
+            TipoUva tipoUva = null;
+            string query = "SELECT * FROM TipoUva WHERE id = (SELECT id_tipo_uva FROM Varietal WHERE id = @IdVarietal)";
+            SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+            cmd.Parameters.AddWithValue("@IdVarietal", idVarietal);
+
+            using (SQLiteDataReader dr = cmd.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    tipoUva = new TipoUva()
+                    {
+                        IdTipoUva = int.Parse(dr["id"].ToString()),
+                        Nombre = dr["nombre"].ToString()
+                    };
+                }
+            }
+            return tipoUva;
+        }
+
     }
 }

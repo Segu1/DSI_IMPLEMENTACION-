@@ -8,12 +8,15 @@ namespace BonVino.Entidades
 {
     public class TipoUva
     {
-        private string nombre;
+        public int IdTipoUva { get; set; }
+        public string Nombre { get; set; }
 
-        public TipoUva(string nombre) {
-            this.nombre = nombre;
+        public TipoUva() { }
+
+        public TipoUva(int idTipoUva, string nombre)
+        {
+            IdTipoUva = idTipoUva;
+            Nombre = nombre;
         }
-        public string getNombre { get { return nombre; } }
-        public string setNombre { set { nombre = value; } }
     }
 }

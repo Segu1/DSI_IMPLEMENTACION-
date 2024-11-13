@@ -9,22 +9,26 @@ namespace BonVino.Entidades
 {
     public class RegionVitivinicola
     {
-        private string nombre;
-        private readonly Provincia _provincia;
-        
-        public RegionVitivinicola(string nombre, Provincia provincia)
+        public int IdRegionVitivinicola { get; set; }
+        public string Nombre { get; set; }
+        public int IdProvincia { get; set; }
+        public Provincia Provincia { get; set; }
+
+        public RegionVitivinicola() { }
+
+        public RegionVitivinicola(int idRegionVitivincola, string nombre, int idProvincia)
         {
-            this.nombre = nombre;
-            _provincia = provincia;
+            IdRegionVitivinicola = idRegionVitivincola;
+            Nombre = nombre;
+            IdProvincia = idProvincia;
         }
 
-        public string getNombre { get { return nombre; } }
-        public string setNombre { set { nombre = value; } }
-        public (string, string) getDatosRegion() {
+        public (string, string) getDatosRegion()
+        {
 
-            // da comienzo a la busqueda de datos de ubicacion y retorna el resultado de la busqueda y el nombre de la region.
+            // da comienzo a la busqueda de datos de ubicacion y retorna el resultado de la busqueda y el nombre de la Region.
 
-            return (this.getNombre, this._provincia.getDatosProvincia(this));
+            return (this.Nombre, this.Provincia.getDatosProvincia(this));
         }
 
     }

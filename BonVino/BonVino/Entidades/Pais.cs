@@ -10,33 +10,24 @@ namespace BonVino.Entidades
 {
     public class Pais
     {
-        private string nombre;
-        private List<Provincia> provincia;
+        public int IdPais { get; set; }
+        public string Nombre { get; set; }
+        public List<Provincia> Provincia { get; set; }
 
-        public Pais(string nombre, List<Provincia> provincia)
+        public Pais() { }
+        public Pais(int idPais, string nombre)
         {
-            this.nombre = nombre;
-            this.provincia = provincia;
+            IdPais = idPais;
+            Nombre = nombre;
         }
-
-        public string getNombre { get { return nombre; } }
-        public string setNombre { set { nombre = value; } }
 
         public string getDatosPais(Provincia prov) {
 
-            // obtiene y retorna el nombre del pais.
+            // obtiene y retorna el nombre del Pais.
 
             string nombrePais = "";
 
-            //foreach (Provincia p in provincia)
-            //{
-            //    if(p.getNombre == prov.getNombre)
-            //    {
-            //        nombrePais = this.nombre;
-            //        break;
-            //    };
-            //}
-            nombrePais = this.getNombre;
+            nombrePais = this.Nombre;
             return nombrePais;
         }
 

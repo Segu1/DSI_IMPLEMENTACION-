@@ -7,6 +7,34 @@
       "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\gestor\\gestorreportesderese\u00F1as.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\varietal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\varietal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\bodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\bodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\tipouva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\tipouva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\provincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\provincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\rese\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\rese\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -29,34 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\iiterador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\iiterador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\interfaces\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\varietal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\varietal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\tipouva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\tipouva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\region.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\provincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\provincia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\pais.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\entidades\\bodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|solutionrelative:bonvino\\entidades\\bodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51B2C1B8-9AF8-44C8-A2DF-B2E36D9301DD}|BonVino\\BonVino.csproj|c:\\users\\esmeralda\\source\\repos\\dsi_implementacion_merge\\bonvino\\bonvino\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "BonVino\\Gestor\\GestorReportesDeRese\u00F1as.cs",
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Gestor\\GestorReportesDeRese\u00F1as.cs*",
               "RelativeToolTip": "BonVino\\Gestor\\GestorReportesDeRese\u00F1as.cs*",
-              "ViewState": "AQIAAGQAAAAAAAAAAAAAAG4AAAA1AAAA",
+              "ViewState": "AQIAACIBAAAAAAAAAAAAABcBAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T06:36:34.028Z",
               "IsPinned": true,
@@ -100,34 +100,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Region.cs",
+              "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Region.cs",
+              "RelativeDocumentMoniker": "BonVino\\Entidades\\Region.cs",
+              "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Region.cs",
+              "RelativeToolTip": "BonVino\\Entidades\\Region.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwBAAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T16:07:03.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Bodega.cs",
+              "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Bodega.cs",
+              "RelativeDocumentMoniker": "BonVino\\Entidades\\Bodega.cs",
+              "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Bodega.cs",
+              "RelativeToolTip": "BonVino\\Entidades\\Bodega.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAhwBAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T15:55:51.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Vino.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Vino.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\Vino.cs",
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Vino.cs",
               "RelativeToolTip": "BonVino\\Entidades\\Vino.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAAACIAAAA0AAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAF0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-29T13:03:18.451Z",
-              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Rese\u00F1a.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Rese\u00F1a.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\Rese\u00F1a.cs",
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Rese\u00F1a.cs",
               "RelativeToolTip": "BonVino\\Entidades\\Rese\u00F1a.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAuwCEAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T08:01:13.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Iteradorvinos.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Iteradorvinos.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\Iteradorvinos.cs",
@@ -140,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "IteradorVarietal.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\IteradorVarietal.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\IteradorVarietal.cs",
@@ -153,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "IteradorRese\u00F1a.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\IteradorRese\u00F1a.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\IteradorRese\u00F1a.cs",
@@ -166,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "IIterador.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\IIterador.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\IIterador.cs",
@@ -179,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Interfaces\\Program.cs",
               "RelativeDocumentMoniker": "BonVino\\Interfaces\\Program.cs",
@@ -192,75 +217,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Region.cs",
-              "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Region.cs",
-              "RelativeDocumentMoniker": "BonVino\\Entidades\\Region.cs",
-              "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Region.cs",
-              "RelativeToolTip": "BonVino\\Entidades\\Region.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T16:07:03.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "TipoUva.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\TipoUva.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\TipoUva.cs",
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\TipoUva.cs",
               "RelativeToolTip": "BonVino\\Entidades\\TipoUva.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAA7AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:27:41.441Z"
+              "WhenOpened": "2024-05-30T20:27:41.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "Varietal.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Varietal.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\Varietal.cs",
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Varietal.cs",
               "RelativeToolTip": "BonVino\\Entidades\\Varietal.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAtwAoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T20:17:38.176Z"
+              "WhenOpened": "2024-05-30T20:17:38.176Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "Provincia.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Provincia.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\Provincia.cs",
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Provincia.cs",
               "RelativeToolTip": "BonVino\\Entidades\\Provincia.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAawBEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T21:09:24.463Z"
+              "WhenOpened": "2024-05-30T21:09:24.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "Pais.cs",
               "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Pais.cs",
               "RelativeDocumentMoniker": "BonVino\\Entidades\\Pais.cs",
               "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Pais.cs",
               "RelativeToolTip": "BonVino\\Entidades\\Pais.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAD4vxAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T21:05:55.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Bodega.cs",
-              "DocumentMoniker": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Bodega.cs",
-              "RelativeDocumentMoniker": "BonVino\\Entidades\\Bodega.cs",
-              "ToolTip": "C:\\Users\\Esmeralda\\source\\repos\\DSI_IMPLEMENTACION_MERGE\\BonVino\\BonVino\\Entidades\\Bodega.cs",
-              "RelativeToolTip": "BonVino\\Entidades\\Bodega.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwB0AAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T15:55:51.1Z"
+              "WhenOpened": "2024-05-30T21:05:55.679Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

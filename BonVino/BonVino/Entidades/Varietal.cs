@@ -8,26 +8,24 @@ namespace BonVino.Entidades
 {
     public class Varietal
     {
-        private string descripcion;
-        private float porcentajeComposion;
-        private TipoUva tipoUva;
+        public int IdVarietal { get; set; }
+        public string Descripcion { get; set; }
+        public float PorcentajeComposion { get; set; }
+        public int IdTipoUva { get; set; }
+        public TipoUva TipoUva { get; set; }
 
-        public Varietal(string descripcion, float porcentajeComposicion, TipoUva tipoUva)
+        public Varietal() { }
+        public Varietal(int idVarietal, string descripcion, float porcentajeComposion, int idTipoUva)
         {
-            this.descripcion = descripcion;
-            this.porcentajeComposion = porcentajeComposicion;
-            this.tipoUva = tipoUva;
+            IdVarietal = idVarietal;
+            Descripcion = descripcion;
+            PorcentajeComposion = porcentajeComposion;
+            IdTipoUva = idTipoUva;
         }
-
-        public string getDescripcion { get { return descripcion; } }
-        public string setDescripcion { set { descripcion = value; } } //cambiar en todos. 
-
-        public string getPorcentajeComposion { get { return descripcion; } }
-        public float setPorcentajeComposicion { set { porcentajeComposion = value; } }
 
         public (string, float) getDatosVarietal()
         {
-            return (this.tipoUva.getNombre, this.porcentajeComposion);
+            return (this.TipoUva.Nombre, this.PorcentajeComposion);
         }
     }
 }

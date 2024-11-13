@@ -83,11 +83,11 @@
             varietal.MinimumWidth = 6;
             varietal.Name = "varietal";
             // 
-            // region
+            // Region
             // 
             region.HeaderText = "Nombre Región";
             region.MinimumWidth = 6;
-            region.Name = "region";
+            region.Name = "Region";
             // 
             // nombrePais
             // 
